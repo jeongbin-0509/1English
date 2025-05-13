@@ -10,40 +10,42 @@
 
 <body>
    <div id="sbarpart">
-    <!--사이드바 열기 버튼 -->
-        <button class="open-btn" onclick="openSidebar()">사이드바 열기</button>
+        <!--사이드바 열기 버튼 -->
+            <button class="open-btn" onclick="openSidebar()"></button>
 
-    <!-- 사이드바 -->
-        <div class="sidebar" id="sidebar">
-            <button class="close-btn" onclick="closeSidebar()">닫기</button>
-            <h2>사이드바</h2>
-            <p>이곳에 메뉴나 내용을 넣을 수 있습니다.</p>
-        </div>
+        <!-- 사이드바 -->
+            <div class="sidebar" id="sidebar">
+                <button class="close-btn" onclick="closeSidebar()"></button>
+                <h2>사이드바</h2>
+                <p>이곳에 메뉴나 내용을 넣을 수 있습니다.</p>
+            </div>
    </div> 
 
    <div id="mainpart">
-    <!-- 홈화면면 제목 -->
-        <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
-        
-    <!-- 단어 선택 input -->
-        <div class="wordoption">
-            <label><input class="itam" type="checkbox" value="d1">Day1</label>
-            <label><input class="itam" type="checkbox" value="d2">Day2</label>
-            <label><input class="itam" type="checkbox" value="d3">Day3</label>
-            <label><input class="itam" type="checkbox" value="d4">Day4</label>
-            <label><input class="itam" type="checkbox" value="d5">Day5</label>
-            <label><input class="itam" type="checkbox" value="d6">Day6</label>
-            <label><input class="itam" type="checkbox" value="d7">Day7</label>
-            <label><input class="itam" type="checkbox" value="d8">Day8</label>
-            <label><input class="itam" type="checkbox" value="d9">Day9</label>
-            <label><input class="itam" type="checkbox" value="d10">Day10</label>
-            <label><input class="itam" type="checkbox" value="d11">Day11</label>
-            <label><input class="itam" type="checkbox" value="d12">Day12</label>
-            <label><input class="itam" type="checkbox" value="d13">Day13</label>
-            <label><input class="itam" type="checkbox" value="d14">Day14</label>
-            <label><input class="itam" type="checkbox" value="d15">Day15</label>
-            <label><input class="itam" type="checkbox" value="d16">Day16</label>
-        </div>    
+        <!-- 홈화면면 제목 -->
+            <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
+            
+        <!-- 단어 선택 input -->
+            <div class="wordoption">
+                <label><input class="itam" type="checkbox" value="d1">Day1</label>
+                <label><input class="itam" type="checkbox" value="d2">Day2</label>
+                <label><input class="itam" type="checkbox" value="d3">Day3</label>
+                <label><input class="itam" type="checkbox" value="d4">Day4</label>
+                <label><input class="itam" type="checkbox" value="d5">Day5</label>
+                <label><input class="itam" type="checkbox" value="d6">Day6</label>
+                <label><input class="itam" type="checkbox" value="d7">Day7</label>
+                <label><input class="itam" type="checkbox" value="d8">Day8</label>
+                <label><input class="itam" type="checkbox" value="d9">Day9</label>
+                <label><input class="itam" type="checkbox" value="d10">Day10</label>
+                <label><input class="itam" type="checkbox" value="d11">Day11</label>
+                <label><input class="itam" type="checkbox" value="d12">Day12</label>
+                <label><input class="itam" type="checkbox" value="d13">Day13</label>
+                <label><input class="itam" type="checkbox" value="d14">Day14</label>
+                <label><input class="itam" type="checkbox" value="d15">Day15</label>
+                <label><input class="itam" type="checkbox" value="d16">Day16</label>
+            </div>   
+        <button id="selectAllBtn">모두 선택</button>
+        <button id="deselectAllBtn">모두 취소</button>
     </div>
 
 <script src="quiz.js"></script>
