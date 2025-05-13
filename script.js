@@ -35,3 +35,5 @@ document.getElementById("goStart").addEventListener("submit", e => {
 
   if(url != "./example.html?") window.location.href = url;
 });
+
+// 다들 화이팅!! - 정빈
