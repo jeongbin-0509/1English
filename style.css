@@ -7,17 +7,29 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 80%;
+  margin-top: 8%;
+  margin-bottom: 10%;
   font-size: 500%;
   color: white;
 }
 
 .wordoption{
-  display: flex;
-  flex-direction: column; /* label과 select를 세로 배치 */
-  align-items: center;     /* 가로 가운데 */
-  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  padding: 20px;        
+  max-width: 1200px;     
+  margin: 0 auto;       
+  box-sizing: border-box;
+  color: white;
+  border: 2px double white;
+}
+
+.item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 select {
@@ -36,7 +48,7 @@ select {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -350px; /* 처음엔 완전히 숨김 */
+  left: -350px;
   width: 300px;
   height: 100%;
   background-color: #333;
