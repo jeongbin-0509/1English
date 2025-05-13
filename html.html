@@ -7,12 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
+
 <body>
-    <img src="butt1.png" alt="버튼">
-    <button id="toggleBtn">메뉴 열기</button>
-    <div id="sidebar"></div>
-    <div id="mainpart"></div>
-    <div id="quiz part" style="display: none;"></div>
-    <script src="quiz.js"></script>
+   <div id="sbarpart">
+    <!--사이드바 열기 버튼 -->
+        <button class="open-btn" onclick="openSidebar()">사이드바 열기</button>
+
+    <!-- 사이드바 -->
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" onclick="closeSidebar()">닫기</button>
+            <h2>사이드바</h2>
+            <p>이곳에 메뉴나 내용을 넣을 수 있습니다.</p>
+        </div>
+
+
+
+   </div> 
+
+   <div id="mainpart">
+    <!-- 홈화면면 제목 -->
+        <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
+
+    <!-- 단어 선택 input -->
+        
+   </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>

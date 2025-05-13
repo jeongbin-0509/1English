@@ -1,17 +1,46 @@
-#sidebar {
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  padding: 0;
+  background-color: #181818;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 80%;
+  font-size: 500%;
+  color: white;
+}
+
+.open-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* 처음에는 화면 밖에 숨김 */
-  width: 250px;
+  left: -350px; /* 처음엔 완전히 숨김 */
+  width: 300px;
   height: 100%;
   background-color: #333;
-  background-image: url('butt1.png');
-  background-size: cover;
   color: white;
   padding: 20px;
   transition: left 0.3s ease;
+  z-index: 1000;
 }
 
-#sidebar.active {
-  left: 0; /* 활성화 시 화면으로 슬라이드 인 */
+.sidebar.active {
+  left: 0;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
