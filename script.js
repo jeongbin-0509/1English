@@ -21,3 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
     checkboxes.forEach(cb => cb.checked = false);
   });
 });
+
+// day 정보 예문 페이지로 보내기
+document.getElementById("goStart").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const selected = [];
+  document.querySelectorAll("input[name='day']:checked").forEach(cb => {
+    selected.push(cb.value);
+  });
+  
+  const url = "./example.html?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
+
+  if(url != "./example.html?") window.location.href = url;
+});

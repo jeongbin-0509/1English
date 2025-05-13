@@ -24,28 +24,32 @@
    <div id="mainpart">
         <!-- 홈화면면 제목 -->
             <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
-            
+        
+        <!-- form 써서 url로 예문 페이지에 day 정보 보내버릴거임-->
+        <form id="goStart">
         <!-- 단어 선택 input -->
             <div class="wordoption">
-                <label><input class="itam" type="checkbox" value="d1">Day1</label>
-                <label><input class="itam" type="checkbox" value="d2">Day2</label>
-                <label><input class="itam" type="checkbox" value="d3">Day3</label>
-                <label><input class="itam" type="checkbox" value="d4">Day4</label>
-                <label><input class="itam" type="checkbox" value="d5">Day5</label>
-                <label><input class="itam" type="checkbox" value="d6">Day6</label>
-                <label><input class="itam" type="checkbox" value="d7">Day7</label>
-                <label><input class="itam" type="checkbox" value="d8">Day8</label>
-                <label><input class="itam" type="checkbox" value="d9">Day9</label>
-                <label><input class="itam" type="checkbox" value="d10">Day10</label>
-                <label><input class="itam" type="checkbox" value="d11">Day11</label>
-                <label><input class="itam" type="checkbox" value="d12">Day12</label>
-                <label><input class="itam" type="checkbox" value="d13">Day13</label>
-                <label><input class="itam" type="checkbox" value="d14">Day14</label>
-                <label><input class="itam" type="checkbox" value="d15">Day15</label>
-                <label><input class="itam" type="checkbox" value="d16">Day16</label>
+                <label><input class="itam" type="checkbox" name="day" value="d1">Day1</label>
+                <label><input class="itam" type="checkbox" name="day" value="d2">Day2</label>
+                <label><input class="itam" type="checkbox" name="day" value="d3">Day3</label>
+                <label><input class="itam" type="checkbox" name="day" value="d4">Day4</label>
+                <label><input class="itam" type="checkbox" name="day" value="d5">Day5</label>
+                <label><input class="itam" type="checkbox" name="day" value="d6">Day6</label>
+                <label><input class="itam" type="checkbox" name="day" value="d7">Day7</label>
+                <label><input class="itam" type="checkbox" name="day" value="d8">Day8</label>
+                <label><input class="itam" type="checkbox" name="day" value="d9">Day9</label>
+                <label><input class="itam" type="checkbox" name="day" value="d10">Day10</label>
+                <label><input class="itam" type="checkbox" name="day" value="d11">Day11</label>
+                <label><input class="itam" type="checkbox" name="day" value="d12">Day12</label>
+                <label><input class="itam" type="checkbox" name="day" value="d13">Day13</label>
+                <label><input class="itam" type="checkbox" name="day" value="d14">Day14</label>
+                <label><input class="itam" type="checkbox" name="day" value="d15">Day15</label>
+                <label><input class="itam" type="checkbox" name="day" value="d16">Day16</label>
             </div>   
-        <button id="selectAllBtn">모두 선택</button>
-        <button id="deselectAllBtn">모두 취소</button>
+        <button type="button" id="selectAllBtn">모두 선택</button>
+        <button type="button" id="deselectAllBtn">모두 취소</button>
+        <button type="submit" id="start">시작하기</button>
+        </form>
     </div>
 
 <script src="quiz.js"></script>
