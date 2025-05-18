@@ -137,7 +137,7 @@ function submit(){
     if(!document.querySelector("#answer").value == "") {
         if(sts.isRest && sts.cNum == testingWords.length) {
         sts.isRest = false;
-        location.href = "./html.html";
+        location.href = "./main.html";
     } else if(sts.isRest) {
         sts.isRest = false;
         sts.cNum++;
