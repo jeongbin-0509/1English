@@ -4,10 +4,12 @@ function doNotReload(event){
         return false;
     }
 }
+let hasUnsavedChanges = true;
+
 window.addEventListener('beforeunload', (e) => {
   e.preventDefault();
   e.returnValue = ''; // Chrome, Edge, Safari에서 필요
-  return '작성 중인 내용이 사라질 수 있습니다. 정말 나가시겠습니까?';  //새로고침시 경고 메세지
+  return '작성 중인 내용이 사라질 수 있습니다. 정말 나가시겠습니까?';
 });
 document.addEventListener("keydown", doNotReload);
 const params = new URLSearchParams(window.location.search);
