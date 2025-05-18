@@ -5,6 +5,7 @@ let sts = {
     cNum : 1,
     cDay : 0,
     cWord : "",
+    isRest : false
 }
 
 // Day 선택이 0개이면 다시 돌려보내기
@@ -16,16 +17,16 @@ if (days.length == 0) {
 // 예문 + 빈칸 생성
 
 const newExample = data => { // data에 [int : day, string : 단어, string : 예문, string : 뜻]
-    
+
     sts.cNum++;
     sts.cDay = data[0];
     sts.cWord = data[1];
 
     document.querySelector("#exp").innerHTML = `
-        <p><span>${data[2].replace(/__/, `</span><input type="text" id="answer" placeholder="${data[1][0]}" autocomplete="off"><span>`)}
-    </span></p>`;
+        <p>${data[2].replace(/__/, `<input type="text" id="answer" placeholder="${sts.cWord.slice(0,1)}" autocomplete="off">`)}</p>`;
 
     // 형식 : <p><span>예문</span>빈칸<span>예문</span></p>
+    document.querySelector("#answer").style.color = "#000000";
 
     document.querySelector("#asp").innerHTML = `<p>${data[3]}</p>`
 
@@ -46,30 +47,39 @@ function parseCSV(text) {
         const char = text[i];
         const nextChar = text[i + 1];
 
-        if (char === '"' && inQuotes && nextChar === '"') {
-            current += '"';
+        // 따옴표 쌍 안에 따옴표가 두 개 연속 나오는 경우 (이중 따옴표)
+        if ((char === '"' || char === '“' || char === '”') && inQuotes && (nextChar === '"' || nextChar === '“' || nextChar === '”')) {
+            current += '"'; // 실제 따옴표 한 개 넣기
             i++;
-        } else if (char === '"') {
+        }
+        // 따옴표 시작/끝 토글
+        else if (char === '"' || char === '“' || char === '”') {
             inQuotes = !inQuotes;
-        } else if (char === ',' && !inQuotes) {
-            row.push(current);
+        }
+        // 콤마인데 따옴표 안이면 그냥 문자, 밖이면 셀 구분
+        else if (char === ',' && !inQuotes) {
+            row.push(current.trim());
             current = '';
-        } else if ((char === '\n' || char === '\r') && !inQuotes) {
+        }
+        // 줄바꿈인데 따옴표 안이면 그냥 문자, 밖이면 행 구분
+        else if ((char === '\n' || char === '\r') && !inQuotes) {
             if (current !== '' || row.length > 0) {
-                row.push(current);
-                rows.push(row);
+                row.push(current.trim());
+                rows.push(row.map(cell => cell.replace(/[“”]/g, '"')));
                 row = [];
                 current = '';
-        }
+            }
             if (char === '\r' && nextChar === '\n') i++; // Windows 줄바꿈 처리
-        } else {
+        } 
+        else {
             current += char;
         }
     }
 
+    // 마지막 행 처리
     if (current !== '' || row.length > 0) {
-        row.push(current);
-        rows.push(row);
+        row.push(current.trim());
+        rows.push(row.map(cell => cell.replace(/[“”]/g, '"')));
     }
 
     return rows;
@@ -124,9 +134,26 @@ const bData = data => { // 여기에 데이터를 1차원 배열로 입력하면
 
 // 버튼 누르면면
 function submit(){
-    if(sts.cWord == document.querySelector("#answer").innerHTML){
-
-    };
+    if(sts.isRest && sts.cNum == testingWords.length) {
+        sts.isRest = false;
+        document.querySelector(".okBtn").innerHTML = "제출";
+        // 완료 코드드
+    } else if(sts.isRest) {
+        sts.isRest = false;
+        newWord();
+    } else {
+        if(document.querySelector("#answer").value == sts.cWord) {
+            // 맞음 코드
+            document.querySelector("#answer").style.color = "#66cc33";
+            
+        } else {
+            // 틀림 코드드
+            document.querySelector("#answer").style.color = "#ff0000";
+            document.querySelector("#answer").value = sts.cWord;
+        }
+        document.querySelector(".okBtn").innerHTML = "다음";
+        sts.isRest = true;
+    }
 }
 
 function newWord() {
@@ -135,7 +162,7 @@ function newWord() {
 
 
 
-// 실행 줄
+// 실행 줄, 코드 짤때 이안에 짜세요 
 
 (async () => {
     await fetchData();
@@ -145,4 +172,6 @@ function newWord() {
 
     });
     testingWords = [...realdata].sort(() => Math.random() - 0.5).slice(0, Math.min(realdata.length, 50));
+
+    newWord();
 })();
