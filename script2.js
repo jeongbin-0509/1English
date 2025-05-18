@@ -1,3 +1,10 @@
+function doNotReload(event){
+    if ((event.ctrlKey && (event.keyCode === 78 || event.keyCode === 82)) || event.keyCode === 116) { //F5차단 기능
+        event.preventDefault();
+        return false;
+    }
+}
+document.addEventListener("keydown", doNotReload);
 const params = new URLSearchParams(window.location.search);
 const days = params.getAll("day");
 
