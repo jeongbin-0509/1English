@@ -32,6 +32,11 @@
   .sidebar {
     width: 80%;
   }
+
+  #answer {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
 }
 
 /* 모바일 */
@@ -53,6 +58,11 @@
   .open-btn, .close-btn {
     width: 30px;
     height: 30px;
+  }
+
+  #answer{
+    font-size: 0.85rem;
+    padding: 8px 12px;
   }
 }
 

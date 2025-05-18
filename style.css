@@ -146,3 +146,17 @@ select {
 .progress{
   color: #66cc33;
 }
+
+#answer {
+  background-color: #181818;
+  color: white !important;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 12px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
