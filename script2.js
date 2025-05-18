@@ -31,7 +31,6 @@ const newExample = data => { // data에 [int : day, string : 단어, string : �
 
     // 형식 : <p>뜻</p>
     document.querySelector("#progress").innerHTML = sts.cNum + " / " + sts.len;
-    sts.cNum++;
 
     return ; // 이녀석이 ㄹㅇ 단어 original임 요녀석을 쓰세요요
 }
@@ -135,12 +134,14 @@ const bData = data => {
 
 // 버튼 누르면
 function submit(){
-    if(sts.isRest && sts.cNum == testingWords.length) {
+    if(!document.querySelector("#answer").value == "") {
+        if(sts.isRest && sts.cNum == testingWords.length) {
         sts.isRest = false;
-        document.querySelector(".okBtn").innerHTML = "제출";
-        // 완료 코드
+        location.href = "./html.html";
     } else if(sts.isRest) {
         sts.isRest = false;
+        sts.cNum++;
+        document.querySelector(".okBtn").innerHTML = "제출";
         newWord();
     } else {
         if(document.querySelector("#answer").value == sts.cWord) {
@@ -152,9 +153,10 @@ function submit(){
             document.querySelector("#answer").style.color = "#ff0000";
             document.querySelector("#answer").value = sts.cWord;
         }
-        document.querySelector(".okBtn").innerHTML = "다음";
+        if(sts.cNum != 43) {document.querySelector(".okBtn").innerHTML = "다음";}
+        else {document.querySelector(".okBtn").innerHTML = "처음";}
         sts.isRest = true;
-    }
+    }}
 }
 
 function newWord() {
