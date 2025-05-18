@@ -5,7 +5,8 @@ let sts = {
     cNum : 1,
     cDay : 0,
     cWord : "",
-    isRest : false
+    isRest : false,
+    len : 50
 }
 
 // Day 선택이 0개이면 다시 돌려보내기
@@ -17,10 +18,10 @@ if (days.length == 0) {
 // 예문 + 빈칸 생성
 
 const newExample = data => { // data에 [int : day, string : 단어, string : 예문, string : 뜻]
-
-    sts.cNum++;
     sts.cDay = data[0];
     sts.cWord = data[1];
+
+    document.querySelector("#progress").innerHTML = sts.cNum + " / " + sts.len;
 
     document.querySelector("#exp").innerHTML = `
         <p>${data[2].replace(/__/, `<input type="text" id="answer" placeholder="${sts.cWord.slice(0,1)}" autocomplete="off">`)}</p>`;
@@ -31,6 +32,8 @@ const newExample = data => { // data에 [int : day, string : 단어, string : �
     document.querySelector("#asp").innerHTML = `<p>${data[3]}</p>`
 
     // 형식 : <p>뜻</p>
+
+    sts.cNum++;
 
     return ; // 이녀석이 ㄹㅇ 단어 original임 요녀석을 쓰세요요
 }
@@ -172,6 +175,6 @@ function newWord() {
 
     });
     testingWords = [...realdata].sort(() => Math.random() - 0.5).slice(0, Math.min(realdata.length, 50));
-
+    sts.len = testingWords.length;
     newWord();
 })();
