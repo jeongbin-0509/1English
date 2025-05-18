@@ -1,12 +1,14 @@
 @font-face {
-    font-family: 'NEXON Lv2 Gothic';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
   font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,54 +19,42 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 3%;
-  margin-bottom: 8%;
-  font-size: 500%;
+  margin: 3% 0 10%;
+  font-size: 5vw; /* 반응형 폰트 */
   color: white;
 }
 
 h3 {
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 18%;
-  font-size: 200%;
+  margin: 5% 0 18%;
+  font-size: 3vw;
   color: white;
 }
 
-#mainbtn{
+.mainbtn {
   margin-top: 8%;
   display: flex;
   justify-content: center;  
-  gap: 10px;               
-  margin-top: 20px;
+  gap: 2%;               
+  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
 }
 
-#selectAllBtn {
+#selectAllBtn, #deselectAllBtn, #startAllBtn {
   background-color: #181818;
   color: #66cc33;
   border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-#deselectAllBtn {
-  color: #66cc33;
-  background-color: #181818;
-  border: none;
-}
-
-#startAllBtn{
-  color: #66cc33;
-  background-color: #181818;
-  border: none;
-}
-
-.wordoption{
+.wordoption {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 16px;
-  padding: 20px;        
-  max-width: 1200px;     
-  margin: 0 auto;       
-  box-sizing: border-box;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   color: white;
   border: 2px double white;
 }
@@ -74,18 +64,17 @@ h3 {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
+  color: black;
 }
 
 select {
   padding: 10px;
   font-size: 16px;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
 }
 
-.open-btn {
-  margin: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
+.open-btn, .close-btn {
   width: 40px;
   height: 40px;
   background-image: url("pic/butt1-noogi.png");
@@ -95,6 +84,10 @@ select {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.sidebar.active {
+  left: 0;
 }
 
 .sidebar {
@@ -108,59 +101,30 @@ select {
   padding: 20px;
   transition: left 0.3s ease;
   z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.sidebar.active {
-  left: 0;
-}
-
-.close-btn {
-   width: 40px;
-  height: 40px;
-  background-image: url("pic/butt1-noogi.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.sidebar-btn {
+  background-color: #555;
+  color: white;
   border: none;
-  background-color: transparent;
+  padding: 15px;
+  font-size: 16px;
   cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
 
-.Reselect {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;    
-  align-items: flex-start; 
+.okBtn {
+  text-align: center;
+  font-size: 1rem;
+  color: #66cc33;
+  font-weight: bold;
+  border: none;
   background-color: #333;
-  color: white;
-  border: none;
-}
-
-.Review {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;    
-  align-items: flex-start; 
-  background-color: #333;
-  color: white;
-  border: none;
-}
-
-.Favorites{
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;    
-  align-items: flex-start; 
-  background-color: #333;
-  color: white;
-  border: none;
-}
-
-.Statistics{
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;    
-  align-items: flex-start; 
-  color: black;
-  border: none;
+  padding: 10px 20px;
 }

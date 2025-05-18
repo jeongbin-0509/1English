@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  .mainbtn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wordoption {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  select {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .open-btn, .close-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
