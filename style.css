@@ -32,6 +32,10 @@ h3 {
   font-size: 3vw;
 }
 
+h5 {
+  margin-top: 20%;
+}
+
 .mainbtn {
   margin-top: 8%;
   display: flex;
@@ -123,17 +127,19 @@ select {
   display: flex;
   justify-content: center; 
   align-items: center;    
-  height: 100vh;           
+  gap: 10%;
+  height: 50vh;           
   padding: 20px;           
   box-sizing: border-box;
 }
 
 .okBtn {
   padding: 1em 2em;
-  font-size: 1rem;
+  font-size: 2rem;
   background-color: #333;
   color: #66cc33;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  margin: 0.5em 0; 
 }

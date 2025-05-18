@@ -101,11 +101,11 @@ async function fetchData(){ // data에 int : day 입력
     datalist = parseCSV(csvText);
 }
 
-const bData = data => { // 여기에 데이터를 1차원 배열로 입력하면 뚝딱 해서 newExample 함수에 넣기 좋게 만들어줌.
+const bData = data => { 
+    // 여기에 데이터를 1차원 배열로 입력하면 뚝딱 해서 newExample 함수에 넣기 좋게 만들어줌.
     // day1,1,“evidence”,“Evidence shows that global warming is certainly occurring.”,“지구 온난화가 분명히 일어나고 있다는 것을 증거가 보여 준다.”
     // 6, 201, “economy”, “economy”, “The sharing economy is an economic system based on sharing assets or services, for free or for a fee, directly from and between individuals.”, “공유 경제는 무료로 또는 비용을 내고, 개인으로부터 직접 그리고 개인들 간에 자산이나 서비스를 공유하는 것에 기초한 경제체제이다.”
     // 11, "stimulate", "Travel stimulates creative thinking because we recognize that there are many more opportunities for solving problems than the ones we know.", "우리는 우리가 알고 있는 것보다 문제를 해결할 훨씬 더 많은 기회가 있다는 것을 인식하므로 여행은 창의적인 사고를 자극한다."
-
 
     let newdata = [];
 
@@ -133,12 +133,12 @@ const bData = data => { // 여기에 데이터를 1차원 배열로 입력하면
 }
 
 
-// 버튼 누르면면
+// 버튼 누르면
 function submit(){
     if(sts.isRest && sts.cNum == testingWords.length) {
         sts.isRest = false;
         document.querySelector(".okBtn").innerHTML = "제출";
-        // 완료 코드드
+        // 완료 코드
     } else if(sts.isRest) {
         sts.isRest = false;
         newWord();
@@ -148,7 +148,7 @@ function submit(){
             document.querySelector("#answer").style.color = "#66cc33";
             
         } else {
-            // 틀림 코드드
+            // 틀림 코드
             document.querySelector("#answer").style.color = "#ff0000";
             document.querySelector("#answer").value = sts.cWord;
         }
