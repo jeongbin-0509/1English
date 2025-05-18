@@ -6,14 +6,10 @@ function doNotReload(event){
 }
 let hasUnsavedChanges = true;
 
-// beforeunload 이벤트 설정
 window.addEventListener('beforeunload', (e) => {
-  if (hasUnsavedChanges) {
-    // Chrome, Edge, Firefox, Safari 모두 지원
-    e.preventDefault();
-    e.returnValue = ''; // 필수!
-    return ''; // 일부 브라우저에서 필요
-  }
+  e.preventDefault();
+  e.returnValue = ''; // Chrome, Edge, Safari에서 필요
+  return '작성 중인 내용이 사라질 수 있습니다. 정말 나가시겠습니까?';
 });
 document.addEventListener("keydown", doNotReload);
 const params = new URLSearchParams(window.location.search);
