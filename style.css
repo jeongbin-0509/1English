@@ -29,7 +29,7 @@ h1 {
 
 h3 {
   margin: 5% 0 0.5%;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 h5 {
@@ -153,7 +153,7 @@ select {
   width: 100%;
   max-width: 400px;
   padding: 12px 12px;
-  font-size: 2rem;
+  font-size: 2vw;
   border: none;
   border-radius: 8px;
   outline: none;
