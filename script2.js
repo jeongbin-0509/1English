@@ -21,8 +21,6 @@ const newExample = data => { // data에 [int : day, string : 단어, string : �
     sts.cDay = data[0];
     sts.cWord = data[1];
 
-    document.querySelector("#progress").innerHTML = sts.cNum + " / " + sts.len;
-
     document.querySelector("#exp").innerHTML = `
         <p>${data[2].replace(/__/, `<input type="text" id="answer" placeholder="${sts.cWord.slice(0,1)}" autocomplete="off">`)}</p>`;
 
@@ -32,7 +30,7 @@ const newExample = data => { // data에 [int : day, string : 단어, string : �
     document.querySelector("#asp").innerHTML = `<p>${data[3]}</p>`
 
     // 형식 : <p>뜻</p>
-
+    document.querySelector("#progress").innerHTML = sts.cNum + " / " + sts.len;
     sts.cNum++;
 
     return ; // 이녀석이 ㄹㅇ 단어 original임 요녀석을 쓰세요요
@@ -114,12 +112,12 @@ const bData = data => {
     if(!isNaN(data[0].trim())) { // 숫자이면 true 문자이면 false
         // 숫자니까 6~16
         newdata.push(parseInt(data[0], 10)); // day
-        if (newdata[0] > 10) { // 11~15
-            newdata.push(data[1].replace(/^["“”]|["“”]$/g, "")); // word
-            newdata.push(data[2].replace(/^["“”]|["“”]$/g, "")); // 예문
-            newdata.push(data[3].replace(/^["“”]|["“”]$/g, "")); // 뜻
-        } else { // 6~10
+        if (newdata[0] > 10) { // 11~16
             newdata.push(data[2].replace(/^["“”]|["“”]$/g, "")); // word
+            newdata.push(data[3].replace(/^["“”]|["“”]$/g, "")); // 예문
+            newdata.push(data[4].replace(/^["“”]|["“”]$/g, "")); // 뜻
+        } else { // 6~10
+            newdata.push(data[3].replace(/^["“”]|["“”]$/g, "")); // word
             newdata.push(data[4].replace(/^["“”]|["“”]$/g, "")); // 예문
             newdata.push(data[5].replace(/^["“”]|["“”]$/g, "")); // 뜻
         }
