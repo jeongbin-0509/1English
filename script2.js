@@ -1,6 +1,12 @@
 const params = new URLSearchParams(window.location.search);
 const days = params.getAll("day");
 
+let sts = {
+    cNum : 1,
+    cDay : 0,
+    cWord : "",
+}
+
 // Day 선택이 0개이면 다시 돌려보내기
 if (days.length == 0) {
     alert("Day를 선택해주세요.");
@@ -11,13 +17,17 @@ if (days.length == 0) {
 
 const newExample = data => { // data에 [int : day, string : 단어, string : 예문, string : 뜻]
     
-    document.querySelector("#exmplpart").innerHTML = `
+    sts.cNum++;
+    sts.cDay = data[0];
+    sts.cWord = data[1];
+
+    document.querySelector("#exp").innerHTML = `
         <p><span>${data[2].replace(/__/, `</span><input type="text" id="answer" placeholder="${data[1][0]}" autocomplete="off"><span>`)}
     </span></p>`;
 
     // 형식 : <p><span>예문</span>빈칸<span>예문</span></p>
 
-    document.querySelector("#answerpart").innerHTML = `<p>${data[3]}</p>`
+    document.querySelector("#asp").innerHTML = `<p>${data[3]}</p>`
 
     // 형식 : <p>뜻</p>
 
@@ -67,6 +77,7 @@ function parseCSV(text) {
 
 let datalist; // 여기에 단어가 이차원배열 형식으로 들어갈거임 ㅇㅇㅇ
 let realdata;
+let testingWords;
 
 async function fetchData(){ // data에 int : day 입력
 
@@ -97,7 +108,6 @@ const bData = data => { // 여기에 데이터를 1차원 배열로 입력하면
         } else { // 6~10
             newdata.push(data[2].replace(/^["“”]|["“”]$/g, "")); // word
             newdata.push(data[4].replace(/^["“”]|["“”]$/g, "")); // 예문
-            console.log(data)
             newdata.push(data[5].replace(/^["“”]|["“”]$/g, "")); // 뜻
         }
     } else {
@@ -111,25 +121,28 @@ const bData = data => { // 여기에 데이터를 1차원 배열로 입력하면
     return newdata;
 }
 
-// 현재 상태 저장
 
-let status = {
-    cDay : 0,
-    cWord : "",
-}
-
-
+// 버튼 누르면면
 function submit(){
+    if(sts.cWord == document.querySelector("#answer").innerHTML){
 
+    };
 }
+
+function newWord() {
+    return newExample(bData(testingWords[sts.cNum - 1]));
+}
+
+
 
 // 실행 줄
 
 (async () => {
     await fetchData();
-    console.log(datalist)
     realdata = datalist.filter(row => {
         const key = "d" + bData(row)[0];
         return days.includes(key);
+
     });
+    testingWords = [...realdata].sort(() => Math.random() - 0.5).slice(0, Math.min(realdata.length, 50));
 })();
