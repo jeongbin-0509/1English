@@ -12,7 +12,7 @@ let sts = {
 // Day 선택이 0개이면 다시 돌려보내기
 if (days.length == 0) {
     alert("Day를 선택해주세요.");
-    location.href = "./html.html";
+    location.href = "./index.html";
 }
 
 // 예문 + 빈칸 생성
@@ -94,7 +94,7 @@ async function fetchData(){ // data에 int : day 입력
     const response = await fetch("data.csv")
     if (!response.ok) {
         alert("데이터 파일을 불러오지 못했습니다. 관리자에게 문의해주세요.");
-        location.href = "./html.html";
+        location.href = "./index.html";
     }
     const csvText = await response.text();
     datalist = parseCSV(csvText);
@@ -137,7 +137,7 @@ function submit(){
     if(!document.querySelector("#answer").value == "") {
         if(sts.isRest && sts.cNum == testingWords.length) {
         sts.isRest = false;
-        location.href = "./main.html";
+        location.href = "./index.html";
     } else if(sts.isRest) {
         sts.isRest = false;
         sts.cNum++;
