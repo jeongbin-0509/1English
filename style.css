@@ -7,7 +7,7 @@
 
 * {
   font-family: 'NEXON Lv2 Gothic', sans-serif;
-  font-weight: bold;
+  font-weight: bold; /* 확인 필요 */
   box-sizing: border-box;
 }
 
@@ -17,18 +17,19 @@ body {
   background-color: #181818;
 }
 
-h1 {
+h1, h3 {
   text-align: center;
-  margin: 3% 0 10%;
-  font-size: 5vw; /* 반응형 폰트 */
   color: white;
 }
 
+h1 {
+  margin: 3% 0 10%;
+  font-size: 5vw;
+}
+
 h3 {
-  text-align: center;
   margin: 5% 0 18%;
   font-size: 3vw;
-  color: white;
 }
 
 .mainbtn {
@@ -36,7 +37,7 @@ h3 {
   display: flex;
   justify-content: center;  
   gap: 2%;               
-  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+  flex-wrap: wrap;
 }
 
 #selectAllBtn, #deselectAllBtn, #startAllBtn {
@@ -86,11 +87,7 @@ select {
   cursor: pointer;
 }
 
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar {
+.sidebar{
   position: fixed;
   top: 0;
   left: -350px;
@@ -101,10 +98,13 @@ select {
   padding: 20px;
   transition: left 0.3s ease;
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.sidebar.active{
+  left: 0;
 }
 
 .sidebar-btn {
@@ -119,12 +119,21 @@ select {
   transition: background-color 0.2s ease;
 }
 
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  height: 100vh;           
+  padding: 20px;           
+  box-sizing: border-box;
+}
+
 .okBtn {
-  text-align: center;
+  padding: 1em 2em;
   font-size: 1rem;
-  color: #66cc33;
-  font-weight: bold;
-  border: none;
   background-color: #333;
-  padding: 10px 20px;
+  color: #66cc33;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

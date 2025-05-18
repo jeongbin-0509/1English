@@ -1,4 +1,21 @@
+/* 데스크탑 */
+@media (min-width: 1024px) {
+  .container {
+    margin-top: 120px;
+    height: auto;
+    padding-top: 100px; 
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* 태블릿 */
 @media (max-width: 768px) {
+  .okBtn {
+    font-size: 0.9rem;
+    padding: 0.8em 1.6em;
+  }
+
   h1 {
     font-size: 8vw;
   }
@@ -17,7 +34,13 @@
   }
 }
 
+/* 모바일 */
 @media (max-width: 480px) {
+  .okBtn {
+    font-size: 0.8rem;
+    padding: 0.6em 1.2em;
+  }
+
   .wordoption {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
@@ -32,3 +55,5 @@
     height: 30px;
   }
 }
+
+/* 태스트 해봐야 알긴함 디버깅 필수! */

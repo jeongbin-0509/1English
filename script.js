@@ -34,4 +34,9 @@ document.getElementById("goStart").addEventListener("submit", e => {
   const url = "./example.html?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
 
   if(url != "./example.html?") window.location.href = url;
-});
+}); 
+
+// Day 재선택 기능구현
+function goToPage() {
+      window.location.href = "html.html";
+    }

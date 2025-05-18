@@ -18,20 +18,26 @@
                 <button class="close-btn" onclick="closeSidebar()"></button>
                 <h2>단<spon style="color: #66cc33;">어</spon>장 by <span style="color: #66cc33;">;</span></h2>
                 <hr style="width: auto; height: 2px; background-color: #555555; border: none">
-                <button class="Reselect">DAY 재선택</button>
+                <button class="Reselect" onclick="goToPage()">DAY 재선택</button>
                 <button class="Review">오답복습</button>
                 <button class="Favorites">즐겨찾기된 단어</button>
                 <button class="Statistics">통계</button>
             </div>
    </div>
+    
     <script src="script.js"></script>
     <script src="script2.js"></script>
+
     <br>
 
-   <div id="exmplpart"> <!--예문 띄울 공간-->
-    <h3>영어 예문이 띄워집니다</h3>
-    <h3>해석문이 띄워집니다</h3>
+    <div id="exmplpart"> <!--예문 띄울 공간-->
+        <h3>영어 예문이 띄워집니다</h3>
+        <h3>해석문이 띄워집니다</h3>
+    </div>
 
-   <button class="okBtn" onclick="submit">제출</button>
+    <div class="container">
+        <button class="okBtn" onclick="submit">제출</button>
+    </div>
+   
 </body>
 </html>
