@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 10px;
   padding: 0;
   background-color: #181818;
@@ -7,8 +17,8 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin-top: 3%;
+  margin-bottom: 8%;
   font-size: 500%;
   color: white;
 }
@@ -16,17 +26,35 @@ h1 {
 h3 {
   text-align: center;
   margin-top: 5%;
-  margin-bottom: 8%;
+  margin-bottom: 18%;
   font-size: 200%;
   color: white;
 }
 
-.selectAllbtn {
-  color: black;
+#mainbtn{
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;  
+  gap: 10px;               
+  margin-top: 20px;
 }
 
-.deselectAllBtn{
-  color: black;
+#selectAllBtn {
+  background-color: #181818;
+  color: #66cc33;
+  border: none;
+}
+
+#deselectAllBtn {
+  color: #66cc33;
+  background-color: #181818;
+  border: none;
+}
+
+#startAllBtn{
+  color: #66cc33;
+  background-color: #181818;
+  border: none;
 }
 
 .wordoption{
@@ -96,4 +124,43 @@ select {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.Reselect {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-start; 
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.Review {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-start; 
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.Favorites{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-start; 
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.Statistics{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-start; 
+  color: black;
+  border: none;
 }

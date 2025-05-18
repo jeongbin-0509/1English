@@ -18,10 +18,10 @@
                 <button class="close-btn" onclick="closeSidebar()"></button>
                 <h2>단<spon style="color: #66cc33;">어</spon>장 by <span style="color: #66cc33;">;</span></h2>
                 <hr style="width: auto; height: 2px; background-color: #555555; border: none">
-                <button id="Reselect">DAY 재선택</button>
-                <button id="Review">오답복습</button>
-                <button id="Favorites">즐겨찾기된 단어</button>
-                <button id="Statistics">통계</button>
+                <button class="Reselect">DAY 재선택</button>
+                <button class="Review">오답복습</button>
+                <button class="Favorites">즐겨찾기된 단어</button>
+                <button class="Statistics">통계</button>
             </div>
    </div> 
 
@@ -29,7 +29,7 @@
         <!-- 홈화면면 제목 -->
             <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
         <!-- form 써서 url로 예문 페이지에 day 정보 보내버릴거임-->
-        <form id="goStart">
+            <form id="goStart">
         <!-- 단어 선택 input -->
             <div class="wordoption">
                 <label><input class="itam" type="checkbox" name="day" value="d1">Day1</label>
@@ -48,16 +48,18 @@
                 <label><input class="itam" type="checkbox" name="day" value="d14">Day14</label>
                 <label><input class="itam" type="checkbox" name="day" value="d15">Day15</label>
                 <label><input class="itam" type="checkbox" name="day" value="d16">Day16</label>
-            </div>   
-        <button type="button" id="selectAllBtn">모두 선택</button>
-        <button type="button" id="deselectAllBtn">모두 취소</button>
-        <button type="submit" id="start">시작하기</button>
+            </div>
+
+            <div id="mainbtn">
+                <button type="button" id="selectAllBtn">모두 선택</button>
+                <button type="button" id="deselectAllBtn">모두 취소</button>
+                <button type="submit" id="startAllBtn">시작하기</button>
+            </div>
         </form>
     </div>
 
-<h5 style="color: #555555;">made by</h5>
+<h5 style="color: #555555;">made by </h5>
 <script src="quiz.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
