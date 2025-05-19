@@ -212,3 +212,10 @@ document.addEventListener("input", function (e) {
     e.target.dataset.enterAttached = "true"; // 중복 방지용 플래그
   }
 });
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        submit();
+    }
+});
+
