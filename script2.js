@@ -148,8 +148,19 @@ const bData = data => {
 
 // 버튼 누르면
 function submit(){
-    if(!document.querySelector("#answer").value == "") {
-        if(sts.isRest && sts.cNum == testingWords.length) {
+    const answerInput = document.querySelector("#answer");
+    const userInput = answerInput.value.trim();  // 공백 제거한 입력값
+
+    if (userInput === "") {
+        // 공백이나 빈 문자열인 경우 틀린 처리
+        answerInput.style.color = "#ff0000";
+        answerInput.value = sts.cWord;  // 정답 보여주기
+        document.querySelector(".okBtn").innerHTML = (sts.cNum != 43) ? "다음" : "처음";
+        sts.isRest = true;
+        return;  // 더 이상 진행하지 않음
+    }
+
+    if(sts.isRest && sts.cNum == testingWords.length) {
         sts.isRest = false;
         location.href = "./index.html";
     } else if(sts.isRest) {
@@ -158,19 +169,17 @@ function submit(){
         document.querySelector(".okBtn").innerHTML = "제출";
         newWord();
     } else {
-        if(document.querySelector("#answer").value == sts.cWord) {
-            // 맞음 코드
-            document.querySelector("#answer").style.color = "#66cc33";
-            
+        if(userInput === sts.cWord) {
+            // 정답
+            answerInput.style.color = "#66cc33";
         } else {
-            // 틀림 코드
-            document.querySelector("#answer").style.color = "#ff0000";
-            document.querySelector("#answer").value = sts.cWord;
+            // 오답
+            answerInput.style.color = "#ff0000";
+            answerInput.value = sts.cWord;
         }
-        if(sts.cNum != 43) {document.querySelector(".okBtn").innerHTML = "다음";}
-        else {document.querySelector(".okBtn").innerHTML = "처음";}
+        document.querySelector(".okBtn").innerHTML = (sts.cNum != 43) ? "다음" : "처음";
         sts.isRest = true;
-    }}
+    }
 }
 
 function newWord() {
