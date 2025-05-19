@@ -6,17 +6,10 @@ return false;
 }
 let hasUnsavedChanges = true;
 
-// beforeunload 이벤트 설정
 window.addEventListener('beforeunload', (e) => {
-  if (hasUnsavedChanges) {
-    // Chrome, Edge, Firefox, Safari 모두 지원
-    e.preventDefault();
-    e.returnValue = ''; // 필수!
-    return ''; // 일부 브라우저에서 필요
-  }
-  e.preventDefault();
-  e.returnValue = ''; // Chrome, Edge, Safari에서 필요
-  return '작성 중인 내용이 사라질 수 있습니다. 정말 나가시겠습니까?';
+e.preventDefault();
+e.returnValue = ''; // Chrome, Edge, Safari에서 필요
+return '작성 중인 내용이 사라질 수 있습니다. 정말 나가시겠습니까?';
 });
 document.addEventListener("keydown", doNotReload);
 const params = new URLSearchParams(window.location.search);
@@ -199,3 +192,14 @@ testingWords = [...realdata].sort(() => Math.random() - 0.5).slice(0, Math.min(r
 sts.len = testingWords.length;
 newWord();
 })();
+document.addEventListener("input", function (e) {
+  if (e.target && e.target.id === "answer" && !e.target.dataset.enterAttached) {
+    e.target.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        submit(); // 제출 버튼 누른 것처럼
+      }
+    });
+    e.target.dataset.enterAttached = "true"; // 중복 방지용 플래그
+  }
+});
