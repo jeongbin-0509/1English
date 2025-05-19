@@ -192,3 +192,14 @@ function newWord() {
     sts.len = testingWords.length;
     newWord();
 })();
+document.addEventListener("input", function (e) {
+  if (e.target && e.target.id === "answer" && !e.target.dataset.enterAttached) {
+    e.target.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        submit(); // 제출 버튼 누른 것처럼
+      }
+    });
+    e.target.dataset.enterAttached = "true"; // 중복 방지용 플래그
+  }
+});
