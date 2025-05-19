@@ -145,6 +145,7 @@ select {
 
 .progress{
   color: #66cc33;
+  font-weight: lighter;
 }
 
 #answer {
