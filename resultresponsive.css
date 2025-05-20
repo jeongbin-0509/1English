@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .result-box {
+    padding: 30px 20px;
+  }
+
+  .stat {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .stat {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
