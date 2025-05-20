@@ -7,11 +7,17 @@ function doNotReload(event) {
 
 let hasUnsavedChanges = true;
 
-window.addEventListener('beforeunload', (e) => {
+function removeBeforeUnloadWarning() {
+  window.removeEventListener('beforeunload', beforeUnloadHandler);
+}
+
+function beforeUnloadHandler(e) {
   e.preventDefault();
   e.returnValue = '';
   return '작성 중인 내용이 사라질 수 있습니다. 정말 나가시겠습니까?';
-});
+}
+
+window.addEventListener('beforeunload', beforeUnloadHandler);
 
 document.addEventListener("keydown", doNotReload);
 
@@ -24,7 +30,10 @@ let sts = {
   cWord: "",
   isRest: false,
   len: 50,
-  feedbackShown: false
+  feedbackShown: false,
+  correct: 0,
+  incorrect: 0,
+  quizFinished: false
 };
 
 if (days.length == 0) {
@@ -104,19 +113,19 @@ const bData = data => {
   if (!isNaN(data[0].trim())) {
     newdata.push(parseInt(data[0], 10));
     if (newdata[0] > 10) {
-      newdata.push(data[2].replace(/^\["“”]|["“”]$/g, ""));
-      newdata.push(data[3].replace(/^\["“”]|["“”]$/g, ""));
-      newdata.push(data[4].replace(/^\["“”]|["“”]$/g, ""));
+      newdata.push(data[2].replace(/^["“”]|["“”]$/g, ""));
+      newdata.push(data[3].replace(/^["“”]|["“”]$/g, ""));
+      newdata.push(data[4].replace(/^["“”]|["“”]$/g, ""));
     } else {
-      newdata.push(data[3].replace(/^\["“”]|["“”]$/g, ""));
-      newdata.push(data[4].replace(/^\["“”]|["“”]$/g, ""));
-      newdata.push(data[5].replace(/^\["“”]|["“”]$/g, ""));
+      newdata.push(data[3].replace(/^["“”]|["“”]$/g, ""));
+      newdata.push(data[4].replace(/^["“”]|["“”]$/g, ""));
+      newdata.push(data[5].replace(/^["“”]|["“”]$/g, ""));
     }
   } else {
     newdata.push(parseInt(data[0].replace(/\D/g, ""), 10));
-    newdata.push(data[2].replace(/^\["“”]|["“”]$/g, ""));
-    newdata.push(data[3].replace(/^\["“”]|["“”]$/g, ""));
-    newdata.push(data[4].replace(/^\["“”]|["“”]$/g, ""));
+    newdata.push(data[2].replace(/^["“”]|["“”]$/g, ""));
+    newdata.push(data[3].replace(/^["“”]|["“”]$/g, ""));
+    newdata.push(data[4].replace(/^["“”]|["“”]$/g, ""));
   }
 
   return newdata;
@@ -127,8 +136,10 @@ function submit() {
   if (!answerInput) return;
 
   if (sts.isRest && sts.cNum == testingWords.length) {
-    sts.isRest = false;
-    location.href = "./index.html";
+    removeBeforeUnloadWarning();
+    sts.quizFinished = true;
+    const resultURL = `./result.html?correct=${sts.correct}&incorrect=${sts.incorrect}`;
+    location.href = resultURL;
   } else if (sts.isRest) {
     sts.isRest = false;
     sts.cNum++;
@@ -166,6 +177,11 @@ document.addEventListener("input", function (e) {
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
+    if (sts.quizFinished) {
+      window.location.href = "./index.html";
+      return;
+    }
+
     const answerInput = document.querySelector("#answer");
     if (!answerInput) return;
 
@@ -178,11 +194,13 @@ document.addEventListener("keydown", function (event) {
         answerInput.style.color = "#66cc33";
         feedback.textContent = "정답입니다!";
         feedback.style.color = "#66cc33";
+        sts.correct++;
       } else {
         answerInput.style.color = "#ff0000";
         answerInput.value = correctAnswer;
         feedback.textContent = `오답입니다! 정답: ${correctAnswer}`;
         feedback.style.color = "#ff0000";
+        sts.incorrect++;
       }
       document.querySelector(".okBtn").innerHTML = (sts.cNum != 43) ? "다음" : "처음";
       sts.feedbackShown = true;
