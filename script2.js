@@ -52,6 +52,7 @@ const newExample = data => {
   document.querySelector("#answer").style.color = "#000000";
   document.querySelector("#asp").innerHTML = `<p>${data[3]}</p>`;
   document.querySelector("#progress").innerHTML = sts.cNum + " / " + sts.len;
+  document.getElementById('answer').focus()
 };
 
 function parseCSV(text) {
