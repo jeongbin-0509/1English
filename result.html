@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>검색 결과</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      font-family: 'Pretendard', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #66cc33;
+    }
+
+    .result-box {
+      background-color: #2b2b2b;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .stat {
+      font-size: 22px;
+      margin: 15px 0;
+    }
+
+    .correct {
+      color: #66cc33;
+    }
+
+    .incorrect {
+      color: #ff4444;
+    }
+
+    button {
+      margin-top: 25px;
+      font-size: 16px;
+      padding: 12px 28px;
+      background-color: #66cc33;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #57b52b;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 테스트 결과</h1>
+  <div class="result-box">
+    <div class="stat correct" id="correct-count">정답: 0개</div>
+    <div class="stat incorrect" id="incorrect-count">오답: 0개</div>
+    <button onclick="goHome()">🏠 홈으로 돌아가기</button>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const correct = params.get('correct') || 0;
+    const incorrect = params.get('incorrect') || 0;
+
+    document.getElementById('correct-count').textContent = `정답: ${correct}개`;
+    document.getElementById('incorrect-count').textContent = `오답: ${incorrect}개`;
+
+    function goHome() {
+      window.location.href = './index.html';
+    }
+
+    // ✔ 엔터를 누르면 홈으로
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        goHome();
+      }
+    });
+  </script>
+</body>
+</html>
