@@ -214,3 +214,7 @@ document.addEventListener("keydown", function (event) {
     }
   }
 });
+document.querySelector(".okBtn")?.addEventListener("click", () => {
+  const enterEvent = new KeyboardEvent("keydown", { key: "Enter" });
+  document.dispatchEvent(enterEvent);
+});
