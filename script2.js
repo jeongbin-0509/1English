@@ -23,7 +23,8 @@ let sts = {
   cDay: 0,
   cWord: "",
   isRest: false,
-  len: 50
+  len: 50,
+  feedbackShown: false
 };
 
 if (days.length == 0) {
@@ -34,9 +35,11 @@ if (days.length == 0) {
 const newExample = data => {
   sts.cDay = data[0];
   sts.cWord = data[1];
+  sts.feedbackShown = false;
 
   document.querySelector("#exp").innerHTML = `
-    <p>${data[2].replace(/__/, `<input type="text" id="answer" placeholder="${sts.cWord.slice(0,1)}" autocomplete="off">`)}</p>`;
+    <p>${data[2].replace(/__/, `<input type="text" id="answer" placeholder="${sts.cWord.slice(0,1)}" autocomplete="off">`)}</p>
+    <div id="feedback" style="margin-top: 10px; font-weight: bold;"></div>`;
   document.querySelector("#answer").style.color = "#000000";
   document.querySelector("#asp").innerHTML = `<p>${data[3]}</p>`;
   document.querySelector("#progress").innerHTML = sts.cNum + " / " + sts.len;
@@ -161,8 +164,6 @@ document.addEventListener("input", function (e) {
   }
 });
 
-// ✅ 최종 수정된 기능: 정확히 일치하지 않으면 정답을 보여주고, 이후 Enter로 넘어감
-
 document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     const answerInput = document.querySelector("#answer");
@@ -170,19 +171,27 @@ document.addEventListener("keydown", function (event) {
 
     const inputVal = answerInput.value.trim();
     const correctAnswer = sts.cWord.trim();
+    const feedback = document.querySelector("#feedback");
 
-    if (!sts.isRest) {
+    if (!sts.isRest && !sts.feedbackShown) {
       if (inputVal.toLowerCase() === correctAnswer.toLowerCase()) {
-        // 정답일 경우 초록색 표시
         answerInput.style.color = "#66cc33";
+        feedback.textContent = "정답입니다!";
+        feedback.style.color = "#66cc33";
       } else {
-        // 오답일 경우 빨간색으로 정답 노출
         answerInput.style.color = "#ff0000";
         answerInput.value = correctAnswer;
+        feedback.textContent = `오답입니다! 정답: ${correctAnswer}`;
+        feedback.style.color = "#ff0000";
       }
       document.querySelector(".okBtn").innerHTML = (sts.cNum != 43) ? "다음" : "처음";
+      sts.feedbackShown = true;
+      return;
+    }
+
+    if (sts.feedbackShown) {
+      feedback.textContent = "";
       sts.isRest = true;
-    } else {
       submit();
     }
   }
