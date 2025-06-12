@@ -1,6 +1,6 @@
 day1,1,“Evidence”,“__ shows that global warming is certainly occurring.”,“지구 온난화가 분명히 일어나고 있다는 것을 증거가 보여 준다.”
 day1,2,“beneficial”,“Heavily processed foods such as frozen food lack __ bacteria.”,“냉동식품과 같은 많이 가공된 식품들은 유익한 세균이 부족하다.”
-day1,3,“value”,“The company’s stock continues to drop in __.”,“그 회사의 주식은 가치가 계속 하락하고 있다.”
+day1,3,“value”,“The company’s stock continues to drop in __.” ,“그 회사의 주식은 가치가 계속 하락하고 있다.”
 day1,4,“pandemic”,“Because of the global __, work from home is becoming more common.”,“전 세계적인 대규모 유행병 때문에 재택 근무가 더 흔해지고 있다.”
 day1,5,“public”,“The advertisement is designed to raise __ awareness of the issues.”,“그 광고는 그 쟁점들에 대한 대중의 의식을 증진시키기 위해 계획된 것이다.”
 day1,6,“ingredient”,“The main __ of the dish is the passion!”,“음식의 주재료는 열정이다!”
@@ -125,7 +125,7 @@ day3,36,“utilized”,“In the early days, dogs were __ to deliver mail.”,�
 day3,37,“scenery”,“The beauty of the __ was beyond description.”,“그 풍경의 아름다움은 형언할 수 없었다.”
 day3,38,“moist”,“Artificial tears are a good way to keep the eye __.”,“인공 눈물은 눈을 촉촉하게 유지하기 위한 좋은 방법이다.”
 day3,39,“merchants”,“Both consumers and __ expect to be able to use cloud services.”,“소비자와 상인 모두 클라우드 서비스를 이용할 수 있기를 기대한다.”
-day3,40,“domesticated”,“In a region called the “Fertile Crescent,” the earliest known wheat was __ and grown in about 8500 BCE. ”,“‘비옥한 초승달’이라고 불리는 지역에서, 기원전 약 8,500년에 최초로 알려진 밀이 재배되고 길러졌다.”
+day3,40,“domesticated”,“In a region called the 'Fertile Crescent,' the earliest known wheat was __ and grown in about 8500 BCE.”,“‘비옥한 초승달’이라고 불리는 지역에서, 기원전 약 8,500년에 최초로 알려진 밀이 재배되고 길러졌다.”
 day3,41,“monopoly”,“Cigarette production is still a state __ in some countries.”, “담배 생산은 몇몇 국가에서 여전히 국가가 독점한다.”
 day3,42,“collapsed”,“Hundreds of buildings __ in the earthquake.”,“수백 개의 건물이 지진으로 무너져 내렸다.” 
 day3,43,“impaired”,“ A knee injury may have __ her chances of winning the tournament.” ,“무릎 부상이 그녀의 토너먼트 우승 가능성을 손상시켰을 수도 있다.”
@@ -404,7 +404,7 @@ day5,43,“independent”,“A consultant is an __ contractor and not an employe
 10, 366, “segregate”, “segregate”, “People who live in these places may still try to __ based on skin color.”, “이들 지역에 사는 사람들은 여전히 피부색에 근거하여 차별 대우를 하려고 할지도 모른다.”
 10, 367, “notion”, “notion”, “The __ that food has a specific influence on gene expression is relatively new.”, “음식이 유전자 발현에 특정한 영향을 미친다는 생각은 비교적 새로운 것이다.”
 10, 368, “nuclear”, “nuclear”, “All __ installations in the world are subject to international safeguards.”, “세계의 모든 핵 시설은 국제 안전 규약의 지배를 받는다.”
-10, 369, “proposal”, “proposal”, “If your process has an activity such as “submit __” or “make cold call,” then that’s just what your people will do.”, “만약 당신의 과정에 ‘제안 제출하기’나 ‘임의의 권유 전화 걸기’와 같은 활동이 있다면, 그것은 그저 당신의 아랫사람들이 할 일이다.”
+10, 369, “proposal”, “proposal”, “If your process has an activity such as 'submit __' or 'make cold call,' then that’s just what your people will do.”, “만약 당신의 과정에 ‘제안 제출하기’나 ‘임의의 권유 전화 걸기’와 같은 활동이 있다면, 그것은 그저 당신의 아랫사람들이 할 일이다.”
 10, 370, “voluntary”, “voluntary”, “This method of choosing a sample is called “__ response sampling.””, “표본을 고르는 이러한 방식은 ‘자발적 응답 표본 추출’이라고 불린다.”
 10, 371, “eliminate”, “eliminated”, “Once racial and ethnic segregation is __ and people come together, they must learn to live, work, and play with each other.”, “일단 인종적, 민족적 차별이 제거되고 사람들이 화합하고 나면, 그들은 서로 함께 살고 일하고 노는 법을 배워야 한다.”
 10, 372, “species”, “species”, “Warbler is an endangered __, so observers should carefully follow certain viewing ethics.”, “Warbler는 멸종 위기에 처한 종이므로, 관찰자들은 특정한 관찰 윤리를 신중히 따라야 한다.”
@@ -494,19 +494,19 @@ day5,43,“independent”,“A consultant is an __ contractor and not an employe
 12, 446, "philosopher", "There is only one thing a __ can be relied upon to do, and that is to contradict other philosophers.", "철학자가 할 수 있다고 기대할 수 있는 단 한 가지는 다른 철학자들의 말을 반박하는 것이다."
 12, 447, "federal", "The new legislation was necessary in order to obtain __ funding for construction projects.", "건설 프로젝트를 위한 연방 정부의 자금을 얻기 위해 새로운 법률 제정이 필요했다."
 12, 448, "devotes", "The bigger the flock of birds, the less time an individual bird __ to vigilance.", "새들의 무리가 더 클수록 한 마리 새가 경계에 바치는 시간은 더 줄어든다."
-12, 449, "refuge", "Take a look at a bus that has been converted into a refuge for the homeless.", "노숙자들의 쉼터로 개조된 버스를 보라."
+12, 449, "refuge", "Take a look at a bus that has been converted into a __ for the homeless.", "노숙자들의 쉼터로 개조된 버스를 보라."
 12, 450, "ego", "The purposeful displacement of concern away from the __ nonetheless remains partly self-referential.", "의도적으로 관심을 자아에서 멀리 옮긴다 하더라도 부분적으로는 여전히 자기 참조적인 상태로 남아 있다."
 12, 451, "criminal", "This movie is a thriller about a New York cop hunting an escaped __.", "이 영화는 탈주범을 쫓는 뉴욕 경찰에 관한 스릴러이다."
 12, 452, "tug", "The villagers used tractors to __ the car out of the ditch.", "마을 사람들은 트랙터를 이용해 그 차를 도랑에서 끌어냈다."
 12, 453, "debit card", "The most secure way of paying your bills online is to provide your __ number to your biller.", "온라인으로 대금을 지불하는 가장 안전한 방법은 청구서 발행자에게 직불카드 번호를 제공하는 것이다."
 12, 454, "mature", "In __ markets, breakthroughs that lead to a major change in competitive positions and to the growth of the market are rare.", "충분히 발달한 시장에서는 경쟁 구도에서 중요한 변화를 일으키고 시장 성장을 견인하는 획기적 발견이 드물다."
 12, 455, "dependence", "It was a political system operated by the emperor and the nobles based on mutual __.", "그것은 황제와 귀족들이 상호 의존에 근거해 운영한 정치 체제였다."
-12, 456, "authentic", "If the painting is authentic, we'd like to know more about it.", "그 그림이 진품이라면, 우리는 그것에 대해 더 알고 싶다."
+12, 456, "authentic", "If the painting is __, we'd like to know more about it.", "그 그림이 진품이라면, 우리는 그것에 대해 더 알고 싶다."
 12, 457, "spoil", "Group work inevitably produces poor results ("Too many cooks __ the broth").", "집단 작업은 불가피하게 좋지 않은 결과를 낳는다('요리사가 너무 많으면 수프가 망친다')."
 12, 458, "elaborate", "The species has evolved __ greeting behaviors.", "그 종은 정교한 인사 행동을 진화시켜 왔다."
 12, 459, "Enzyme", "__-rich foods like papaya and pineapple are great additions to your diet.", "파파야와 파인애플처럼 효소가 풍부한 음식은 식단에 크게 도움이 된다."
 12, 460, "breeding", "The cere changes color during the __ season, indicating whether a bird is ready to mate or may be less desirable as a partner.", "새의 부리 낭막은 번식기 동안 색이 변하여 짝짓기 준비 여부 또는 파트너로서의 매력도를 나타낸다."
-12, 461, "domain", "Organic foods are no longer the sole __ of healthy-eating fanatics.", "유기농 식품은 더 이상 건강식 광신자들의 전유물이 아니다."
+12, 461, "domain", "Organic foods are no longer the sole __ of healthy-eating fanatics.", "유기농 식품은 더 이상 건강식 광신자들의 영역이 아니다." 
 12, 462, "currency", "The end result was that gold could no longer be used as a unit of __ or exchange in America.", "최종 결과는 금이 미국에서 더 이상 통화나 교환 수단으로 사용될 수 없다는 것이었다."
 12, 463, "socialize", "We’re creating networks and influencing people to adopt a healthier way to __.", "우리는 네트워크를 구축하고 사람들이 더 건전한 방식으로 교제하도록 장려하고 있다."
 12, 464, "analogies", "Speculations about the meaning and purpose of prehistoric art rely heavily on __ drawn with modern-day hunter-gatherer societies.", "선사시대 예술의 의미와 목적에 대한 추측은 현대 수렵채집 사회와의 유사점에 크게 의존한다."
@@ -516,7 +516,7 @@ day5,43,“independent”,“A consultant is an __ contractor and not an employe
 12, 468, "staple", "In Ireland, the potato became the __ food, with adults consuming an average of ten potatoes a day.", "아일랜드에서 감자가 주식이 되어 성인이 하루 평균 10개의 감자를 소비했다."
 12, 469, "normative", "Romans were not the first people to have a __ system.", "로마인들이 규범 체계를 가진 최초의 사람들은 아니다."
 12, 470, "evasion", "For the judge, this is equivalent to an __ of his responsibilities as a magistrate.", "그 판사에게 이것은 자신의 판사로서의 책임을 회피한 것과 같다."
-12, 471, "coordinate", "The agile methodology helps us to be flexible and to __ the work of the team.", "애자일 방법론은 유연하게 팀 업무를 조정하도록 돕는다."
+12, 471, "coordinate", "The agile methodology helps us to be flexible and to __ the work of the team.", "그 민첩한 방법론은 우리가 융통성 있고 팀의 업무를 조직화하도록 돕는다."
 12, 472, "discrimination", "Employees over the age of 40 are protected from age __ in the workplace.", "40세 이상의 직원들은 직장에서 나이 차별로부터 보호받는다."
 12, 473, "Habitual", "__ caffeinated coffee consumption contributes to depression prevention.", "습관적으로 카페인이 함유된 커피를 섭취하는 것은 우울증 예방에 기여한다."
 12, 474, "fatigue", "A business owner noticed that many of her employees exhibited signs of __ throughout the workday.", "한 기업주는 직원들이 근무 시간 내내 피로 징후를 보인다는 것을 알아챘다."
@@ -624,7 +624,7 @@ day5,43,“independent”,“A consultant is an __ contractor and not an employe
 15, 564, "pollution", "More meat production results in increased water __ in both rivers and oceans.", "육류 생산 증가로 인해 강과 바다에서의 수질 오염이 증가하고 있다."
 15, 565, "ruins", "Product placement __ the story only when it fails.", "제품을 숨겨 넣는 광고는 실패했을 때만 이야기를 망친다."
 15, 566, "limitations", "We should attempt to become the best we can be within our __.", "우리는 우리의 한계 내에서 우리가 될 수 있는 최고의 사람이 되기 위해 노력해야 한다."
-15, 567, "prompted", "What was it that __ scientists to become interested in the way we treat animals?", "무엇이 과학자들이 우리가 동물을 다루는 방식에 관심을 가지게 만들었을까?"
+15, 567, "prompted", "What was it that __ scientists to become interested in the way we treat animals?", "도대체 무엇이 과학자들로 하여금 우리가 동물을 대하는 방식에 대해 관심을 갖도록 촉발했을까?"
 15, 568, "particles", "These tears help clear the eyes of such irritants as the gas from the onion or dust __.", "이 눈물은 양파에서 나오는 가스나 먼지 입자와 같은 자극 물질로부터 눈을 보호하도록 돕는다."
 15, 569, "renewable", "They are at last beginning to invest in __ energy.", "그들은 마침내 재생 가능 에너지에 투자하기 시작하고 있다."
 15, 570, "qualifies", "Most people acquire a bit of decency that __ them for proper membership in the community of moral agents.", "대부분의 사람들은 도덕적 주체 공동체의 적절한 구성원이 될 자격을 주는 약간의 품위를 얻는다."
@@ -667,7 +667,7 @@ day5,43,“independent”,“A consultant is an __ contractor and not an employe
 16, 603, "ethical", "In 2011, British scientists, engineers, and scholars suggested that designers, builders, and users of robots follow five __ principles.", "2011년 영국의 과학자들, 공학자들, 학자들은 로봇의 설계자, 제작자, 이용자들이 다섯 가지 윤리적 원칙을 따라야 한다고 제안했다."
 16, 604, "contemporary", "Most __ art began as some sort of craft.", "대부분의 현대 예술은 일종의 공예로서 시작됐다."
 16, 605, "candidates", "We decided to narrow down the __.", "우리는 후보군을 좁히기로 했다."
-16, 606, "conventional", "The Eastgate Centre was constructed without a __ cooling system.", "Eastgate Centre는 전통적인 냉방 시스템 없이 건설되었다."
+16, 606, "conventional", "The Eastgate Centre was constructed without a __ cooling system.", "Eastgate Centre는 전형적인 냉방 시스템 없이 건설되었다."
 16, 607, "niches", "More diverse communities are believed to be more stable because they use a broader range of __ than species-poor communities.", "더 다양한 군집은 종이 빈약한 군집보다 더 광범위한 적소를 사용하기 때문에 더 안정적인 것으로 여겨진다."
 16, 608, "governed", "Whatever we do on earth is __ by the rules of nature.", "우리가 지구상에서 하는 모든 것은 자연의 법칙에 의해 지배받는다."
 16, 609, "impulse", "Our first __ is to run away when in danger.", "위험에 처하면 우리의 첫 번째 충동은 달아나는 것이다."
@@ -695,7 +695,7 @@ day5,43,“independent”,“A consultant is an __ contractor and not an employe
 16, 631, "corresponds", "We will check whether the written record __ to what was actually said.", "우리는 서면 기록이 실제 말했던 것과 일치하는지 확인할 것이다."
 16, 632, "kinship", "The two boys proved their __ by showing their identification cards.", "두 소년은 신분증을 제시하며 친족임을 증명했다."
 16, 633, "botanical", "There was merely a tag on the plant showing some foreign or __ name.", "식물에는 단지 어떤 외국명이든지 또는 식물학상의 이름인지 알려 주는 이름표가 있었다."
-16, 634, "compromise", "Neither party is willing to __ on the issue.", "양쪽 정당 중 어느 쪽도 그 문제에 대해 굴복하라고 하지 않는다."
+16, 634, "compromise", "Neither party is willing to __ on the issue.", "양쪽 정당 중 어느 쪽도 그 문제에 대해 타협하라고 하지 않는다."
 16, 635, "deceit", "That’s because criminals have perfected the art of manipulation and __.", "그것은 범죄자들이 조작과 사기의 기술에 통달했기 때문이다."
 16, 636, "informal", "Tourism can generate business opportunities in both the formal and __ sector.", "관광업은 공식적 분야와 비공식적 분야 둘 다에서 사업 기회를 창출할 수 있다."
 16, 637, "asserted", "The lawyer __ that his client is not guilty.", "변호사는 자신의 의뢰인에게는 죄가 없다고 주장했다."
