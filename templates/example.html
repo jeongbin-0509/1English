@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영어 수행 만점 가자</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../responsive.css">
+    <!-- 정적 CSS 불러오기 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 </head>
 
 <body> 
     <div id="sbarpart">
-        <!--사이드바 열기 버튼 -->
+        <!-- 사이드바 열기 버튼 -->
         <button class="open-btn" onclick="openSidebar()"></button>
 
         <!-- 사이드바 -->
         <div class="sidebar" id="sidebar">
             <button class="close-btn" onclick="closeSidebar()"></button>
-            <h2>단<spon style="color: #66cc33;">어</spon>장 by <span style="color: #66cc33;">;</span></h2>
+            <h2>단<span style="color: #66cc33;">어</span>장 by <span style="color: #66cc33;">;</span></h2>
             <hr style="width: auto; height: 2px; background-color: #555555; border: none">
             <button class="Reselect" onclick="goToPage()">DAY 재선택</button>
             <button class="Review">오답복습(미완)</button>
@@ -37,13 +38,13 @@
     </div>
 
     <div class="container">
-        <button class="okBtn" onclick="submit()">제출</button>
-
+        <button class="okBtn" onclick="submitAnswer()">제출</button>
         <!-- ✅ 정답/오답 피드백 메시지 출력 영역 -->
         <div id="feedback" style="margin-top: 10px; font-weight: bold;"></div>
     </div>
     
-    <script src="../script.js"></script>
-    <script src="../script2.js"></script>
+    <!-- 정적 JS 불러오기 -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
 </body>
 </html>

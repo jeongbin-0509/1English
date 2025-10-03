@@ -23,7 +23,7 @@ h1, h3 {
 }
 
 h1 {
-  margin: 3% 0 10%;
+  margin: 4.5% 0 10%;
   font-size: 5vw;
 }
 
@@ -82,7 +82,7 @@ select {
 .open-btn, .close-btn {
   width: 40px;
   height: 40px;
-  background-image: url("pic/butt1-noogi.png");
+  background-image: url("../images/butt1-noogi.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -160,4 +160,66 @@ select {
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
+}
+
+.loginpart {
+  margin: 0;
+  padding: 0;
+  height: 40vh; /* 전체 화면 높이 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+  background-color: #181818; /* 배경색 (원하는 대로 바꿔도 됨) */
+}
+
+/* 로그인 박스 */
+.loginbox {
+  background-color: #222;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+  width: 300px;
+}
+
+.loginbox h2 {
+  margin-bottom: 25px;
+  color: #66cc33;
+}
+
+/* 입력창 */
+.loginbox input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.loginbox input:focus {
+  border: 2px solid #66cc33;
+  background-color: #2a2a2a;
+}
+
+/* 버튼 */
+.loginbox button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66cc33;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #181818;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.2s;
+}
+
+.loginbox button:hover {
+  background-color: #57a82c;
 }
