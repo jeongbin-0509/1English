@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+  <div class="loginbox">
+    <h2>회원가입</h2>
+    <form action="/signup" method="post">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">회원가입</button>
+    </form>
+    <p style="margin-top:10px;">
+      이미 계정이 있나요? <a href="{{ url_for('login') }}">로그인</a>
+    </p>
+  </div>
+
+    <h5 style="color: #555555;">
+        made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 <br>
+        오류문의 : 인스타 an0_9jb (오류난 화면을 찍어서 보내주세요)
+    </h5>
+
+    <!-- 자바스크립트도 url_for 사용 -->
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>
