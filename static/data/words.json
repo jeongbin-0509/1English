@@ -1,0 +1,1910 @@
+[
+    {
+        "day" : 27,
+        "wordnum" : 1018,
+        "word" : "share",
+        "example_count" : 4,
+        "examples" : [
+            {
+                "meaning" : "공유하다",
+                "e_sentence" : "She wrote a report about her experience to _1_ with her class.",
+                "k_sentence" : "그녀는 반 친구들과 공유하기 위해 그녀의 경험에 대한 보고서를 작성했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "share"
+                ]
+            },
+            {
+                "meaning" : "나누다",
+                "e_sentence" : "We _1_ the pizza between the four of us and it was plenty!",
+                "k_sentence" : "우리는 피자를 우리 네 명끼리 나눠 먹었고 그것은 충분했다!",
+                "blank_count" : 1,
+                "blanks" : [
+                    "shared"
+                ]
+            },
+            {
+                "meaning" : "몫, 지분",
+                "e_sentence" : "Will both players receive an equal _1_ of the winnings?",
+                "k_sentence" : "두 선수가 상금에서 동등한 몫을 받습니까?",
+                "blank_count" : 1,
+                "blanks" : [
+                    "share"
+                ]
+            },
+            {
+                "meaning" : "시장 점유율, 주식",
+                "e_sentence" : "The company dramatically increased its market _1_ last year.",
+                "k_sentence" : "그 회사는 지난해에 시장 점유율을 극적으로 늘렸다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "share"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1019,
+        "word" : "object",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "물건, 사물",
+                "e_sentence" : "I saw a strange _1_ rolling fast on the ground.",
+                "k_sentence" : "나는 이상한 물체가 땅 위를 빠르게 굴러가는 것을 보았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "object"
+                ]
+            },
+            {
+                "meaning" : "목적, 동기",
+                "e_sentence" : "His sole object in life was to make a great fortune.",
+                "k_sentence" : "삶에서 그의 유일한 목적은 많은 재산을 모으는 것이었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "object"
+                ]
+            },
+            {
+                "meaning" : "반대하다, 싫어하다",
+                "e_sentence" : "Many people _1_ to the building of a gas station in many town.",
+                "k_sentence" : "많은 사람들이 자신들의 마을에 주유소를 건설하는 것에 반대했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "objected"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1020,
+        "word" : "practice",
+        "example_count" : 5,
+        "examples" : [
+            {
+                "meaning" : "연습, 실행",
+                "e_sentence" : "Musical ability is less important and comes with _1_.",
+                "k_sentence" : "음악적 능력은 덜 중요하고 연습과 함께 온다[연습을 해야 길러진다].",
+                "blank_count" : 1,
+                "blanks" : [
+                    "practice"
+                ]
+            },
+            {
+                "meaning" : "관행, 관례",
+                "e_sentence" : "It is common _1_ to share child development information.",
+                "k_sentence" : "아동 발달 정보를 공유하는 것은 일반적인 관행이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "practice"
+                ]
+            },
+            {
+                "meaning" : "업무, 영업",
+                "e_sentence" : "Tom entered the _1_ of law in 1998.",
+                "k_sentence" : "Tom은 1998년에 변호사업을 개업했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "practice"
+                ]
+            },
+            {
+                "meaning" : "실천하다, 실행하다",
+                "e_sentence" : "_1_ healthy eating habits influences everything including your weight and blood pressure.",
+                "k_sentence" : "건강한 식습관을 실천하는 것은 체중과 혈압을 포함한 모든 것에 영향을 미친다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "Practicing"
+                ]
+            },
+            {
+                "meaning" : "연습하다, 훈련하다",
+                "e_sentence" : "He jumped up onto the board just like he had _1_.",
+                "k_sentence" : "그는 자신이 연습했던 그대로 보드 위로 뛰어 올랐다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "practiced"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1021,
+        "word" : "issue",
+        "example_count" : 4,
+        "examples" : [
+            {
+                "meaning" : "문제, 쟁점",
+                "e_sentence" : "You need to have a good understanding of the _1_.",
+                "k_sentence" : "여러분은 그 문제에 대해 잘 이해하고 있어야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "issue"
+                ]
+            },
+            {
+                "meaning" : "~호, 발행(물)",
+                "e_sentence" : "This article appeared in _1_ 108 of the magazine.",
+                "k_sentence" : "이 기사는 그 잡지의 108호에 실렸다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "issue"
+                ]
+            },
+            {
+                "meaning" : "발부하다, 발행하다",
+                "e_sentence" : "The first driver's licenses were _1_ in 1903 by Massachusetts and Missouri.",
+                "k_sentence" : "최초의 운전 면허증은 1903년에 Massachusetts주와 Missouri주에서 발부되었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "issued"
+                ]
+            },
+            {
+                "meaning" : "공표하다, 발표하다",
+                "e_sentence" : "Could you _1_ this statement, please?",
+                "k_sentence" : "이 성명서를 공표해 주실 수 있나요?",
+                "blank_count" : 1,
+                "blanks" : [
+                    "issue"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1022,
+        "word" : "represent",
+        "example_count" : 5,
+        "examples" : [
+            {
+                "meaning" : "대표하다, 대변하다",
+                "e_sentence" : "Every athlete in the Olympics _1_ his own country.",
+                "k_sentence" : "올림픽에서 모든 선수들은 자신의 국가를 대표한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "represents"
+                ]
+            },
+            {
+                "meaning" : "대표하다",
+                "e_sentence" : "To _1_ members effectively, directors must know what members need.",
+                "k_sentence" : "구성원들을 효과적으로 대표하기 위해서, 관리자들은 구성원들이 필요로 하는 것을 알아야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "represent"
+                ]
+            },
+            {
+                "meaning" : "상징하다, 나타내다",
+                "e_sentence" : "Hwaseong Fortress _1_ the peak of 18th-century Korean architecture.",
+                "k_sentence" : "수원화성은 18세기 한국 건축의 절정을 상징한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "represents"
+                ]
+            },
+            {
+                "meaning" : "묘사하다, 표현하다",
+                "e_sentence" : "In her painting, the prince is _1_ in the form of a snake.",
+                "k_sentence" : "그녀의 그림에서 그 왕자는 뱀의 형태로 묘사되어 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "represented"
+                ]
+            },
+            {
+                "meaning" : "기술하다, 단언하다",
+                "e_sentence" : "The boys were _1_ as being in need of protection.",
+                "k_sentence" : "그 소년들은 보호가 필요한 존재로 기술되었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "represented"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1023,
+        "word" : "favor",
+        "example_count" : 4,
+        "examples" : [
+            {
+                "meaning" : "호의, 친절",
+                "e_sentence" : "The recipient reciprocates _1_ for _2_.",
+                "k_sentence" : "받는 사람은 호의를 호의로 보답한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "favor", "favor"
+                ]
+            },
+            {
+                "meaning" : "지지, 찬성",
+                "e_sentence" : "The system is expected to meet with general _1_.",
+                "k_sentence" : "그 제도는 대체적인 지지를 받을 것으로 예상된다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "favor"
+                ]
+            },
+            {
+                "meaning" : "찬성하다, 지지하다",
+                "e_sentence" : "Most people _1_ a mandatory helmet law.",
+                "k_sentence" : "대부분의 사람들은 강제 헬멧 착용 법안을 찬성한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "favor"
+                ]
+            },
+            {
+                "meaning" : "선호하다, 더 좋아하다",
+                "e_sentence" : "Potatoes were at first less _1_ than sweet potatoes by Europeans.",
+                "k_sentence" : "유럽인들은 처음에 감자를 고구마보다 덜 선호하였다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "favored"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1024,
+        "word" : "degree",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "정도, 등급",
+                "e_sentence" : "This created a considerable _1_ of social influence.",
+                "k_sentence" : "이것이 상당한 정도의 사회적 영향력을 창출했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "degree"
+                ]
+            },
+            {
+                "meaning" : "학위, 계급",
+                "e_sentence" : "He received an honorary _1_ from the University of Oxford.",
+                "k_sentence" : "그는 Oxford 대학으로부터 명예 학위를 받았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "degree"
+                ]
+            },
+            {
+                "meaning" : "(온도 등의) 도",
+                "e_sentence" : "The earth's average temperature rose by nearly one _1_ Celcius during the last century.",
+                "k_sentence" : "지난 세기 동안 지구의 평균 기온은 거의 섭씨 1도가 상승했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "degree"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1025,
+        "word" : "property",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "재산, 자산",
+                "e_sentence" : "A certain amount of intellectual _1_ law is plainly necessary.",
+                "k_sentence" : "어느 정도의 지적 재산권법은 분명히 필요하다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "property"
+                ]
+            },
+            {
+                "meaning" : "부동산, 소유지",
+                "e_sentence" : "The price of _1_ in big cities has risen enormously.",
+                "k_sentence" : "대도시에서는 부동산 가격이 엄청나게 올랐다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "property"
+                ]
+            },
+            {
+                "meaning" : "특성, 속성",
+                "e_sentence" : "TWe use instruments to measure bulk _1_ of the environment.",
+                "k_sentence" : "우리는 대량의 환경 특성을 측정하기 위해 도구를 사용한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "properties"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1026,
+        "word" : "match",
+        "example_count" : 6,
+        "examples" : [
+            {
+                "meaning" : "성냥",
+                "e_sentence" : "The flare of the _1_ revealed his angry face.",
+                "k_sentence" : "휙 타오르는 성냥불이 그의 화난 얼굴을 드러냈다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "match"
+                ]
+            },
+            {
+                "meaning" : "시합, 경기",
+                "e_sentence" : "They scored five goals in the first half of the _1_.",
+                "k_sentence" : "그들은 그 시합의 전반전에서 5점을 득점했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "match"
+                ]
+            },
+            {
+                "meaning" : "필적하는 사람",
+                "e_sentence" : "I realized that science was no _1_ for art.",
+                "k_sentence" : "나는 과학이 예술에 필적하지 못한다는 것을 깨달았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "match"
+                ]
+            },
+            {
+                "meaning" : "~에 필적하다",
+                "e_sentence" : "Soon his warriors _1_ those of the other village.",
+                "k_sentence" : "곧 그의 전사들은 상대 마을의 전사들에 필적했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "matched"
+                ]
+            },
+            {
+                "meaning" : "어울리다, 일치하다",
+                "e_sentence" : "Your dress should _1_ the occasion.",
+                "k_sentence" : "여러분의 옷은 행사에 어울려야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "match"
+                ]
+            },
+            {
+                "meaning" : "짝지어 주다, 조화시키다",
+                "e_sentence" : "There are organizations that _1_ you with a baby orangutan.",
+                "k_sentence" : "당신과 아기 오랑우탄을 짝지어 주는 기관들이 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "match"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1027,
+        "word" : "article",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "기사, 글",
+                "e_sentence" : "She is supplying newspapers with _1_.",
+                "k_sentence" : "그녀는 신문사에 기사를 제공하고 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "articles"
+                ]
+            },
+            {
+                "meaning" : "물품, 물건",
+                "e_sentence" : "Inside are some furniture and other household _1_.",
+                "k_sentence" : "안에는 몇 점의 가구들과 다른 가정용품이 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "articles"
+                ]
+            },
+            {
+                "meaning" : "조항, 규약",
+                "e_sentence" : "It is an offense under _1_ 92.",
+                "k_sentence" : "그것은 제 92조에 의거하여 불법이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "article"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1028,
+        "word" : "yield",
+        "example_count" : 4,
+        "examples" : [
+            {
+                "meaning" : "낳다, 생산하다",
+                "e_sentence" : "Car sharing services are proven to _1_ environmentally friendly results.",
+                "k_sentence" : "자동차 공유 서비스는 환경 친화적인 결과를 낳는다는 것이 입증되었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "yield"
+                ]
+            },
+            {
+                "meaning" : "항복하다, 굴복하다",
+                "e_sentence" : "He resisted as long as possible, but was forced to _1_.",
+                "k_sentence" : "그는 가능한 한 오래 저항했지만, 어쩔 수 없이 항복했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "yield"
+                ]
+            },
+            {
+                "meaning" : "수확, 산출",
+                "e_sentence" : "For better _1_ of mustard seeds, pollination is necessary.",
+                "k_sentence" : "더 나은 겨자 씨 수확을 위해서는 꽃가루받이가 필수적이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "yield"
+                ]
+            },
+            {
+                "meaning" : "양보하다",
+                "e_sentence" : "If you're going downhill, you need to _1_ to bikers going uphill.",
+                "k_sentence" : "여러분이 언덕을 내려가고 있다면, 자전거를 타고 언덕을 올라가는 사람들에게 양보할 필요가 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "yield"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1029,
+        "word" : "lean",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "기대다, 의지하다",
+                "e_sentence" : "Two uniformed soldiers _1_ against a stone wall.",
+                "k_sentence" : "군복을 입은 병사 두 명이 돌담에 기대었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "leaned"
+                ]
+            },
+            {
+                "meaning" : "숙이다, 기울이다",
+                "e_sentence" : "I was compelled to _1_ over to pick it up.",
+                "k_sentence" : "나는 그것을 줍기 위해 어쩔 수 없이 몸을 앞으로 숙였다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "lean"
+                ]
+            },
+            {
+                "meaning" : "마른, 야윈",
+                "e_sentence" : "This can help you stay _1_ and muscular year round.",
+                "k_sentence" : "이것은 당신이 일 년 내내 마르고 근육이 발달된 채로 있도록 도울 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "lean"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1030,
+        "word" : "overcome",
+        "example_count" : 2,
+        "examples" : [
+            {
+                "meaning" : "극복하다, 압도하다",
+                "e_sentence" : "Grazing animals have different kinds of adaptations that _1_ these deterrents.",
+                "k_sentence" : "방목 가축은 이러한 방해 요인을 극복하는 여러 종류의 적응 기제를 가지고 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "overcome"
+                ]
+            },
+            {
+                "meaning" : "극복하다",
+                "e_sentence" : "He helped women and minorities _1_ discrimination in the workplace.",
+                "k_sentence" : "그는 여성과 소수자들이 직장에서의 차별을 극복하도록 도왔다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "overcome"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1031,
+        "word" : "overtake",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "추월하다, 따라잡다",
+                "e_sentence" : "A vehicle, which traveled in the opposite direction, _1_ another vehicle.",
+                "k_sentence" : "한 차량이 반대 방향에서 이동하였고 다른 차량을 추월했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "overtook"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1032,
+        "word" : "expedition",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "탐험, 원정",
+                "e_sentence" : "In the past five years, there have been seven or eight research _1_ to the region.",
+                "k_sentence" : "지난 5년간 그 지역에 일고여덟 차례 조사 탐험이 있었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "expeditions"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1033,
+        "word" : "exception",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "예외, 제외",
+                "e_sentence" : "Nothing is perfect in life, and the IoT is no _1_.",
+                "k_sentence" : "인생에서 완벽한 것은 아무것도 없으며, 사물인터넷도 예외는 아니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "exception"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1034,
+        "word" : "expose",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "노출시키다",
+                "e_sentence" : "We are _1_ to cosmic radiation that damages our DNA and increases our risk of cancer.",
+                "k_sentence" : "우리는 우리의 DNA를 손상시키고 암 발생 위험을 높이는 우주 방사선에 노출된다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "exposed"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1035,
+        "word" : "impose",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "부과하다",
+                "e_sentence" : "If they fail to meet their twelve percent obligation, they face penalties _1_ by the government.",
+                "k_sentence" : "만약 그들이 12퍼센트의 의무를 충족시키지 못하면, 정부에서 부과되는 벌금을 받게 된다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "imposed"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1036,
+        "word" : "violation",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "위반, 위배",
+                "e_sentence" : "Not wearing your seat belts is a _1_ of the traffice regulation.",
+                "k_sentence" : "안전벨트 미착용은 교통 법규 위반이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "violation"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1037,
+        "word" : "violence",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "폭력, 격렬함",
+                "e_sentence" : "The aims of the program are to highlight the prevalence of _1_ against children and women.",
+                "k_sentence" : "그 프로그램의 목적은 아이들과 여성에 대한 폭력의 만연을 조명하는 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "violence"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1038,
+        "word" : "resist",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "거부하다, 저항하다",
+                "e_sentence" : "Work with what they give you, instead of _1_ and trying to change them.",
+                "k_sentence" : "그들을 거부하거나 변화시키려는 것 대신 그들이 여러분에게 주는 것을 가지고 일해라.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "resisting"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1039,
+        "word" : "persist",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "지속하다",
+                "e_sentence" : "I hope some people will _1_ in the journey to unraveling this mystery.",
+                "k_sentence" : "나는 몇몇 사람들이 이 신비를 푸는 여향을 지속하기를 바란다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "persist"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1040,
+        "word" : "imaginary",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "상상의, 가상의",
+                "e_sentence" : "Try stepping outside your _1_ box and solve problems in a way you've never thought about before.",
+                "k_sentence" : "여러분의 상상의 상자 밖으로 시험 삼아 발을 디뎌보고 이전에는 한 번도 생각해보지 않았던 방식으로 문제들을 풀어보라.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "imaginary"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1041,
+        "word" : "imaginative",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "상상력이 풍부한",
+                "e_sentence" : "Jenny is really _1_ and has a definite vision of what she wants her business to be.",
+                "k_sentence" : "Jenny는 정말 상상력이 풍부하고 자신의 일이 어떻게 되기를 원하는지에 대한 명확한 비전을 가지고 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "imaginative"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1042,
+        "word" : "considerable",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "상당한, 많은",
+                "e_sentence" : "Our shopping habits can have _1_ effects on the environment.",
+                "k_sentence" : "우리의 쇼핑 습관은 환경에 상당한 영향을 미칠 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "considerable"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1043,
+        "word" : "considerate",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "배려하는, 사려 깊은",
+                "e_sentence" : "Please be _1_ of other spectators when using umbrellas.",
+                "k_sentence" : "우산을 사용할 때는 다른 관중을 배려하십시오.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "considerate"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1044,
+        "word" : "hostility",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "적대, 강한 반감",
+                "e_sentence" : "The climate of _1_ affects us all, but most especially impacts those who reside overseas.",
+                "k_sentence" : "적대의 분위기는 우리 모두에게 영향을 미치지만, 특히 해외에 거주하는 사람들에게 가장 영향을 준다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "hostility"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1045,
+        "word" : "hospitality",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "환대, 후한 대접",
+                "e_sentence" : "Their generosity and _1_ will be forever remembered by their friends and neighbors.",
+                "k_sentence" : "그들의 관대함과 환대는 그들의 친구들과 이웃에게 영원히 기억될 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "hospitality"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1046,
+        "word" : "appliance",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "기기, 기구",
+                "e_sentence" : "People began to accept the tradeoff of the risk of accidental death from electricity for better and cheaper tighting and worksaving electrical _1_.",
+                "k_sentence" : "사람들은 더 좋고 더 저렴한 조명 및 일을 줄여 주는 가전제품과 전기로 인한 사고사의 위험과의 맞교환을 받아들이기 시작했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "appliances"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1047,
+        "word" : "compliance",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "승낙",
+                "e_sentence" : "In order to ensure _1_, we also need to develop our means of action.",
+                "k_sentence" : "확실히 승낙을 얻기 위해서, 우리는 또한 우리의 행동 방식을 발전시켜야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "compliance"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1048,
+        "word" : "withdraw",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "빼내다, 철회하다",
+                "e_sentence" : "Its Mexican collection will still be large and impressive for several years to come unless they start _1_ books.",
+                "k_sentence" : "그것이 소장하고 있는 멕시코 도서는 책들을 빼내기 시작하지 않는다면, 향후 여러 해 동안 여전히 대규모이고 인상적일 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "withdrawing"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 27,
+        "wordnum" : 1049,
+        "word" : "withstand",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "견디다, 버티다",
+                "e_sentence" : "Brick walls have the advantage of _1_ heavy blows and are not easily destroyed.",
+                "k_sentence" : "벽돌 벽은 심한 타격을 견뎌내는 이점을 가지고 있고, 쉽게 파괴되지 않는다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "withstanding"
+                ]
+            }
+        ]
+    },
+
+
+    {
+        "day" : 28,
+        "wordnum" : 1050,
+        "word" : "feature",
+        "example_count" : 4,
+        "examples" : [
+            {
+                "meaning" : "특징, 특성",
+                "e_sentence" : "These _1_ of the smartphone have resulted in new picture-taking habits.",
+                "k_sentence" : "이러한 스마트폰의 특징들은 새로운 사진 촬영 습관을 낳았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "features"
+                ]
+            },
+            {
+                "meaning" : "지형, 지세",
+                "e_sentence" : "The geographical _1_ of the world can be found in maps and images.",
+                "k_sentence" : "세계의 지형들은 지도와 미미지에서 찾을 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "features"
+                ]
+            },
+            {
+                "meaning" : "특집 기사",
+                "e_sentence" : "They ran a _1_ on retirement planning.",
+                "k_sentence" : "그들은 은퇴 계획에 관한 특집 기사를 냈다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "feature"
+                ]
+            },
+            {
+                "meaning" : "~의 특징이 되다",
+                "e_sentence" : "It _1_ a wooden boardwalk which was built along the shore.",
+                "k_sentence" : "그것이 호숫가를 따라 만들어 놓은 나무 판자로 된 산책로의 특징이었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "featured"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1051,
+        "word" : "direct",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "기울이다, 향하다",
+                "e_sentence" : "All our efforts should be _1_ towards helping those in need.",
+                "k_sentence" : "우리의 모든 노력은 어려움에 처한 사람들을 돕는 데에 기울여져야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "directed"
+                ]
+            },
+            {
+                "meaning" : "지휘하다",
+                "e_sentence" : "In 2020, he was appointed to _1_ the science policy staff.",
+                "k_sentence" : "2020년에 그는 과학 정책 직원을 지휘하도록 임명되었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "direct"
+                ]
+            },
+            {
+                "meaning" : "직접적인",
+                "e_sentence" : "The students have _1_ experience with the concept.",
+                "k_sentence" : "그 학생들은 그 개념에 대해 직접적인 경험을 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "direct"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1052,
+        "word" : "matter",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "문제, 일",
+                "e_sentence" : "It is a _1_ of perspective nourished by passion.",
+                "k_sentence" : "그것은 열정으로 길러진 관점의 문제이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "matter"
+                ]
+            },
+            {
+                "meaning" : "물질",
+                "e_sentence" : "Coastal soil contains poisonous organic _1_.",
+                "k_sentence" : "해안토양은 독성의 유기 물질을 포함한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "matter"
+                ]
+            },
+            {
+                "meaning" : "중요하다",
+                "e_sentence" : "Feelings sometimes _1_ more than facts.",
+                "k_sentence" : "감정이 때때로 사실보다 더 중요하다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "matter"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1053,
+        "word" : "account",
+        "example_count" : 6,
+        "examples" : [
+            {
+                "meaning" : "설명, 서술",
+                "e_sentence" : "There are some _1_ of her paintings.",
+                "k_sentence" : "그녀의 그림에 대한 설명이 약간 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "accounts"
+                ]
+            },
+            {
+                "meaning" : "고려",
+                "e_sentence" : "They may take into _1_ the people at the helm.",
+                "k_sentence" : "그들은 실권이 있는 사람들을 고려할지도 모른다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "account"
+                ]
+            },
+            {
+                "meaning" : "계정, 계좌",
+                "e_sentence" : "My _1_ was locked after several attempts.",
+                "k_sentence" : "나의 계정이 몇 차례 시도 후에 잠겼다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "account"
+                ]
+            },
+            {
+                "meaning" : "원인이 되다",
+                "e_sentence" : "We examined the elements that _1_ for the show's popularity.",
+                "k_sentence" : "우리는 그 쇼의 인기의 원인이 되는 요소들을 조사했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "accounted"
+                ]
+            },
+            {
+                "meaning" : "여기다, 간주하다",
+                "e_sentence" : "The annual event was _1_ a success.",
+                "k_sentence" : "그 연례행사는 성공한 것으로 여겨졌다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "accounted"
+                ]
+            },
+            {
+                "meaning" : "차지하다",
+                "e_sentence" : "It _1_ for 69 percent of the total solid waste disposal.",
+                "k_sentence" : "그것은 전체 고형 폐기물 처리의 69퍼센트를 차지했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "accounted"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1054,
+        "word" : "ground",
+        "example_count" : 4,
+        "examples" : [
+            {
+                "meaning" : "지면, 땅",
+                "e_sentence" : "Outer chimneys are close to the _1_.",
+                "k_sentence" : "외부 굴뚝들은 지면에 가까이 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "ground"
+                ]
+            },
+            {
+                "meaning" : "이유, 동기",
+                "e_sentence" : "This step is consideered to be necessary on public _1_.",
+                "k_sentence" : "이 단계는 공공적 이유로 필요하다고 여겨진다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "grounds"
+                ]
+            },
+            {
+                "meaning" : "분야, 영역",
+                "e_sentence" : "They believe the process is moving onto dangerous _1_.",
+                "k_sentence" : "그들은 그 과정이 위험한 분야로 움직여 들어가고 있다고 믿는다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "ground"
+                ]
+            },
+            {
+                "meaning" : "근거를 두다",
+                "e_sentence" : "Readers want their stories firmly _1_ in scientific fact.",
+                "k_sentence" : "곧 그의 전사들은 상대 마을의 전사들에 필적했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "grounded"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1055,
+        "word" : "constitution",
+        "example_count" : 3,
+        "examples" : [
+            {
+                "meaning" : "헌법",
+                "e_sentence" : "The new _1_ of the United States and the agents of the Handicapper General (HG) guaranteed all this wonderful equality.",
+                "k_sentence" : "미국의 새로운 헌법과 Handicapper 장군(HG)의 대리인들이 이 모든 멋진 평등을 보장했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "constitution"
+                ]
+            },
+            {
+                "meaning" : "구성, 구조",
+                "e_sentence" : "The dictionary defines nature as the _1_ of a person or thing.",
+                "k_sentence" : "사전은 본성을 사람 또는 사물의 기본적인 구성으로 정의한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "constitution"
+                ]
+            },
+            {
+                "meaning" : "체질, 체격",
+                "e_sentence" : "Mr. Simpson was a man of delicate _1_.",
+                "k_sentence" : "Simpson 씨는 허약한 체질의 사람이었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "constitution"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1056,
+        "word" : "board",
+        "example_count" : 6,
+        "examples" : [
+            {
+                "meaning" : "판자, 널빤지",
+                "e_sentence" : "The _1_ creaked as I walked on them.",
+                "k_sentence" : "그 판자들은 내가 그 위로 걸었을 때 삐걱거렸다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "boards"
+                ]
+            },
+            {
+                "meaning" : "~판, 게시판",
+                "e_sentence" : "An electronic _1_ shows the accumulated donation in real time.",
+                "k_sentence" : "전광판은 실시간으로 누적된 기부액을 보여준다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "board"
+                ]
+            },
+            {
+                "meaning" : "선내",
+                "e_sentence" : "This means that all passengers are on _1_.",
+                "k_sentence" : "이것은 모든 승객이 탐승한 것을 의미한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "board"
+                ]
+            },
+            {
+                "meaning" : "위원회",
+                "e_sentence" : "Despite Carter's speech, the _1_ votes to unlock the gym.",
+                "k_sentence" : "Carter의 연설에도 불구하고, 위원회는 체육관을 개방하기 위한 투표를 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "board"
+                ]
+            },
+            {
+                "meaning" : "승선하다",
+                "e_sentence" : "From the main dock, people _1_ long wooden canoes, which carry them out to their various homes and shops.",
+                "k_sentence" : "중심 부두에서 사람들은 긴 나무 카누를 타고, 그것은 그들을 여러 집과 가게로 운반한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "board"
+                ]
+            },
+            {
+                "meaning" : "기숙하다",
+                "e_sentence" : "He is _1_ at the school for his senior year,",
+                "k_sentence" : "그는 4학년 동안 학교에서 기숙하고 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "boarding"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1057,
+        "word" : "stock",
+        "example_count" : 5,
+        "examples" : [
+            {
+                "meaning" : "재고, 저장",
+                "e_sentence" : "The product instantly went out of _1_.",
+                "k_sentence" : "그 제품은 즉시 재고가 바닥났다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stock"
+                ]
+            },
+            {
+                "meaning" : "주식, 증권",
+                "e_sentence" : "She owned $3,000 worth of _1_.",
+                "k_sentence" : "그녀는 3,000달러 가치의 주식을 소유했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stock"
+                ]
+            },
+            {
+                "meaning" : "가문, 혈통",
+                "e_sentence" : "His wife was descended from good Puritan _1_.",
+                "k_sentence" : "그의 아내는 훌륭한 Puritan 가문의 후손이었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stock"
+                ]
+            },
+            {
+                "meaning" : "가축",
+                "e_sentence" : "The breeding _1_ remains well protected.",
+                "k_sentence" : "번식용 가축은 여전히 잘 보호받고 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stock"
+                ]
+            },
+            {
+                "meaning" : "가지고 있다, 비축하다",
+                "e_sentence" : "We _1_ a wide range of products for your pet.",
+                "k_sentence" : "우리는 당신의 반려동물을 위한 다양한 종류의 제품을 가지고 있습니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stock"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1058,
+        "word" : "spring",
+        "example_count" : 5,
+        "examples" : [
+            {
+                "meaning" : "봄",
+                "e_sentence" : "You might simply notice _1_ because that is the time when your allergies get worse.",
+                "k_sentence" : "당신은 자신의 알레르기가 악화되는 시기인 것으로 보아 봄을 쉽게 알아차릴지도 모른다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "spring"
+                ]
+            },
+            {
+                "meaning" : "탄력, 탄성",
+                "e_sentence" : "Skin that has lost its _1_ isn't the result of just one cause.",
+                "k_sentence" : "탄력을 잃은 피부는 단 하나의 원인에 대한 결과가 아니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "spring"
+                ]
+            },
+            {
+                "meaning" : "활기, 생기",
+                "e_sentence" : "Joe has been walking with a _1_ in his step.",
+                "k_sentence" : "Joe는 활기찬 발걸음으로 걷고 있었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "spring"
+                ]
+            },
+            {
+                "meaning" : "나오다",
+                "e_sentence" : "The blueprints for our shells _1_ from our minds.",
+                "k_sentence" : "우리의 겉모습에 대한 청사진은 우리의 정신으로부터 나온다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "spring"
+                ]
+            },
+            {
+                "meaning" : "뛰어오르다",
+                "e_sentence" : "They _1_ directly out of the water in the manner of dabbling ducks.",
+                "k_sentence" : "그것들은 물장구치는 오리와 같은 방식으로 물 밖으로 곧장 뛰어오른다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "spring"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1059,
+        "word" : "mean",
+        "example_count" : 6,
+        "examples" : [
+            {
+                "meaning" : "의미하다",
+                "e_sentence" : "This does not _1_ that we should ignore the possibility of sinkholes.",
+                "k_sentence" : "이것이 우리가 싱크홀의 가능성을 무시해야 한다는 것을 의미하는 것은 아니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "mean"
+                ]
+            },
+            {
+                "meaning" : "의도하다",
+                "e_sentence" : "Since the bilding is _1_ for children, the handrails and stairs are specially designed for children's convenience.",
+                "k_sentence" : "그 건물은 어린이를 위한 것이기 때문에 일반 손잡이와 계단은 어린이의 편의에 맞게 특별히 설계되었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "meant"
+                ]
+            },
+            {
+                "meaning" : "인색한",
+                "e_sentence" : "It means sometimes you can be _1_.",
+                "k_sentence" : "그것은 때때로 당신이 인색해질 수 있다는 것을 의미한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "mean"
+                ]
+            },
+            {
+                "meaning" : "평균의",
+                "e_sentence" : "The _1_ temperature for the first 4 days in January was 2 degrees Celcius.",
+                "k_sentence" : "1월 첫 4일의 평균 온도는 섭씨 2도였다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "mean"
+                ]
+            },
+            {
+                "meaning" : "수단",
+                "e_sentence" : "Testing is still the usual _1_ by which students' progress is measured.",
+                "k_sentence" : "시험은 여전히 학생들의 진도가 측정되는 통상적인 수단이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "means"
+                ]
+            },
+            {
+                "meaning" : "평균",
+                "e_sentence" : "The _1_ of age of the employees is 35.",
+                "k_sentence" : "직원들의 나이의 평균은 35세이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "mean"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1060,
+        "word" : "balance",
+        "example_count" : 5,
+        "examples" : [
+            {
+                "meaning" : "균형",
+                "e_sentence" : "Finally, strike a _1_ between work and play.",
+                "k_sentence" : "마지막으로, 일과 놀이 사이의 균형을 맞추세요.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "balance"
+                ]
+            },
+            {
+                "meaning" : "잔고, 잔액",
+                "e_sentence" : "How many of you check your _1_ before you withdraw cash from a cash machine?",
+                "k_sentence" : "여러분들 중 얼마나 많은 분이 현금 자동 인출기에서 돈을 뽑기 전에 잔고를 확인하나요?",
+                "blank_count" : 1,
+                "blanks" : [
+                    "balance"
+                ]
+            },
+            {
+                "meaning" : "저울",
+                "e_sentence" : "A spring _1_ is a weighing instrument used in industries.",
+                "k_sentence" : "용수철 저울은 산업에서 사용되는 무게를 재는 도구이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "balance"
+                ]
+            },
+            {
+                "meaning" : "균형을 잡다",
+                "e_sentence" : "Likewise, missed field goals need not be balanced by successes.",
+                "k_sentence" : "마찬가지로, 놓친 필드 골은 성공(득점)에 의해서 균형이 맞춰져야 하는 것은 아니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "balanced"
+                ]
+            },
+            {
+                "meaning" : "비교 평가하다",
+                "e_sentence" : "You have to _1_ the advantages of living in a big house against the disadvantages.",
+                "k_sentence" : "너는 큰 집 생활의 유리한 점과 불리한 점을 비교해야만 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "balance"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1061,
+        "word" : "cover",
+        "example_count" : 7,
+        "examples" : [
+            {
+                "meaning" : "덮다, 가리다",
+                "e_sentence" : "His masterpiece is _1_ with thousands of blue dots.",
+                "k_sentence" : "그의 걸작은 수천 개의 파란 점들로 덮여 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "covered"
+                ]
+            },
+            {
+                "meaning" : "포괄하다",
+                "e_sentence" : "The term _1_ both video games and computer games.",
+                "k_sentence" : "그 용어는 비디오 게임과 컴퓨터 게임 둘 다를 포괄한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "covers"
+                ]
+            },
+            {
+                "meaning" : "걸치다",
+                "e_sentence" : "The national park _1_ an area of some 2,800 square kilometers.",
+                "k_sentence" : "그 국립공원은 약 2,800 평방킬로미터의 지역에 걸쳐 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "covers"
+                ]
+            },
+            {
+                "meaning" : "취재하다",
+                "e_sentence" : "He _1_ mostly high school and college sports.",
+                "k_sentence" : "그는 주로 고등학교와 대학 스포츠를 취재한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "covers"
+                ]
+            },
+            {
+                "meaning" : "보장하다",
+                "e_sentence" : "You're _1_ for up to 20,000 dollars in damages.",
+                "k_sentence" : "당신은 피해에 대해 2만 달러까지 보장받습니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "covered"
+                ]
+            },
+            {
+                "meaning" : "뚜껑, 덮개",
+                "e_sentence" : "A manhole _1_ changes into a pineapple with some yellow paint.",
+                "k_sentence" : "맨홀 뚜껑은 노란색 페인트를 이용하면 파인애플로 바뀐다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "cover"
+                ]
+            },
+            {
+                "meaning" : "피할 곳",
+                "e_sentence" : "Spectators ran for _1_ from flying debris.",
+                "k_sentence" : "관중들은 날아다니는 파편으로부터 피할 곳을 찾아 뛰었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "cover"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1062,
+        "word" : "project",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "프로젝트",
+                "e_sentence" : "They initiated large-scale development _1_ with money borrowed from other companies.",
+                "k_sentence" : "그들은 다른 회사에서 빌린 돈으로 대규모 발전 프로젝트를 시작했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "projects"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1063,
+        "word" : "reject",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "거절하다",
+                "e_sentence" : "She was later invited to meet Adolf Hitler but she _1_ the offer on political grounds.",
+                "k_sentence" : "그녀는 후에 Adolf Hitler를 만나도록 초대를 받았지만 정치적인 이유로 그 제안을 거절했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "rejected"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1064,
+        "word" : "perspective",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "관점",
+                "e_sentence" : "Looking at a problem from a different _1_ can lead you to a new approach to handle the problem.",
+                "k_sentence" : "다른 관점에서 문제를 보는 것은 그 문제를 다룰 새로운 접근 방식으로 당신을 이끌 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "perspective"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1065,
+        "word" : "respective",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "각자의",
+                "e_sentence" : "In fact, the two men have taken very separate ways in amassing their _1_ fortunes.",
+                "k_sentence" : "사실 두 남자는 자신들 각자의 재산을 모으는 데 매우 다른 방법을 취했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "respective"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1066,
+        "word" : "objective",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "객관적인",
+                "e_sentence" : "It is urgent to introduce _1_ methods to assess teachers.",
+                "k_sentence" : "교사를 평가하는 객고나적인 방법을 도입하는 것이 시급하다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "objective"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1067,
+        "word" : "subjective",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "주관적인",
+                "e_sentence" : "It is not only beliefs, attitudes, and values that are _1_.",
+                "k_sentence" : "주관적인 것은 신념, 태도, 가치관만이 아니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "subjective"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1068,
+        "word" : "emergency",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "비상 사태",
+                "e_sentence" : "International human rights law permits restrictions on liberty in times of national _1_.",
+                "k_sentence" : "국제 인권법은 국가 비상 사태 시에는 자유에 대한 제한을 허용한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "emergency"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1069,
+        "word" : "emergence",
+        "example_count" : 2,
+        "examples" : [
+            {
+                "meaning" : "발생",
+                "e_sentence" : "Respecting the rules makes room for the creation of excellence and the _1_ of meaning.",
+                "k_sentence" : "규칙을 존중하는 것은 탁월성 창출과 의미 발생의 여지를 만들어 낸다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "emergence"
+                ]
+            },
+            {
+                "meaning" : "출현",
+                "e_sentence" : "The _1_ of a pandemic flu virus is not only inevitable, but overdue.",
+                "k_sentence" : "세계적으로 유행하는 독감 바이러스의 추렿ㄴ은 불가피할 뿐만 아니라 이미 무르익었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "emergence"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1070,
+        "word" : "oppose",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "반대하다",
+                "e_sentence" : "Over the years, I have heard arguments from those who _1_ the death penalty.",
+                "k_sentence" : "수년간 나는 사형을 반대하는 사람들의 주장을 들어왔다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "oppose"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1071,
+        "word" : "compose",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "작곡하다",
+                "e_sentence" : "The dances _1_ by famous composers from Bach to Chopin originally did accompany dancing.",
+                "k_sentence" : "Bach에서 Chopin에 이르는 유명한 작곡가들에 의해서 작곡된 춤곡들은 사실상 춤을 동반했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "composed"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1072,
+        "word" : "sensitive",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "민감한",
+                "e_sentence" : "This technique, clearly more _1_ than earlier ones, allows us to detect responses at the cellular level.",
+                "k_sentence" : "이전의 것들보다 분명히 더 민감한 이 기술로 우리는 세포 수준에서의 반응을 감지할 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "sensitive"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1073,
+        "word" : "sensible",
+        "example_count" : 2,
+        "examples" : [
+            {
+                "meaning" : "현명한",
+                "e_sentence" : "The choices which have been made explicit exhaust the _1_ alternatives.",
+                "k_sentence" : "명확하게 드러난 선택지들이 현명한 대안들을 소진시킨다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "sensible"
+                ]
+            },
+            {
+                "meaning" : "잘 알고 있는",
+                "e_sentence" : "Nothing is so good for an ignorant man as silence, and if he was _1_ of this he wood not be ignorant.",
+                "k_sentence" : "무지한 사람에게 침묵만큼 좋은 것은 없고, 그거 이것을 잘 알고 있다면 그는 무지하지 않을 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "sensible"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1074,
+        "word" : "consciousness",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "의식",
+                "e_sentence" : "Once she regained _1_, an assessment of brain damage was able to be made.",
+                "k_sentence" : "그녀가 의식을 회복하자마자, 뇌손상에 대한 평가가 이루어질 수 있었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "consciousness"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1075,
+        "word" : "conscience",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "양심",
+                "e_sentence" : "Paul did not believe that ethical convictions were purely a matter of individual _1_.",
+                "k_sentence" : "Paul은 윤리적인 신념이 순전히 개인 양심의 문제가 아니라고 믿었다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "conscience"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1076,
+        "word" : "interrupt",
+        "example_count" : 2,
+        "examples" : [
+            {
+                "meaning" : "방해하다",
+                "e_sentence" : "Their pleasant evening was unexpectedly _1_ as they waited to get a taxi.",
+                "k_sentence" : "그의 걸작은 수천 개의 파란 점들로 덮여 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "interrupted"
+                ]
+            },
+            {
+                "meaning" : "방해하다",
+                "e_sentence" : "He tried to explain what had happened but she kept _1_ him.",
+                "k_sentence" : "그가 일어난 일을 설명하려고 했지만 그녀가 그를 계속 방해했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "interrupting"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1077,
+        "word" : "interfere",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "개입하다",
+                "e_sentence" : "No one has the right to _1_ in what comes under the state's authority.",
+                "k_sentence" : "아무도 그 나라의 지배에 있는 것에 개입할 권리를 가지고 있지 않다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "interfere"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1078,
+        "word" : "consume",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "소비하다",
+                "e_sentence" : "We humans need to find ways to survive before we _1_ all the available resources on Earth.",
+                "k_sentence" : "우리 인류는 지구의 모든 이용 가능한 자원을 다 소비하기 전에 생존할 방법을 찾아야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "consume"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1079,
+        "word" : "resume",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "재개하다",
+                "e_sentence" : "Labor leaders and oil company representatives will _1_ face-to-face talks soon.",
+                "k_sentence" : "노동 지도자들과 석유 회사 대표들이 곧 대좌 회담[대면 접촉]을 재개할 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "resume"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1080,
+        "word" : "extrovert",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "외향적인 사람",
+                "e_sentence" : "He was an _1_ - assertive, sociable, and good at motivating people.",
+                "k_sentence" : "그는 외향적인 사람으로, 적극적이고 사교적이며 사람들에게 동기를 부여하는 데에 뛰어났다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "extrovert"
+                ]
+            }
+        ]
+    },
+
+    {
+        "day" : 28,
+        "wordnum" : 1081,
+        "word" : "introvert",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "내향적인 사람",
+                "e_sentence" : "_1_ tend to be drawn to the internal world of thoughts and feelings.",
+                "k_sentence" : "내향적인 사람들은 생각과 감정이라는 내적인 세계에 이끌리는 경향이 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "Introverts"
+                ]
+            }
+        ]
+    }
+]
