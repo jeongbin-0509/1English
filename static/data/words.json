@@ -1263,7 +1263,7 @@
     {
         "day" : 25,
         "wordnum" : 946,
-        "word" : "preserve"
+        "word" : "preserve",
         "example_count" : 1,
         "examples" : [
             {
@@ -1280,7 +1280,7 @@
     {
         "day" : 25,
         "wordnum" : 947,
-        "word" : "predict"
+        "word" : "predict",
         "example_count" : 1,
         "examples" : [
             {
