@@ -1297,7 +1297,7 @@
     {
         "day" : 25,
         "wordnum" : 948,
-        "word" : "presence"
+        "word" : "presence",
         "example_count" : 1,
         "examples" : [
             {
@@ -1314,7 +1314,7 @@
     {
         "day" : 25,
         "wordnum" : 949,
-        "word" : "previous"
+        "word" : "previous",
         "example_count" : 1,
         "examples" : [
             {
@@ -1331,7 +1331,7 @@
     {
         "day" : 25,
         "wordnum" : 950,
-        "word" : "prejudice"
+        "word" : "prejudice",
         "example_count" : 1,
         "examples" : [
             {
@@ -1348,7 +1348,7 @@
     {
         "day" : 25,
         "wordnum" : 951,
-        "word" : "prevail"
+        "word" : "prevail",
         "example_count" : 1,
         "examples" : [
             {
@@ -1365,7 +1365,7 @@
     {
         "day" : 25,
         "wordnum" : 952,
-        "word" : "preoccupy"
+        "word" : "preoccupy",
         "example_count" : 1,
         "examples" : [
             {
@@ -1382,7 +1382,7 @@
     {
         "day" : 25,
         "wordnum" : 953,
-        "word" : "presuppose"
+        "word" : "presuppose",
         "example_count" : 1,
         "examples" : [
             {
@@ -1399,7 +1399,7 @@
     {
         "day" : 25,
         "wordnum" : 954,
-        "word" : "prehistory"
+        "word" : "prehistory",
         "example_count" : 1,
         "examples" : [
             {
@@ -1416,7 +1416,7 @@
     {
         "day" : 25,
         "wordnum" : 955,
-        "word" : "precaution"
+        "word" : "precaution",
         "example_count" : 1,
         "examples" : [
             {
@@ -1433,7 +1433,7 @@
     {
         "day" : 25,
         "wordnum" : 956,
-        "word" : "obvious"
+        "word" : "obvious",
         "example_count" : 1,
         "examples" : [
             {
@@ -1450,7 +1450,7 @@
     {
         "day" : 25,
         "wordnum" : 957,
-        "word" : "opposite"
+        "word" : "opposite",
         "example_count" : 1,
         "examples" : [
             {
@@ -1467,7 +1467,7 @@
     {
         "day" : 25,
         "wordnum" : 958,
-        "word" : "obstacle"
+        "word" : "obstacle",
         "example_count" : 1,
         "examples" : [
             {
@@ -1484,7 +1484,7 @@
     {
         "day" : 25,
         "wordnum" : 959,
-        "word" : "obsess"
+        "word" : "obsess",
         "example_count" : 1,
         "examples" : [
             {
@@ -1501,7 +1501,7 @@
     {
         "day" : 25,
         "wordnum" : 960,
-        "word" : "oblige"
+        "word" : "oblige",
         "example_count" : 1,
         "examples" : [
             {
@@ -1518,7 +1518,7 @@
     {
         "day" : 25,
         "wordnum" : 961,
-        "word" : "obscure"
+        "word" : "obscure",
         "example_count" : 1,
         "examples" : [
             {
@@ -1535,7 +1535,7 @@
     {
         "day" : 25,
         "wordnum" : 962,
-        "word" : "structure"
+        "word" : "structure",
         "example_count" : 1,
         "examples" : [
             {
@@ -1552,7 +1552,7 @@
     {
         "day" : 25,
         "wordnum" : 963,
-        "word" : "infrastructure"
+        "word" : "infrastructure",
         "example_count" : 1,
         "examples" : [
             {
@@ -1569,7 +1569,7 @@
     {
         "day" : 25,
         "wordnum" : 964,
-        "word" : "reconstruct"
+        "word" : "reconstruct",
         "example_count" : 1,
         "examples" : [
             {
@@ -1586,7 +1586,7 @@
     {
         "day" : 25,
         "wordnum" : 965,
-        "word" : "obstruct"
+        "word" : "obstruct",
         "example_count" : 1,
         "examples" : [
             {
@@ -1603,7 +1603,7 @@
     {
         "day" : 25,
         "wordnum" : 966,
-        "word" : "outcome"
+        "word" : "outcome",
         "example_count" : 1,
         "examples" : [
             {
@@ -1620,7 +1620,7 @@
     {
         "day" : 25,
         "wordnum" : 967,
-        "word" : "outdated"
+        "word" : "outdated",
         "example_count" : 1,
         "examples" : [
             {
@@ -1637,7 +1637,7 @@
     {
         "day" : 25,
         "wordnum" : 968,
-        "word" : "outstanding"
+        "word" : "outstanding",
         "example_count" : 1,
         "examples" : [
             {
@@ -1654,7 +1654,7 @@
     {
         "day" : 25,
         "wordnum" : 969,
-        "word" : "outlet"
+        "word" : "outlet",
         "example_count" : 1,
         "examples" : [
             {
@@ -1671,7 +1671,7 @@
     {
         "day" : 25,
         "wordnum" : 970,
-        "word" : "outrageous"
+        "word" : "outrageous",
         "example_count" : 1,
         "examples" : [
             {
@@ -1688,7 +1688,7 @@
     {
         "day" : 25,
         "wordnum" : 971,
-        "word" : "refine"
+        "word" : "refine",
         "example_count" : 1,
         "examples" : [
             {
@@ -1705,7 +1705,7 @@
     {
         "day" : 25,
         "wordnum" : 972,
-        "word" : "confine"
+        "word" : "confine",
         "example_count" : 1,
         "examples" : [
             {
@@ -1722,7 +1722,7 @@
     {
         "day" : 25,
         "wordnum" : 973,
-        "word" : "infinite"
+        "word" : "infinite",
         "example_count" : 1,
         "examples" : [
             {
@@ -1739,7 +1739,7 @@
     {
         "day" : 25,
         "wordnum" : 974,
-        "word" : "generate"
+        "word" : "generate",
         "example_count" : 1,
         "examples" : [
             {
@@ -1756,7 +1756,7 @@
     {
         "day" : 25,
         "wordnum" : 975,
-        "word" : "genetic"
+        "word" : "genetic",
         "example_count" : 1,
         "examples" : [
             {
@@ -1773,7 +1773,7 @@
     {
         "day" : 25,
         "wordnum" : 976,
-        "word" : "indigenous"
+        "word" : "indigenous",
         "example_count" : 1,
         "examples" : [
             {
@@ -1790,7 +1790,7 @@
     {
         "day" : 25,
         "wordnum" : 977,
-        "word" : "generosity"
+        "word" : "generosity",
         "example_count" : 1,
         "examples" : [
             {
@@ -1807,7 +1807,7 @@
     {
         "day" : 25,
         "wordnum" : 978,
-        "word" : "universal"
+        "word" : "universal",
         "example_count" : 1,
         "examples" : [
             {
@@ -1824,7 +1824,7 @@
     {
         "day" : 25,
         "wordnum" : 979,
-        "word" : "union"
+        "word" : "union",
         "example_count" : 1,
         "examples" : [
             {
@@ -1841,7 +1841,7 @@
     {
         "day" : 25,
         "wordnum" : 980,
-        "word" : "reunion"
+        "word" : "reunion",
         "example_count" : 1,
         "examples" : [
             {
@@ -1858,7 +1858,7 @@
     {
         "day" : 26,
         "wordnum" : 981,
-        "word" : "influence"
+        "word" : "influence",
         "example_count" : 1,
         "examples" : [
             {
@@ -1875,7 +1875,7 @@
     {
         "day" : 26,
         "wordnum" : 982,
-        "word" : "fluid"
+        "word" : "fluid",
         "example_count" : 1,
         "examples" : [
             {
@@ -1892,7 +1892,7 @@
     {
         "day" : 26,
         "wordnum" : 983,
-        "word" : "fluctuate"
+        "word" : "fluctuate",
         "example_count" : 1,
         "examples" : [
             {
@@ -1909,7 +1909,7 @@
     {
         "day" : 26,
         "wordnum" : 984,
-        "word" : "affluent"
+        "word" : "affluent",
         "example_count" : 1,
         "examples" : [
             {
@@ -1926,7 +1926,7 @@
     {
         "day" : 26,
         "wordnum" : 985,
-        "word" : "produce"
+        "word" : "produce",
         "example_count" : 1,
         "examples" : [
             {
@@ -1943,7 +1943,7 @@
     {
         "day" : 26,
         "wordnum" : 986,
-        "word" : "progress"
+        "word" : "progress",
         "example_count" : 1,
         "examples" : [
             {
@@ -1960,7 +1960,7 @@
     {
         "day" : 26,
         "wordnum" : 987,
-        "word" : "professional"
+        "word" : "professional",
         "example_count" : 1,
         "examples" : [
             {
@@ -1977,7 +1977,7 @@
     {
         "day" : 26,
         "wordnum" : 988,
-        "word" : "profit"
+        "word" : "profit",
         "example_count" : 1,
         "examples" : [
             {
@@ -1994,7 +1994,7 @@
     {
         "day" : 26,
         "wordnum" : 989,
-        "word" : "profound"
+        "word" : "profound",
         "example_count" : 1,
         "examples" : [
             {
@@ -2011,7 +2011,7 @@
     {
         "day" : 26,
         "wordnum" : 990,
-        "word" : "prosper"
+        "word" : "prosper",
         "example_count" : 1,
         "examples" : [
             {
@@ -2028,7 +2028,7 @@
     {
         "day" : 26,
         "wordnum" : 991,
-        "word" : "prolonged"
+        "word" : "prolonged",
         "example_count" : 1,
         "examples" : [
             {
@@ -2045,7 +2045,7 @@
     {
         "day" : 26,
         "wordnum" : 992,
-        "word" : "prodigy"
+        "word" : "prodigy",
         "example_count" : 1,
         "examples" : [
             {
@@ -2062,7 +2062,7 @@
     {
         "day" : 26,
         "wordnum" : 993,
-        "word" : "protest"
+        "word" : "protest",
         "example_count" : 1,
         "examples" : [
             {
@@ -2079,7 +2079,7 @@
     {
         "day" : 26,
         "wordnum" : 994,
-        "word" : "prophet"
+        "word" : "prophet",
         "example_count" : 1,
         "examples" : [
             {
@@ -2096,7 +2096,7 @@
     {
         "day" : 26,
         "wordnum" : 995,
-        "word" : "prospect"
+        "word" : "prospect",
         "example_count" : 1,
         "examples" : [
             {
@@ -2113,7 +2113,7 @@
     {
         "day" : 26,
         "wordnum" : 996,
-        "word" : "absorb"
+        "word" : "absorb",
         "example_count" : 1,
         "examples" : [
             {
@@ -2130,7 +2130,7 @@
     {
         "day" : 26,
         "wordnum" : 997,
-        "word" : "absolute"
+        "word" : "absolute",
         "example_count" : 1,
         "examples" : [
             {
@@ -2147,7 +2147,7 @@
     {
         "day" : 26,
         "wordnum" : 998,
-        "word" : "abstract"
+        "word" : "abstract",
         "example_count" : 1,
         "examples" : [
             {
@@ -2164,7 +2164,7 @@
     {
         "day" : 26,
         "wordnum" : 999,
-        "word" : "abuse"
+        "word" : "abuse",
         "example_count" : 1,
         "examples" : [
             {
@@ -2181,7 +2181,7 @@
     {
         "day" : 26,
         "wordnum" : 1000,
-        "word" : "abundance"
+        "word" : "abundance",
         "example_count" : 1,
         "examples" : [
             {
@@ -2198,7 +2198,7 @@
     {
         "day" : 26,
         "wordnum" : 1001,
-        "word" : "absurd"
+        "word" : "absurd",
         "example_count" : 1,
         "examples" : [
             {
@@ -2215,7 +2215,7 @@
     {
         "day" : 26,
         "wordnum" : 1002,
-        "word" : "discourage"
+        "word" : "discourage",
         "example_count" : 1,
         "examples" : [
             {
@@ -2232,7 +2232,7 @@
     {
         "day" : 26,
         "wordnum" : 1003,
-        "word" : "core"
+        "word" : "core",
         "example_count" : 1,
         "examples" : [
             {
@@ -2249,7 +2249,7 @@
     {
         "day" : 26,
         "wordnum" : 1004,
-        "word" : "accord"
+        "word" : "accord",
         "example_count" : 1,
         "examples" : [
             {
@@ -2266,7 +2266,7 @@
     {
         "day" : 26,
         "wordnum" : 1005,
-        "word" : "upcycling"
+        "word" : "upcycling",
         "example_count" : 1,
         "examples" : [
             {
@@ -2283,7 +2283,7 @@
     {
         "day" : 26,
         "wordnum" : 1006,
-        "word" : "upload"
+        "word" : "upload",
         "example_count" : 1,
         "examples" : [
             {
@@ -2300,7 +2300,7 @@
     {
         "day" : 26,
         "wordnum" : 1007,
-        "word" : "upright"
+        "word" : "upright",
         "example_count" : 1,
         "examples" : [
             {
@@ -2317,7 +2317,7 @@
     {
         "day" : 26,
         "wordnum" : 1008,
-        "word" : "upcoming"
+        "word" : "upcoming",
         "example_count" : 1,
         "examples" : [
             {
@@ -2334,7 +2334,7 @@
     {
         "day" : 26,
         "wordnum" : 1009,
-        "word" : "uphold"
+        "word" : "uphold",
         "example_count" : 1,
         "examples" : [
             {
@@ -2351,7 +2351,7 @@
     {
         "day" : 26,
         "wordnum" : 1010,
-        "word" : "security"
+        "word" : "security",
         "example_count" : 1,
         "examples" : [
             {
@@ -2368,7 +2368,7 @@
     {
         "day" : 26,
         "wordnum" : 1011,
-        "word" : "curious"
+        "word" : "curious",
         "example_count" : 1,
         "examples" : [
             {
@@ -2385,7 +2385,7 @@
     {
         "day" : 26,
         "wordnum" : 1012,
-        "word" : "cure"
+        "word" : "cure",
         "example_count" : 1,
         "examples" : [
             {
@@ -2402,7 +2402,7 @@
     {
         "day" : 26,
         "wordnum" : 1013,
-        "word" : "accurate"
+        "word" : "accurate",
         "example_count" : 1,
         "examples" : [
             {
@@ -2419,7 +2419,7 @@
     {
         "day" : 26,
         "wordnum" : 1014,
-        "word" : "artificial"
+        "word" : "artificial",
         "example_count" : 1,
         "examples" : [
             {
@@ -2436,7 +2436,7 @@
     {
         "day" : 26,
         "wordnum" : 1015,
-        "word" : "artwork"
+        "word" : "artwork",
         "example_count" : 1,
         "examples" : [
             {
@@ -2453,7 +2453,7 @@
     {
         "day" : 26,
         "wordnum" : 1016,
-        "word" : "artistic"
+        "word" : "artistic",
         "example_count" : 1,
         "examples" : [
             {
@@ -2470,7 +2470,7 @@
     {
         "day" : 26,
         "wordnum" : 1017,
-        "word" : "artifact"
+        "word" : "artifact",
         "example_count" : 1,
         "examples" : [
             {
