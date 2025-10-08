@@ -59,7 +59,7 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 
 /* Sidebar */
 .sidebar {
-    width: max(30vw, 45vh);
+    width: max(24vw, 36vh);
     height: 100%;
     background: #272727;
     position: fixed;
@@ -72,14 +72,21 @@ input[id="menuicon"]:checked + label + div {
     left: 0;
 }
 .sidebar .logo {
+    cursor: pointer;
     position: absolute;
     margin: 0;
     font-family: "NanumSquareExtraBold";
     font-size: 2rem;
     color: #35b3f2;
     top: min(5vh, 6.5vw);
-    right: min(5vh, 7.5vw);
+    right: min(3vh, 4.5vw);
     transform: translateY(-33%);
+    transition: all .35s ease;
+}
+.sidebar .logo:hover {
+    color: #d8e4eb;
+    transition: all .35s ease;
+    font-size: 2.1rem;
 }
 .sidebar .sidelinks {
     position: absolute;
@@ -90,8 +97,43 @@ input[id="menuicon"]:checked + label + div {
     left: min(3vh, 4.5vw);
 }
 .sidebar .sidelinks div {
+    cursor: pointer;
     margin: min(2vh, 3vw);
 }
 #dayselectheader {
     color: #35b3f2;
+}
+
+/* Day Selection Bar */
+.dayselect {
+    position: absolute;
+    top: min(36vh, 54vw);
+    left: min(5vh, 7.5vw);
+}
+.dayselect div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.dayselect div div {
+    font-family: "NanumSquareExtraBold";
+    margin: min(0.6vh, 0.9vw);
+    font-size: 1.4rem;
+    width: min(7vh, 10.5vw);
+    height: min(7vh, 10.5vw);
+    padding: 0;
+    background-color: #333333;
+    border-radius: 50%;
+    color: #35b3f2;
+    line-height: min(7vh, 10.5vw);
+    display: flex;
+    justify-content: center;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+.dayselect div div:hover {
+    transform: scale(1.03);
+    transition: all .35s ease;
+    background-color: #5f5f5f;
+    font-size: 1.45rem;
 }
