@@ -4,26 +4,34 @@
   <meta charset="UTF-8">
   <title>회원가입</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 </head>
+<body>
+  <div id="mainpart">
+    <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
+  </div>
 
   <div class="loginbox">
     <h2>회원가입</h2>
-    <form action="/signup" method="post">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
+
+    <!-- 엔드포인트 이름 정확히: signup -->
+    <form action="{{ url_for('signup') }}" method="post">
+      <input type="text" name="username" placeholder="학번" required
+             pattern="[A-Za-z0-9._-]{3,30}" title="영문/숫자 3~30자 (._- 허용)">
+      <input type="password" name="password" placeholder="비번" required>
       <button type="submit">회원가입</button>
     </form>
+
     <p style="margin-top:10px;">
       이미 계정이 있나요? <a href="{{ url_for('login') }}">로그인</a>
     </p>
   </div>
 
-    <h5 style="color: #555555;">
-        made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 <br>
-        오류문의 : 인스타 an0_9jb (오류난 화면을 찍어서 보내주세요)
-    </h5>
+  <h5 style="color: #555555; text-align:center;">
+    made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 <br>
+    오류문의 : 인스타 an0_9jb (오류난 화면을 찍어서 보내주세요)
+  </h5>
 
-    <!-- 자바스크립트도 url_for 사용 -->
-    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
 </body>
 </html>

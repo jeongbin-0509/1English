@@ -10,23 +10,35 @@
 </head>
 
 <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div id="flash-container">
+        {% for category, message in messages %}
+          <div class="flash-message {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% endwith %}
+
    <div id="mainpart">
         <!-- 홈 화면 제목 -->
         <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
     </div>
 
     <div class="loginpart" style="align-items: center; text-align: center;">
-        <form action="/login" method="post">
             <div class="loginbox">
                 <h2>Login</h2>
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Login</button> 
-            </div>
-        </form>
-        <form action="{{ url_for('signup_page') }}">
+                <form action="{{ url_for('login') }}" method="post">
+                    <input type="text" name="username" placeholder="학번" required>
+                    <input type="password" name="password" placeholder="비밀번호" required>
+                    <button type="submit">Login</button>
+                </form>
+                <form action="{{ url_for('signup') }}">
                     <button type="submit" style="background-color:white;">Signup</button>
                 </form>
+            </div>
+        </form>
+            
     </div>
 
     <h5 style="color: #555555;">
