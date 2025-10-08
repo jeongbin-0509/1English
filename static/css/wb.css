@@ -1,0 +1,97 @@
+/* 
+Before Start 
+
+use ->> min(2n vh, 3n vw)
+*/
+
+/* Margin setting */
+body {
+    margin: 0;
+    background-color: #333333;
+}
+
+/* Menu Icon */
+input[id="menuicon"] {
+    display: none;
+}
+input[id="menuicon"] + label {
+    display: block;
+    margin: min(4vh, 6vw);
+    width: min(6vh, 9vw);
+    height: min(4vh, 6vw);
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: min(0.7vh, 1.05vw);
+    border-radius: min(0.7vh, 1.05vw);
+    transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 0;
+    background: #d8e4eb;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    background: #35b3f2;
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 0;
+    background: #d8e4eb;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg)
+}
+
+/* Sidebar */
+.sidebar {
+    width: max(30vw, 45vh);
+    height: 100%;
+    background: #272727;
+    position: fixed;
+    top: 0;
+    left: min(-30vw, -45vh);
+    z-index: 1;
+    transition: all .35s;
+}
+input[id="menuicon"]:checked + label + div {
+    left: 0;
+}
+.sidebar .logo {
+    position: absolute;
+    margin: 0;
+    font-family: "NanumSquareExtraBold";
+    font-size: 2rem;
+    color: #35b3f2;
+    top: min(5vh, 6.5vw);
+    right: min(5vh, 7.5vw);
+    transform: translateY(-33%);
+}
+.sidebar .sidelinks {
+    position: absolute;
+    font-family: "NanumSquareExtraBold";
+    color: #d8e4eb;
+    font-size: 1.6rem;
+    top: min(14vh, 21vw);
+    left: min(3vh, 4.5vw);
+}
+.sidebar .sidelinks div {
+    margin: min(2vh, 3vw);
+}
+#dayselectheader {
+    color: #35b3f2;
+}
