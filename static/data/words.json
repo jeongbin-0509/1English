@@ -1,5 +1,227 @@
 [
     {
+        "day" : 19,
+        "wordnum" : 721,
+        "word" : "turn down",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. ~을 거절하다 2. ~을 약하게 하다. (소리 등을)낮추다",
+                "e_sentence" : "Due to my present duty, I have to _1_ your proposal.",
+                "k_sentence" : "현재의 제 임무 떄문에, 당신의 제안을 거절해야겠습니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "turn down"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 722,
+        "word" : "yield to",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~에게 양보하다; ~에 굴복하다",
+                "e_sentence" : "As a general rule, you should _1_  cars that are already at the intersection.",
+                "k_sentence" : "일반적으로 여러분은 이미 교차로에 들어선 차에 양보해야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "yeild to"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 723,
+        "word" : "under (the) cover of darkness",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "어둠을 틈타, 어둠으로 몸을 가리고",
+                "e_sentence" : "_1_, the thieves crept into the house.",
+                "k_sentence" : "어둠을 틈타 도둑들은 집 안으로 숨어 들어갔다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "Under cover od darkness"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 724,
+        "word" : "ward off",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 물리치다, ~을 피하다",
+                "e_sentence" : "One moment of patience may _1_ great disaster.",
+                "k_sentence" : "한순간의 참을성이 엄청난 재앙을 물리칠 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "ward off"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 725,
+        "word" : "set forth",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. 출발하다 2. (의견을) 말하다[발표하다]",
+                "e_sentence" : "They _1_ on thier desert crossing two days ago.",
+                "k_sentence" : "그들은 이틀 전에 사막 횡단을 출발했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "set forth"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 726,
+        "word" : "take away ~ from ...",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. ...에게서 ~을 빼앗다 2. ~을 폄하하다",
+                "e_sentence" : "Liberty is what you can't _1_ other people.",
+                "k_sentence" : "자유는 여러분이 다른사람들로부터 빼앗을 수 없는 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "take away from"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 727,
+        "word" : "carry out",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "수행하다, (과업을) 완수하다",
+                "e_sentence" : "They _1_ another important process, which was rebuilding the first three stries of the body.",
+                "k_sentence" : "그들은 다른 중요한 과정을 수행했는데, 그것은 본체의 첫 세 개 층을 다시 쌓은 것이였다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "carry out"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 728,
+        "word" : "adhere to",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 고수하다, ~을 충실히 지키다",
+                "e_sentence" : "They pledged to _1_ the terms of the agreement.",
+                "k_sentence" : "그들은 합의한 조건을 충실히 지킬 것을 확약했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "adhere to"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 729,
+        "word" : "rule out",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 제외시키다, ~을 배제하다, ~을 불가능하게 하다",
+                "e_sentence" : "The chairperson refused to _1_ the possibility of a tax increase.",
+                "k_sentence" : "의장은 세금 인상 가능성을 배제하지 않으려 했다.",
+                "blank_count" : 1, 
+                "blanks" : [
+                    "rule out"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 730,
+        "word" : "shy away from",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 피하다",
+                "e_sentence" : "As fears of the disease rise, people _1_ the movies or sporting events.",
+                "k_sentence" : "질병에 대한 두려움이 높아지자, 사람들이 영화나 스포츠 경기를 피한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "shy away from"
+                ]
+            }
+        ]
+    },
+    {
+        "day" : 19,
+        "wordnum" : 731,
+        "word" : "hold true",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. (규칙 등이) 유효하다, 딱 들어맞다 2. 진실이다",
+                "e_sentence" : "These findings do not _1_ for women and children.",
+                "k_sentence" : "이런 발견이 여성과 아이들에게는 들어맞지 않는다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "hold true"
+                ]
+            }
+        ]
+    },
+    {
+    "day" : 19,
+            "wordnum" : 732,
+            "word" : "figure out",
+            "example_count" : 1,
+            "examples" : [
+                {
+                    "meaning" : "1. ~을 이해하다, ~을 생각해내다 2. 계산해 내다, 산출하다",
+                    "e_sentence" : "Even now, he tried to _1_ why and how he had lost her.",
+                    "k_sentence" : "아직까지도, 그는 자신이 왜 그리고 어떻게 그녀를 잃게 되었는지 이해하려고 애를 썼다.",
+                    "blank_count" : 1,
+                    "blanks" : [
+                        "figure out"
+                    ]
+                }
+            ]
+        },
+    {
+    "day" : 19,
+            "wordnum" : 733,
+            "word" : "come up with",
+            "example_count" : 1,
+            "examples" : [
+                {
+                    "meaning" : "~을 만들어내다[생산하다], ~을 제시[제안]하다",
+                    "e_sentence" : "The city is struggling to _1_ creative unban renewal ideas.",
+                    "k_sentence" : "그 도시는 창의적인 도시 재생 아이디어를 만들어내기 위해 애쓰고 있다.",
+                    "blank_count" : 1,
+                    "blanks" : [
+                        "come up with"
+                    ]
+                }
+            ]
+        },
+
+    {
         "day": 21,
         "wordnum": 801,
         "word": "derive",
