@@ -163,6 +163,7 @@ input[id="menuicon"]:checked + label + div {
 .word {
     font-size: 1.6rem;
     color: #35b3f2;
+    font-family: "NanumGothicExtraBold";
     font-weight: 700;
 }
 
@@ -171,7 +172,9 @@ input[id="menuicon"]:checked + label + div {
     color: white;
     border-radius: min(3vh, 4.5vw);
     padding: min(0.5vh, 0.75vw) min(1.6vh, 2.4vw);
-    font-weight: 700;
+    font-family: "NanumGothicExtraBold";
+    font-weight: 500;
+
 }
 
 /* Example */
@@ -179,6 +182,7 @@ input[id="menuicon"]:checked + label + div {
     display: flex;
     flex-direction: column;
     gap: 0;
+    font-family: "NanumGothicBold";
 }
 
 .exampleblock {
@@ -193,6 +197,8 @@ input[id="menuicon"]:checked + label + div {
   color: #fff;
   font-size: 1.1rem;
   margin-bottom: min(0.8vh, 1.2vw);
+  font-family: "NanumGothicExtraBold";
+  font-weight: 400;
 }
 
 .esentence span {
