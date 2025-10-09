@@ -217,7 +217,7 @@ input[id="menuicon"]:checked + label + div {
   top: min(1vh, 1.5vw);
   right: min(1vh, 1.5vw);
   font-size: 1.4rem;
-  color: #555;
+  color: #d8e4eb;
   border-color: #35b3f2;
   cursor: pointer;
   transition: color 0.3s;
