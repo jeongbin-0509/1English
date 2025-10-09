@@ -226,3 +226,19 @@ input[id="menuicon"]:checked + label + div {
   color: #35b3f2;
 }
 
+/* 사이드바 '돌아가기' 버튼 */
+.sidebar form button{
+  width:100%; margin:min(2vh,3vw) 0; padding:min(2vh,3vw);
+  font:700 1rem "NanumSquareExtraBold", system-ui;
+  color:#fff; background:#35b3f2; border:0; border-radius:min(1.2vh,1.8vw);
+  cursor:pointer; transition:background .15s, transform .1s;
+}
+.sidebar form button:hover{background:#1da6ee}
+.sidebar form button:active{transform:scale(.98)}
+
+.sidebar form{
+  position:absolute;
+  bottom:min(3vh,4.5vw);
+  left:min(3vh,4.5vw);
+  right:min(3vh,4.5vw);
+}

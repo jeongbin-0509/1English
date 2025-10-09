@@ -104,3 +104,20 @@ async function main() {
 }
 
 document.addEventListener("DOMContentLoaded", main);
+
+// DAY 클릭 → ?day=숫자 로 이동
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[id^="day"]');
+  if (!btn) return;
+  const n = parseInt(btn.id.slice(3), 10);
+  if (!Number.isInteger(n)) return;
+
+  // 사이드바 닫기
+  const menu = document.getElementById('menuicon');
+  if (menu) menu.checked = false;
+
+  // 해당 day로 이동
+  const url = new URL(location.href);
+  url.searchParams.set('day', n);
+  location.href = url.toString();
+});
