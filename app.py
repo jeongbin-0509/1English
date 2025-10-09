@@ -21,6 +21,7 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY") or os.getenv("SUPABASE_ANON_KEY")
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+    #가짜 이메일 만들고 그 이메일 에서 학번만 추출 
 def to_email(user_id: str) -> str:
     """아이디를 가짜 이메일로 통일 변환"""
     return f"{(user_id or '').strip().lower()}@local.id"
@@ -28,6 +29,16 @@ def to_email(user_id: str) -> str:
 @app.route("/")
 def home():
     return redirect(url_for("login"))
+
+# 단어장 불러오기
+@app.route("/words")
+def words():
+    return render_template("wb.html")
+
+# 메인 창으로 돌아가기
+@app.route("/main_page")
+def main_page():
+    return render_template("index.html")
 
 # 로그인
 @app.route("/login", methods=["GET", "POST"])
