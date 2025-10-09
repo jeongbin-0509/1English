@@ -141,28 +141,27 @@ input[id="menuicon"]:checked + label + div {
 /* Main Screen */
 .wordcontainer {
     background-color: #474747;
-    border-radius: 12px;
-    width: 70%;
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 20px 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: min(1.6vh, 2.4vw);
+    width: min(100vh, 85vw);
+    margin: min(8vh, 12vw) auto;
+    padding: min(3vh, 4.5vw) min(4vh, 6vw);
+    box-shadow: 0 0 min(1.3vh, 2vw) rgba(0, 0, 0, 0.3);
 }
 
 .wordcontainer header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #474747;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    border-bottom: min(0.2vh, 0.3vw) solid #474747;
+    padding-bottom: min(1.3vh, 2vw);
+    margin-bottom: min(2vh, 3vw);
+    border-bottom: min(0.2vh, 0.3vw) solid #fff;
+    padding-bottom: min(1.3vh, 2vw);
+    margin-bottom: min(1.6vh, 2.4vw);
 }
 
 .word {
-    font-size: 26px;
+    font-size: 1.6rem;
     color: #35b3f2;
     font-weight: 700;
 }
@@ -170,8 +169,8 @@ input[id="menuicon"]:checked + label + div {
 .wordnum {
     background-color: #35b3f2;
     color: white;
-    border-radius: 50px;
-    padding: 4px 12px;
+    border-radius: min(3vh, 4.5vw);
+    padding: min(0.5vh, 0.75vw) min(1.6vh, 2.4vw);
     font-weight: 700;
 }
 
@@ -179,12 +178,12 @@ input[id="menuicon"]:checked + label + div {
 .examplecontainer {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 0;
 }
 
 .exampleblock {
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding: min(1.8vh, 2.7vw) 0;
+  border-bottom: min(0.2vh, 0.3vw) solid rgba(255, 255, 255, 0.6);
 }
 
 .meaning {
@@ -192,8 +191,8 @@ input[id="menuicon"]:checked + label + div {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  font-size: 17px;
-  margin-bottom: 6px;
+  font-size: 1.1rem;
+  margin-bottom: min(0.8vh, 1.2vw);
 }
 
 .esentence span {
@@ -203,15 +202,15 @@ input[id="menuicon"]:checked + label + div {
 
 .esentence, .ksentence {
     color: #ccc;
-    font-size: 15px;
-    margin: 3px 0;
+    font-size: 1rem;
+    margin: min(0.4vh, 0.6vw) 0;
 }
 
 /* Star Shape */
 .star {
-  top: 8px;
-  right: 8px;
-  font-size: 22px;
+  top: min(1vh, 1.5vw);
+  right: min(1vh, 1.5vw);
+  font-size: 1.4rem;
   color: #555;
   border-color: #35b3f2;
   cursor: pointer;
@@ -223,7 +222,7 @@ input[id="menuicon"]:checked + label + div {
   color: #35b3f2;
 }
 
-/* hover */
 .star:hover {
   color: #35b3f2;
 }
+

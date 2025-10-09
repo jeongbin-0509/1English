@@ -1,70 +1,106 @@
-// Declaration
-let data = [];
-let dataOfCurrentDay = [];
+// wb.js — JSON fetch + ?day= 필터 + 템플릿 복제 + _n_ → blanks[n-1] 치환
 
-// Data Handling
-async function fetch_data(){
-    const res = await fetch("../static/data/words.json");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    const raw_data = await res.json();
-    data = raw_data;
+const DATA_URL = "../static/data/words.json"; // 경로 수정
 
-    return;
+// ---- util
+const qs = (s, p=document) => p.querySelector(s);
+const txt = (el, v) => { if (el) el.textContent = v ?? ""; };
+const html = (el, v) => { if (el) el.innerHTML = v ?? ""; };
+const esc = s => String(s).replace(/[&<>"']/g, m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+
+// _n_ → blanks[n-1] 치환. 없으면 빈칸 표시.
+function renderBlanks(sentence, blanks = []) {
+  return String(sentence ?? "").replace(/_(\d+)_/g, (_, n) => {
+    const i = Number(n) - 1;
+    const val = blanks?.[i];
+    return val == null
+      ? '<span class="blank">____</span>'
+      : `<span class="filledblank">${esc(val)}</span>`;
+  });
 }
 
-function getDayData(day) { // 특정 DAY의 단어들을 가져옴
-    dataOfCurrentDay = data.filter(x => x.day === day);
+// meaning 안의 텍스트 노드만 교체(별 아이콘 유지)
+function setMeaningText(meaningEl, text) {
+  let done = false;
+  meaningEl?.childNodes.forEach(n => {
+    if (n.nodeType === Node.TEXT_NODE) { n.nodeValue = text ?? ""; done = true; }
+  });
+  if (!done && meaningEl) meaningEl.insertBefore(document.createTextNode(text ?? ""), meaningEl.firstChild);
 }
 
-// Constants
-const wordblock_tpl = document.getElementById("wordblock");
-const exampleblock_tpl = document.getElementById("exampleblock");
-const unselected_tpl = document.getElementById("unselected");
+// 예문 블록 생성
+function buildExampleBlock(tplEB, ex) {
+  const eb = tplEB.cloneNode(true);
+  setMeaningText(qs(".meaning", eb), ex?.meaning ?? "");
+  const eEl = qs(".esentence", eb);
+  const kEl = qs(".ksentence", eb);
+  if (eEl) html(eEl, renderBlanks(ex?.e_sentence, ex?.blanks));
+  if (kEl) txt(kEl, ex?.k_sentence ?? "");
+  const star = qs(".meaning .star", eb);
+  if (star) { star.classList.remove("active"); star.textContent = "☆"; }
+  return eb;
+}
 
-// Use HTML Template
-function giveExampleHTML(d) { // Example 안에 있는 걸 넣어
-    const node = exampleblock_tpl.content.cloneNode(true);
-    const meaning_el = node.querySelector(".meaning");
-    const esentence_el = node.querySelector(".esentence");
-    const ksentence_el = node.querySelector(".ksentence");
+// 단어 컨테이너 생성
+function buildWordContainer(tplWC, tplEB, item) {
+  const wc = tplWC.cloneNode(false);               // 빈 컨테이너만
+  const header = qs("header", tplWC).cloneNode(true);
+  txt(qs(".word", header), item?.word ?? "");
+  txt(qs(".wordnum", header), String(item?.wordnum ?? ""));
+  wc.appendChild(header);
 
-    let esentence_text = d.e_sentence;
-    for (let i=1; i<=d.blank_count; i++) {
-        esentence_text = esentence_text.replace(`_${i}_`, "<span>"+d.blanks[i-1]+"</span>");
+  const examples = Array.isArray(item?.examples) ? item.examples : [];
+  for (const ex of examples) wc.appendChild(buildExampleBlock(tplEB, ex));
+  return wc;
+}
+
+async function main() {
+  const root = qs(".wordblock");
+  const unselected = qs(".unselected");
+  const tplWC = qs(".wordcontainer", root);
+  const tplEB = qs(".exampleblock", tplWC);
+
+  if (!root || !tplWC || !tplEB) { console.error("템플릿 누락"); return; }
+
+  const params = new URLSearchParams(location.search);
+  const dayParam = params.get("day");
+  const day = dayParam ? Number(dayParam) : NaN;
+
+  if (!Number.isFinite(day)) { if (unselected) unselected.style.display = ""; return; }
+  if (unselected) unselected.style.display = "none";
+
+  // 템플릿 분리 후 비우기
+  const wcTemplate = tplWC.cloneNode(true);
+  const ebTemplate = tplEB.cloneNode(true);
+  root.innerHTML = "";
+
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error("JSON 루트는 배열이어야 함");
+
+    const list = data.filter(v => Number(v.day) === day);
+    if (list.length === 0) {
+      if (unselected) {
+        unselected.style.display = "";
+        const msg = qs("#plzselect", unselected);
+        if (msg) msg.textContent = `DAY ${day} 데이터가 없습니다`;
+      }
+      return;
     }
-
-    meaning_el.textContent = d.meaning;
-    esentence_el.innerHTML = esentence_text;
-    ksentence_el.textContent = d.k_sentence;
 
     const frag = document.createDocumentFragment();
-    frag.appendChild(node);
-
-    return frag;
-}
-
-function createWordBlock() {
-    const largeFrag = document.createDocumentFragment();
-
-    for (const d of dataOfCurrentDay) {
-        const node = wordblock_tpl.content.cloneNode(true);
-        const cont = node.querySelector(".wordcontainer");
-        const word_el = cont.querySelector(".word");
-        const num_el = cont.querySelector(".wordnum");
-        const examplecontainer = cont.querySelector(".examplecontainer");
-        const frag = document.createDocumentFragment();
-
-        word_el.textContent = d.word;
-        num_el.textContent = d.wordnum;
-
-        for (const exs of d.examples) {
-            const exfrag = giveExampleHTML(exs);
-            frag.appendChild(exfrag);
-        }
-        examplecontainer.appendChild(frag);
-
-        largeFrag.appendChild(node);
+    for (const item of list) frag.appendChild(buildWordContainer(wcTemplate, ebTemplate, item));
+    root.appendChild(frag);
+  } catch (err) {
+    console.error(err);
+    if (unselected) {
+      unselected.style.display = "";
+      const msg = qs("#plzselect", unselected);
+      if (msg) msg.textContent = "데이터 로드 오류";
     }
-
-    document.querySelector(".mainstream").appendChild(largeFrag);
+  }
 }
+
+document.addEventListener("DOMContentLoaded", main);
