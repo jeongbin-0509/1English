@@ -256,3 +256,60 @@ select {
   80% {opacity: 1;}
   100% {opacity: 0;}
 }
+
+/*사이드바 내부 버튼*/
+#sidebar button:not(.close-btn) {
+    display: block;
+    width: 85%;
+    margin: 10px auto;
+    padding: 12px 0;
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+#sidebar button:not(.close-btn):hover {
+    background-color: #66cc33;
+    color: #222222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(102, 204, 51, 0.4);
+}
+#sidebar button:not(.close-btn):active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 4px rgba(102, 204, 51, 0.3);
+}
+#sidebar .Reselect {
+    background-color: transparent;
+    color: #66cc33;
+    border: 2px solid #66cc33;
+}
+#sidebar .Reselect:hover {
+    background-color: #66cc33;
+    color: #222;
+}
+#sidebar .Logout {
+    background-color: #333333;
+    color: #66cc33;
+}
+#sidebar .Logout:hover {
+    background-color: #66cc33;
+    color: #222;
+}
+#sidebar h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#sidebar hr {
+    margin: 10px auto 20px auto;
+    width: 80%;
+    border: none;
+    height: 2px;
+    background-color: #66cc33;
+}
