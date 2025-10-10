@@ -14,15 +14,17 @@ body {
 input[id="menuicon"] {
     display: none;
 }
-input[id="menuicon"] + label {
-    display: block;
-    margin: min(4vh, 6vw);
-    width: min(6vh, 9vw);
-    height: min(4vh, 6vw);
-    position: relative;
-    cursor: pointer;
-    z-index: 2;
+input[id="menuicon"] + label{
+  position: fixed;     
+  top: min(4vh, 6vw);     
+  left: min(4vh, 6vw);   
+  margin: 0;                     
+  width: min(6vh, 9vw);
+  height: min(4vh, 6vw);
+  cursor: pointer;
+  z-index: 1001;                 
 }
+
 input[id="menuicon"] + label span {
     display: block;
     position: absolute;
