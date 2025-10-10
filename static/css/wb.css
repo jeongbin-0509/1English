@@ -224,6 +224,9 @@ input[id="menuicon"]:checked + label + div {
   user-select: none;
 }
 
+.exampleblock { position: relative; }   
+.star { position: absolute; } 
+
 .star.active {
   color: #35b3f2;
 }

@@ -8,6 +8,29 @@ const txt = (el, v) => { if (el) el.textContent = v ?? ""; };
 const html = (el, v) => { if (el) el.innerHTML = v ?? ""; };
 const esc = s => String(s).replace(/[&<>"']/g, m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 
+// ---- favorites (localStorage)
+const LS_KEY = 'wb_starred';
+
+function getStarred() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY)) ?? []; }
+  catch { return []; }
+}
+function setStarred(arr) {
+  const uniqSorted = [...new Set(arr)].map(n=>Number(n)).filter(Number.isFinite).sort((a,b)=>a-b);
+  localStorage.setItem(LS_KEY, JSON.stringify(uniqSorted));
+}
+function isStarred(wordnum) {
+  const set = new Set(getStarred());
+  return set.has(Number(wordnum));
+}
+function toggleStarred(wordnum) {
+  const set = new Set(getStarred());
+  const k = Number(wordnum);
+  if (set.has(k)) set.delete(k); else set.add(k);
+  setStarred([...set]);
+}
+
+
 // _n_ → blanks[n-1] 치환. 없으면 빈칸 표시.
 function renderBlanks(sentence, blanks = []) {
   return String(sentence ?? "").replace(/_(\d+)_/g, (_, n) => {
@@ -119,5 +142,160 @@ document.addEventListener('click', (e) => {
   // 해당 day로 이동
   const url = new URL(location.href);
   url.searchParams.set('day', n);
+  location.href = url.toString();
+});
+
+
+// [수정] buildWordContainer: 컨테이너에 data-wordnum 부여
+function buildWordContainer(tplWC, tplEB, item) {
+  const wc = tplWC.cloneNode(false);
+  wc.setAttribute('data-wordnum', String(item?.wordnum ?? ''));
+
+  const header = qs("header", tplWC).cloneNode(true);
+  txt(qs(".word", header), item?.word ?? "");
+  txt(qs(".wordnum", header), String(item?.wordnum ?? ""));
+  wc.appendChild(header);
+
+  const examples = Array.isArray(item?.examples) ? item.examples : [];
+  for (const ex of examples) wc.appendChild(buildExampleBlock(tplEB, ex));
+
+  // [추가] 이 컨테이너의 모든 별을 즐겨찾기 상태와 동기화
+  syncStarsIn(wc);
+  return wc;
+}
+
+// [추가] 별 UI 동기화 (컨테이너 단위/전체)
+function syncStarsIn(container) {
+  const wordnum = Number(container?.getAttribute('data-wordnum'));
+  const active = isStarred(wordnum);
+  container.querySelectorAll('.star').forEach(star => {
+    star.classList.toggle('active', active);
+    star.textContent = active ? '★' : '☆';
+    star.setAttribute('role', 'button');
+    star.setAttribute('tabindex', '0');
+    star.setAttribute('aria-pressed', String(active));
+    star.setAttribute('aria-label', active ? '즐겨찾기 해제' : '즐겨찾기에 추가');
+  });
+}
+function syncAllStars() {
+  document.querySelectorAll('.wordcontainer').forEach(syncStarsIn);
+}
+
+
+async function main() {
+  const root = qs(".wordblock");
+  const unselected = qs(".unselected");
+  const tplWC = qs(".wordcontainer", root);
+  const tplEB = qs(".exampleblock", tplWC);
+
+  if (!root || !tplWC || !tplEB) { console.error("템플릿 누락"); return; }
+
+  const params = new URLSearchParams(location.search);
+  const dayParam = params.get("day");
+  const starredParam = params.get("starred");           
+  const isStarPage = starredParam === '1';             
+  const day = dayParam ? Number(dayParam) : NaN;
+
+  if (!isStarPage && !Number.isFinite(day)) {
+    if (unselected) unselected.style.display = "";
+    return;
+  }
+  if (unselected) unselected.style.display = "none";
+
+  const wcTemplate = tplWC.cloneNode(true);
+  const ebTemplate = tplEB.cloneNode(true);
+  root.innerHTML = "";
+
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error("JSON 루트는 배열이어야 함");
+
+    let list = [];
+    if (isStarPage) {
+      const fav = new Set(getStarred());
+      list = data.filter(v => fav.has(Number(v.wordnum)));
+      if (list.length === 0 && unselected) {
+        unselected.style.display = "";
+        const msg = qs("#plzselect", unselected);
+        if (msg) msg.textContent = "즐겨찾기한 단어가 없습니다 (★를 눌러 추가하세요)";
+        return;
+      }
+    } else {
+      list = data.filter(v => Number(v.day) === day);
+      if (list.length === 0 && unselected) {
+        unselected.style.display = "";
+        const msg = qs("#plzselect", unselected);
+        if (msg) msg.textContent = `DAY ${day} 데이터가 없습니다`;
+        return;
+      }
+    }
+
+    const frag = document.createDocumentFragment();
+    for (const item of list) frag.appendChild(buildWordContainer(wcTemplate, ebTemplate, item));
+    root.appendChild(frag);
+
+    // [추가] 초기 동기화(혹시 모를 상태 불일치 대비)
+    syncAllStars();
+  } catch (err) {
+    console.error(err);
+    if (unselected) {
+      unselected.style.display = "";
+      const msg = qs("#plzselect", unselected);
+      if (msg) msg.textContent = "데이터 로드 오류";
+    }
+  }
+}
+
+// [추가] 별 클릭/키보드 토글 (이벤트 위임)
+document.addEventListener('click', (e) => {
+  const star = e.target.closest('.star');
+  if (star) {
+    const wc = star.closest('.wordcontainer');
+    if (!wc) return;
+    const wordnum = Number(wc.getAttribute('data-wordnum'));
+    if (!Number.isFinite(wordnum)) return;
+    toggleStarred(wordnum);
+    // 해당 컨테이너와, 같은 단어의 모든 별 동기화
+    syncStarsIn(wc);
+    return;
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const star = e.target.closest('.star');
+  if (!star) return;
+  e.preventDefault();
+  star.click();
+});
+
+// [수정] DAY 클릭 → ?day=숫자 (기존) + [추가] ★ 클릭 → ?starred=1
+document.addEventListener('click', (e) => {
+  // ★ 즐겨찾기 목록 보기
+  if (e.target && e.target.id === 'starred') {
+    const menu = document.getElementById('menuicon');
+    if (menu) menu.checked = false;
+
+    const url = new URL(location.href);
+    url.searchParams.delete('day');
+    url.searchParams.set('starred', '1');
+    location.href = url.toString();
+    return;
+  }
+
+  // 기존 DAY 처리
+  const btn = e.target.closest('[id^="day"]');
+  if (!btn) return;
+  const n = parseInt(btn.id.slice(3), 10);
+  if (!Number.isInteger(n)) return;
+
+  const menu = document.getElementById('menuicon');
+  if (menu) menu.checked = false;
+
+  const url = new URL(location.href);
+  url.searchParams.set('day', n);
+  url.searchParams.delete('starred'); 
   location.href = url.toString();
 });
