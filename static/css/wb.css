@@ -262,8 +262,8 @@ input[id="menuicon"]:checked + label + div {
   font-size: clamp(1.05rem, 0.9rem + 0.9vw, 1.6rem);
   line-height: 1.8;
   letter-spacing: 0.02em;
-  color: #d8e4eb;               /* 기본 글자색 */
-  word-break: keep-all;          /* 한글 줄바꿈 자연스럽게 */
-  white-space: pre-line;         /* \n 줄바꿈 그대로 표시 */
-  text-shadow: 0 1px 0 rgba(0,0,0,.25); /* 다크 배경에서 가독성 ↑ */
+  color: #d8e4eb;      
+  word-break: keep-all;          
+  white-space: pre-line;         
+  text-shadow: 0 1px 0 rgba(0,0,0,.25); 
 }
