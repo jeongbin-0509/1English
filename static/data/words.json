@@ -126,7 +126,7 @@
         "examples": [
             {
                 "meaning": "1. 대략적인, 근사치인, 거의 정확한 2. 근사치를 내다, 비슷하다",
-                "e_sentence": "What is the _1_ cost of the meterialS?",
+                "e_sentence": "What is the _1_ cost of the meterials?",
                 "k_sentence": "대략적인 재료비는 얼마입니까?",
                 "blank_count": 1,
                 "blanks": [
@@ -173,7 +173,7 @@
         "day": 17,
         "wordnum": 651,
         "word": "tension",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "1. 긴장 상태, 팽팽함, 긴장 2. 팽팽하게 하다",
@@ -182,6 +182,15 @@
                 "blank_count": 1,
                 "blanks": [
                     "Tension"
+                ]
+            },
+            {
+                "meaning": "1. 긴장 상태, 팽팽함, 긴장 2. 팽팽하게 하다",
+                "e_sentence": "Meditation helps people let go of the constant _1_ that accompanies their lives.",
+                "k_sentence": "명상은 사람들이 자신들의 생활에 동반하는 끊임없는 긴장을 없애는 데 도움이 된다.",
+                "blank_count": 1,
+                "blanks": [
+                    "tension"
                 ]
             }
         ]
@@ -398,7 +407,7 @@
         "examples": [
             {
                 "meaning": "1. 합법적인; 타당한, 정당한",
-                "e_sentence": "Sadly, human beings are in fact the only species that will deliberately deprive themselves of slepp without _1_ gain.",
+                "e_sentence": "Sadly, human beings are in fact the only species that will deliberately deprive themselves of sleep without _1_ gain.",
                 "k_sentence": "안타깝게도, 인간은 사실 합당한 이익 없이 의도적으로 잠을 지배할 유일한 종이다.",
                 "blank_count": 1,
                 "blanks": [
@@ -415,7 +424,7 @@
         "examples": [
             {
                 "meaning": "정권, 체제, 제도",
-                "e_sentence": "The presedent _1_ has been in power for two years.",
+                "e_sentence": "The president _1_ has been in power for two years.",
                 "k_sentence": "현 정권은 2년째 권력을 잡고 있다.",
                 "blank_count": 1,
                 "blanks": [
@@ -445,7 +454,7 @@
         "day": 17,
         "wordnum": 667,
         "word": "monument",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "기념비, 기념비, 유물",
@@ -454,6 +463,15 @@
                 "blank_count": 1,
                 "blanks": [
                     "monument"
+                ]
+            },
+            {
+                "meaning": "기념비, 기념비, 유물",
+                "e_sentence": "We tend to view a country's cultural heritage only as _1_ such as the pyramids in Egypt.",
+                "k_sentence": "우리는 한 국가의 문화 유산을 이집트의 피라미드와 같은 기념물로만 보는 경향이 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "monuments"
                 ]
             }
         ]
@@ -530,7 +548,7 @@
         "day": 17,
         "wordnum": 672,
         "word": "esteem",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "1. 존경, 존중; 감탄 2. 존경하다; 감탄하다",
@@ -539,6 +557,15 @@
                 "blank_count": 1,
                 "blanks": [
                     "esteemed"
+                ]
+            },
+            {
+                "meaning": "1. 존경, 존중; 감탄 2. 존경하다; 감탄하다",
+                "e_sentence": "People tend to _1_ those whose conduct serves the good of the public.",
+                "k_sentence": "사람들은 그들의 행동이 대중의 이익이 기여하는 사람들을 존경하는 경향이 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "esteem"
                 ]
             }
         ]
@@ -602,7 +629,7 @@
         "examples": [
             {
                 "meaning": "박수를 치다, 갈채를 보내다",
-                "e_sentence": "We _1_ the efforts of researchers and other experts to who have participated in the development if a vaccine.",
+                "e_sentence": "We _1_ the efforts of researchers and other experts to who have participated in the development of a vaccine.",
                 "k_sentence": "우리는 백신 개발에 참여한 연구원들과 여타 전문가들의 노력에 박수를 보낸다.",
                 "blank_count": 1,
                 "blanks": [
@@ -680,6 +707,732 @@
         ]
     },
     {
+        "day": 18,
+        "wordnum": 681,
+        "word": "account for",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. (부분·비율을) 차지하다 2. ~을 설명하다, ~을 해명하다",
+                "e_sentence": "In 2015, cash transactions _1_ barely 20% of all payments made in Sweden.",
+                "k_sentence": "2015년에 현금 거래는 스웨덴에서 이루어지는 모든 결제의 20%를 겨우 차지했다.",
+                "blank_count": 1,
+                "blanks": [
+                    "account for"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 682,
+        "word": "be dedicated to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 전념하다",
+                "e_sentence": "School time should _1_ academic subjects.",
+                "k_sentence": "학교 시간은 교과목 수업에 전념해야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "be dedicated to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 683,
+        "word": "go over",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 검토하다 ~을 조사하다",
+                "e_sentence": "Then let's go _1_ what we've prepared.",
+                "k_sentence": "그럼 우리가 준비한 것을 검토해 봅시다.",
+                "blank_count": 1,
+                "blanks": [
+                    "go over"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 684,
+        "word": "at one's disposal",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~의 마음대로 이용[사용]할 수 있게",
+                "e_sentence": "Painters have in principle an infinite range of colors _1_.",
+                "k_sentence": "이론상으로 화가들은 무한한 범위의 색을 마음대로 사용할 수 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "at their disposal"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 685,
+        "word": "scale up",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "(크기·규모를) 확대하다[늘리다]",
+                "e_sentence": "_1_ from the small to the large is often accompanied by an evolution from simplicity to complexity.",
+                "k_sentence": "작은 것에서 큰 것으로 규모를 확대하는 것은 흔히 단순함에서 복잡함으로의 진화를 수반한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "Scaling up"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 686,
+        "word": "hold on",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 간직하다(to); ~을 계속 잡고 있다; ~을 견뎌내다 2. <명령문 형태로> 기다려[멈춰]",
+                "e_sentence": "In order to _1_ to these precious memories, we often bring home souvenirs.",
+                "k_sentence": "이런 소중한 추억들을 간직하기 위해 우리는 종종 집에 기념품들을 가져온다.",
+                "blank_count": 1,
+                "blanks": [
+                    "held on"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 687,
+        "word": "make ends meet",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "수입과 지출을 맞추다, 겨우 먹고 살다",
+                "e_sentence": "Many had to reenter the workforce just to _1_.",
+                "k_sentence": "많은 사람들이 그저 수입과 지출을 맞추기 위해 다시 노동자로 돌아가야만 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "make ends meet"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 688,
+        "word": "let off",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~을 내뿜다; (총을) 발사하다; (폭탄 등을) 터뜨리다",
+                "e_sentence": "When the volcano _1_ steam, people ran away.",
+                "k_sentence": "화산이 증기를 내뿜자 사람들은 도망갔다.",
+                "blank_count": 1,
+                "blanks": [
+                    "let off"
+                ]
+            },
+            {
+                "meaning": "~을 내뿜다; (총을) 발사하다; (폭탄 등을) 터뜨리다",
+                "e_sentence": "Providing him with an opportunity to _1_ anger may help him solve the problem.",
+                "k_sentence": "그에게 분노를 표출할 기회를 주는 것은 그가 문제를 해결하는 것을 도울 수 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "let off"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 689,
+        "word": "make sense",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "말이 되다, 타당하다; 의미가 통하다",
+                "e_sentence": "This story only _1_ because it is set in 1980.",
+                "k_sentence": "이 이야기는 단지 그것이 1980년을 배경으로 되어 있기 때문에 말이 될 뿐이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "makes sense"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 690,
+        "word": "sign up for",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 등록하다, ~을 신청[가입]하다",
+                "e_sentence": "I tried to _1_ for your lifeguard training course this summer.",
+                "k_sentence": "저는 이번 여름에 귀사의 인명구조원 훈련 과정에 등록하려 했습니다.",
+                "blank_count": 1,
+                "blanks": [
+                    "sign up for"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 691,
+        "word": "do without",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~없이 지내다[해내다]",
+                "e_sentence": "If they can't get the machine to us, we'll just have to _1_.",
+                "k_sentence": "그들이 우리에게 그 기계를 가져오지 못하면, 그저 그것 없이 지내야 할 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "do without"
+                ]
+            },
+            {
+                "meaning": "~없이 지내다[해내다]",
+                "e_sentence": "Since I'm quite addicted to my smartphone, I cannot _1_ it.",
+                "k_sentence": "나는 스마트폰에 상당히 중독되어 있어서, 스마트폰 없이는 지낼 수 없다.",
+                "blank_count": 1,
+                "blanks": [
+                    "do without"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 692,
+        "word": "come into contact",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~와 접촉하다",
+                "e_sentence": "Discard any foods that have _1_ with polluted water.",
+                "k_sentence": "오염된 물에 접촉한 식품은 어떤 것이라도 폐기하라.",
+                "blank_count": 1,
+                "blanks": [
+                    "come into contact"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 693,
+        "word": "straighten out",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 바로잡다[바르게 하다]; (분쟁·혼란 등을) 수습하다, 해결하다",
+                "e_sentence": "Unfortunately you need braces to _1_ your teeth.",
+                "k_sentence": "유감이지만 당신의 치아를 고르게 하려면 치아 교정기가 필요하다.",
+                "blank_count": 1,
+                "blanks": [
+                    "straighten out"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 694,
+        "word": "put off",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 연기하다",
+                "e_sentence": "I can't find a cable that fits. I'll have to _1_ my presentation.",
+                "k_sentence": "나는 맞는 전선을 찾을 수 없어. 나는 발표를 연기해야 해.",
+                "blank_count": 1,
+                "blanks": [
+                    "put off"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 695,
+        "word": "be in charge of",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 담당하다[맡다]",
+                "e_sentence": "A new manager came in his place to _1_ running the manufacturing location.",
+                "k_sentence": "새로운 관리자가 제조 구역 운영을 담당하기 위해 그의 자리에 왔다.",
+                "blank_count": 1,
+                "blanks": [
+                    "be in charge of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 696,
+        "word": "reflect on",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 되돌아보다, ~을 반성하다",
+                "e_sentence": "The boy was left to _1_ the implications of his decision.",
+                "k_sentence": "그 소년은 자기 결정에 내포되는 의미를 되돌아보도록 남겨졌다.",
+                "blank_count": 1,
+                "blanks": [
+                    "reflect on"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 697,
+        "word": "enroll in",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 등록하다",
+                "e_sentence": "If you want to _1_ any courses this semester, you have to do it by September 3.",
+                "k_sentence": "이번 학기에 어떤 강좌에든 등록하기를 원한다면 9월 3일 까지 해야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "enroll in"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 698,
+        "word": "rob ~ of ...",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에게서 ...을 앗아가다",
+                "e_sentence": "The negative events are likely to _1_ us _2_ appreciation of each day.",
+                "k_sentence": "부정적인 사건은 우리에게서 매일의 감사를 앗아갈 확률이 높다.",
+                "blank_count": 2,
+                "blanks": [
+                    "rob",
+                    "of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 699,
+        "word": "be obsessed with",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~에 사로잡히다, ~에 집착하다",
+                "e_sentence": "The more you look in the mirror, the more you will _1_ your looks.",
+                "k_sentence": "거울을 더 보면 볼수록 더 외모에 집착하게 될 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "be obsessed with"
+                ]
+            },
+            {
+                "meaning": "~에 사로잡히다, ~에 집착하다",
+                "e_sentence": "Do not _1_ the past, but try to be faithful to the present.",
+                "k_sentence": "과거에 집착하지 말되 현재에 충실하려 노력해라.",
+                "blank_count": 1,
+                "blanks": [
+                    "be obsessed with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 700,
+        "word": "correspond to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에[와]일치하다[들어맞다]",
+                "e_sentence": "The goods do not _1_ the sample you sent me.",
+                "k_sentence": "그 상품은 귀사가 제게 보냈던 견본과 일치하지 않습니다.",
+                "blank_count": 1,
+                "blanks": [
+                    "correspond to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 701,
+        "word": "compensate for",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 보상[보완]하다, ~을 보충하다",
+                "e_sentence": "To _1_ the increased surface area, our skin wrinkles.",
+                "k_sentence": "증가된 피부 표면을 보완하기 위해서, 피부에 주름이 생기게 된다.",
+                "blank_count": 1,
+                "blanks": [
+                    "compensate for"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 702,
+        "word": "give in (to)",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "(~에) 굴복하다, (~에) 항복하다",
+                "e_sentence": "The brave young mother refused to _1_ to bullying and threats.",
+                "k_sentence": "그 용감한 젊은 어머니는 괴롭힘과 협박에 굴복하지 않았다.",
+                "blank_count": 1,
+                "blanks": [
+                    "give in"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 703,
+        "word": "lag behind",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~ 보다 뒤처지다(낙후되다)",
+                "e_sentence": "The United States continues to _1_ at least 40 other nations in life expectancy.",
+                "k_sentence": "미국은 기대 수명 순위에서 적어도 다른 40개국에 뒤처지기를 계속한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "lag behind"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 704,
+        "word": "keep in mind",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "기억하다, 염두에 두다",
+                "e_sentence": "What you need to _1_ is to be clear and concise.",
+                "k_sentence": "여러분이 기억해야 할 점은 명확하고 간결해야 한다는 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "keep in mind"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 705,
+        "word": "stand for",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 상징하다[의미하다] 2. ~을 대표하다; ~을 옹호하다",
+                "e_sentence": "An upside-down horseshoe shape _1_ ten.",
+                "k_sentence": "위아래가 뒤집어진 편자 모양은 10을 상징했다.",
+                "blank_count": 1,
+                "blanks": [
+                    "stood for"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 706,
+        "word": "set up",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. 설립하다, 준비하다 2. ~인 체하다",
+                "e_sentence": "They moved to Zambia and _1_ a charitable organization that provides conservation education programs for children.",
+                "k_sentence": "그들은 잠비아로 이주해서 어린이들에게 환경보호 교육 프로그램을 제공하는 자선 기관을 설립했다.",
+                "blank_count": 1,
+                "blanks": [
+                    "set up"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 707,
+        "word": "in a vacuum",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "외부와 단절된 상태에서",
+                "e_sentence": "Data does not exist _1_ - it's there to be consumed and transformed in various ways.",
+                "k_sentence": "데이터는 외부와 단절된 상태에서 존재하는 것이 아니라 다양한 방식으로 소비되고 변형되기 위해 그곳에 있는 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "in a vacuum"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 708,
+        "word": "feel free to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "마음 놓고 ~해도 좋다",
+                "e_sentence": "For more information, _1_ call us.",
+                "k_sentence": "더 많은 정보가 필요하시면 주저 말고 저희에게 전화 주십시오.",
+                "blank_count": 1,
+                "blanks": [
+                    "feel free to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 709,
+        "word": "take advantage of",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 이용하다",
+                "e_sentence": "To _1_ these benefits, you should make good posture a part of your daily life.",
+                "k_sentence": "이러한 이득을 이용하기 위해서, 여러분은 좋은 자세를 일상 생활의 일부로 만들어야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "take advantage of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 710,
+        "word": "consist of",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~로 구성되다",
+                "e_sentence": "The textbook _1_ 12 chapters.",
+                "k_sentence": "그 교과서는 12개의 단원으로 이루어져 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "consists of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 711,
+        "word": "take over",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "이어받다, 인계받다; 인수하다",
+                "e_sentence": "Construction of this remarkable building began in 1882, and Gaudi _1_ responsibility for its design in 1883.",
+                "k_sentence": "이 놀라운 건물의 건설은 1882년에 시작됐고, 가우디가 1883년에 설계에 대한 책임을 이어받았다.",
+                "blank_count": 1,
+                "blanks": [
+                    "took over"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 712,
+        "word": "squeeze in",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 위한 짬을 내다, ~에 비집고 들어가다",
+                "e_sentence": "I even managed to _1_ a good 20 minutes of sleep.",
+                "k_sentence": "나는 족히 20분이나 되는 수면을 위한 짬을 낼 수도 있었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "squeeze in"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 713,
+        "word": "work out",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. 운동하다 2. (일이) 잘 풀리다, ~을 해결하다 3. ~을 계획해 내다; 계산하다",
+                "e_sentence": "I'm trying to _1_ at the gym every day.",
+                "k_sentence": "나는 매일 체욱관에서 운동하려고 노력하고 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "work out"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 714,
+        "word": "sum up",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "요약하다",
+                "e_sentence": "We can _1_ the whole paragraph in a sentence.",
+                "k_sentence": "우리는 문단 전체를 한 문장으로 요약할 수 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "sum up"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 715,
+        "word": "set aside",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "곁에 두다; 확보하다, 따로 떼어 두다",
+                "e_sentence": "These areas are _1_ for public recreation use by the city.",
+                "k_sentence": "이들 지역은 시에 의해 공공 휴양용으로 확보되어 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "set aside"
+                ]
+            },
+            {
+                "meaning": "곁에 두다; 확보하다, 따로 떼어 두다",
+                "e_sentence": "You should _1_ some money for a rainy day.",
+                "k_sentence": "여러분은 어려운 날을 위해 돈을 좀 따로 떼어 놓아야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "set aside"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 716,
+        "word": "keep up with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~에 뒤지지 않다; 시류를 따르다 2. ~와 계속 연락하고 지내다",
+                "e_sentence": "It is difficult to _1_ the rapid pace of changing fashion.",
+                "k_sentence": "패션의 빠른 변화 속도에 뒤지지 않기는 힘들다.",
+                "blank_count": 1,
+                "blanks": [
+                    "keep up with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 717,
+        "word": "get over",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. (곤란을) 극복하다, ~을 넘다 2. (병에서) 회복되다",
+                "e_sentence": "_1_ it and don't let the past keep you from moving forward.",
+                "k_sentence": "그것을 극복하고 과거가 여러분이 앞으로 나아가느 것을 막지 못하게 하라",
+                "blank_count": 1,
+                "blanks": [
+                    "Get over"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 718,
+        "word": "answer for",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 대해 책임지다, ~을 보증하다",
+                "e_sentence": "You will have to _1_ your behavior one day.",
+                "k_sentence": "언젠가는 당신의 행동에 대해 책임을 져야 할 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "answer for"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 719,
+        "word": "bump into",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~와 우연히 마주치다",
+                "e_sentence": "Now, however, many of your worries are not as instantly resolved as they were when you used to _1_ tigers.",
+                "k_sentence": "그러나 요즘은 여러분의 많은 걱정거리가 호랑이를 만나곤 하던 시절처럼 즉각적으로 해결되지 않는다.",
+                "blank_count": 1,
+                "blanks": [
+                    "bump into"
+                ]
+            },
+            {
+                "meaning": "~와 우연히 마주치다",
+                "e_sentence": "While I was shopping at the mall, I happened to _1_ Mike.",
+                "k_sentence": "쇼핑몰에서 쇼핑을 하던 중에, 나는 Mike를 우연히 만났다.",
+                "blank_count": 1,
+                "blanks": [
+                    "bump into"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 18,
+        "wordnum": 720,
+        "word": "read between the lines",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "행간[속뜻]을 읽다",
+                "e_sentence": "You have to _1_ to understand what the writer is saying.",
+                "k_sentence": "작가가 하고자 하는 말을 이해하려면 행간을 읽어야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "read between the lines"
+                ]
+            }
+        ]
+    },
+    {
         "day": 19,
         "wordnum": 721,
         "word": "turn down",
@@ -708,7 +1461,7 @@
                 "k_sentence": "일반적으로 여러분은 이미 교차로에 들어선 차에 양보해야 한다.",
                 "blank_count": 1,
                 "blanks": [
-                    "yeild to"
+                    "yield to"
                 ]
             }
         ]
@@ -725,7 +1478,7 @@
                 "k_sentence": "어둠을 틈타 도둑들은 집 안으로 숨어 들어갔다.",
                 "blank_count": 1,
                 "blanks": [
-                    "Under cover od darkness"
+                    "Under cover of darkness"
                 ]
             }
         ]
@@ -755,7 +1508,7 @@
         "examples": [
             {
                 "meaning": "1. 출발하다 2. (의견을) 말하다[발표하다]",
-                "e_sentence": "They _1_ on thier desert crossing two days ago.",
+                "e_sentence": "They _1_ on their desert crossing two days ago.",
                 "k_sentence": "그들은 이틀 전에 사막 횡단을 출발했다.",
                 "blank_count": 1,
                 "blanks": [
@@ -891,7 +1644,7 @@
         "examples": [
             {
                 "meaning": "~을 만들어내다[생산하다], ~을 제시[제안]하다",
-                "e_sentence": "The city is struggling to _1_ creative unban renewal ideas.",
+                "e_sentence": "The city is struggling to _1_ creative urban renewal ideas.",
                 "k_sentence": "그 도시는 창의적인 도시 재생 아이디어를 만들어내기 위해 애쓰고 있다.",
                 "blank_count": 1,
                 "blanks": [
@@ -1002,7 +1755,7 @@
         "examples": [
             {
                 "meaning": "벗어난, 일탈한 일탈자, 이상 성격",
-                "e_sentence": "tudies show that many violent criminals begin exhibiting _1_ behavior in early childhood.",
+                "e_sentence": "Studies show that many violent criminals begin exhibiting _1_ behavior in early childhood.",
                 "k_sentence": "연구에 따르면 많은 폭력 범죄자들이 유아기에 일탈 행위를 보이기 시작한다고 한다.",
                 "blank_count": 1,
                 "blanks": [
@@ -1479,11 +2232,11 @@
         "examples": [
             {
                 "meaning": "조짐, 증상, 증후",
-                "e_sentence": "The rise in inflation is one symptom of the poor state of the economy.",
+                "e_sentence": "The rise in inflation is one _1_ of the poor state of the economy.",
                 "k_sentence": "인플레이션 증가는 좋지 못한 경제 상태의 한 가지 징후이다.",
                 "blank_count": 1,
                 "blanks": [
-                    "perplexed"
+                    "symptom"
                 ]
             }
         ]
@@ -1590,7 +2343,7 @@
             },
             {
                 "meaning": "활성화하다, 작동시키다; 반응을 촉진하다",
-                "e_sentence": "A pleasant laugh can _1_ the release of enderphins and reduce pain.",
+                "e_sentence": "A pleasant laugh can _1_ the release of endorphins and reduce pain.",
                 "k_sentence": "즐거운 웃음은 엔도르핀의 분비를 촉진하고 고통을 줄일 수 있다.",
                 "blank_count": 1,
                 "blanks": [
@@ -2220,7 +2973,7 @@
         "examples": [
             {
                 "meaning": "이전의, 앞의, 전에",
-                "e_sentence": "This problem is the reverse of the _1_ one",
+                "e_sentence": "This problem is the reverse of the _1_ one.",
                 "k_sentence": "이 문제는 이전의 것과 정반대이다.",
                 "blank_count": 1,
                 "blanks": [
@@ -2475,7 +3228,7 @@
         "examples": [
             {
                 "meaning": "재건[개조]하다; 재구성하다",
-                "e_sentence": "Investigators are trying to _1_ the circumstances of the crash",
+                "e_sentence": "Investigators are trying to _1_ the circumstances of the crash.",
                 "k_sentence": "수사관들은 그 충돌 사고 당시의 상황을 재구성해 보려고 하고 있다.",
                 "blank_count": 1,
                 "blanks": [
@@ -2594,7 +3347,7 @@
         "examples": [
             {
                 "meaning": "정제하다, 세련되게 하다",
-                "e_sentence": "The scientists found a cheap way to _1_ it into aluminum",
+                "e_sentence": "The scientists found a cheap way to _1_ it into aluminum.",
                 "k_sentence": "과학자들은 그것을 알루미늄으로 정련하는 방법을 찾았다.",
                 "blank_count": 1,
                 "blanks": [
@@ -3624,7 +4377,7 @@
                 "meaning": "호의, 친절",
                 "e_sentence": "The recipient reciprocates _1_ for _2_.",
                 "k_sentence": "받는 사람은 호의를 호의로 보답한다.",
-                "blank_count": 1,
+                "blank_count": 2,
                 "blanks": [
                     "favor",
                     "favor"
@@ -3720,7 +4473,7 @@
             },
             {
                 "meaning": "특성, 속성",
-                "e_sentence": "TWe use instruments to measure bulk _1_ of the environment.",
+                "e_sentence": "We use instruments to measure bulk _1_ of the environment.",
                 "k_sentence": "우리는 대량의 환경 특성을 측정하기 위해 도구를 사용한다.",
                 "blank_count": 1,
                 "blanks": [
@@ -4194,7 +4947,7 @@
         "examples": [
             {
                 "meaning": "기기, 기구",
-                "e_sentence": "People began to accept the tradeoff of the risk of accidental death from electricity for better and cheaper tighting and worksaving electrical _1_.",
+                "e_sentence": "People began to accept the tradeoff of the risk of accidental death from electricity for better and cheaper lighting and worksaving electrical _1_.",
                 "k_sentence": "사람들은 더 좋고 더 저렴한 조명 및 일을 줄여 주는 가전제품과 전기로 인한 사고사의 위험과의 맞교환을 받아들이기 시작했다.",
                 "blank_count": 1,
                 "blanks": [
@@ -5076,7 +5829,7 @@
             },
             {
                 "meaning": "잘 알고 있는",
-                "e_sentence": "Nothing is so good for an ignorant man as silence, and if he was _1_ of this he wood not be ignorant.",
+                "e_sentence": "Nothing is so good for an ignorant man as silence, and if he was _1_ of this he would not be ignorant.",
                 "k_sentence": "무지한 사람에게 침묵만큼 좋은 것은 없고, 그거 이것을 잘 알고 있다면 그는 무지하지 않을 것이다.",
                 "blank_count": 1,
                 "blanks": [
@@ -6864,7 +7617,7 @@
         "examples": [
             {
                 "meaning": "알려주다, 지시하다, 가르치다",
-                "e_sentence": "She _1_ him to set the marbles on the table and thoghtfully examine each one with the magnifying glass.",
+                "e_sentence": "She _1_ him to set the marbles on the table and thoughtfully examine each one with the magnifying glass.",
                 "k_sentence": "그녀는 탁자 위에 구슬을 놓아두고 확대경으로 하나하나를 진지하게 살펴보라고 알려 주었다.",
                 "blank_count": 1,
                 "blanks": [
