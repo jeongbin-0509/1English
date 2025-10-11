@@ -3144,7 +3144,7 @@
         "examples": [
             {
                 "meaning": "방해물, 장애물",
-                "e_sentence": "I will have experienced many setbacks and _1_ which will have helped me grow",
+                "e_sentence": "I will have experienced many setbacks and _1_ which will have helped me grow.",
                 "k_sentence": "나는 내가 성장하도록 도울 많은 좌절과 장애물을 경험할 것이다.",
                 "blank_count": 1,
                 "blanks": [
@@ -3161,7 +3161,7 @@
         "examples": [
             {
                 "meaning": "사로잡다, 집착하게 하다",
-                "e_sentence": "Don't be _1_ with winning and enjoy the game",
+                "e_sentence": "Don't be _1_ with winning and enjoy the game.",
                 "k_sentence": "승부에 집착하지 말고 게임을 즐겨라",
                 "blank_count": 1,
                 "blanks": [
