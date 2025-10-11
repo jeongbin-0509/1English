@@ -3003,12 +3003,21 @@
         "day": 25,
         "wordnum": 951,
         "word": "prevail",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "만연하다; 우세하다, 이기다, 성공하다, 설득하다",
                 "e_sentence": "Her work dealt with flowers and insects, not the historical or religious topics that _1_ in those days",
                 "k_sentence": "그녀의 작품은 그 당시 만연했던 역사나 종교적인 주제가 아닌 꽃과 곤충을 다루었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "prevailed"
+                ]
+            },
+            {
+                "meaning": "만연하다, 우세하다",
+                "e_sentence": "A feeling of good fellowship _1_ at the social gathering, so the attendees felt happy.",
+                "k_sentence": "좋은 친근감이 그 사교 모임에서 널리 퍼져 있어서 참석자들은 행복하다고 느꼈다.",
                 "blank_count": 1,
                 "blanks": [
                     "prevailed"
@@ -3077,6 +3086,15 @@
                 "meaning": "예방책",
                 "e_sentence": "Many locals have been stockpiling food as a _1_ against shortages",
                 "k_sentence": "많은 현지인이 부족에 대비한 예방책으로서 식량을 비축하고 있었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "precaution"
+                ]
+            },
+            {
+                "meaning": "예방책",
+                "e_sentence": "The most obvious _1_ to prevent major damage is not to drop your device.",
+                "k_sentence": "큰 손실을 예방할 가장 분명한 예방책은 여러분의 기기를 떨어트리지 않는 것이다.",
                 "blank_count": 1,
                 "blanks": [
                     "precaution"
@@ -3315,6 +3333,15 @@
                 "meaning": "출구,배출구, 발산 수단",
                 "e_sentence": "Sport became the perfect _1_ for his stress",
                 "k_sentence": "스포츠는 그의 스트레스를 발산할 완벽한 수단이 되었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "outlet"
+                ]
+            },
+            {
+                "meaning": "출구, 배출구",
+                "e_sentence": "She began writing in need of an _1_ for her creative energies.",
+                "k_sentence": "그녀는 자신의 창의적인 에너지에 대한 표출구가 필요하여 글쓰기를 시작했다.",
                 "blank_count": 1,
                 "blanks": [
                     "outlet"
@@ -3591,6 +3618,15 @@
                 "blanks": [
                     "produce"
                 ]
+            },
+            {
+                "meaning": "만들어내다",
+                "e_sentence": "We can buy and consume organic _1_ that is grown without pesticides.",
+                "k_sentence": "우리는 살충제 없이 재배된 유기농 농산물을 구매하여 먹을 수 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "produce"
+                ]
             }
         ]
     },
@@ -3689,6 +3725,15 @@
                 "meaning": "연장하는, 오래 계속되는",
                 "e_sentence": "He left the stage to _1_ applause",
                 "k_sentence": "그는 박수가 오래 계속되는 가운데 무대를 떠났다.",
+                "blank_count": 1,
+                "blanks": [
+                    "prolonged"
+                ]
+            },
+            {
+                "meaning": "연장하는",
+                "e_sentence": "The doctor is confident that the patient's life can be _1_ by the operation.",
+                "k_sentence": "그 의사는 그 환자의 생명이 그 수술을 통해 연장될 수 있음에 자신이 있었다.",
                 "blank_count": 1,
                 "blanks": [
                     "prolonged"
@@ -3808,6 +3853,15 @@
                 "meaning": "추상적인, 이론적인",
                 "e_sentence": "Her works consist of _1_ and geometric shapes with stark color contrasts.",
                 "k_sentence": "그녀의 작품은 극명한 색채 대비의 추상적이고 기하학적인 형태로 구성되어 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "abstract"
+                ]
+            },
+            {
+                "meaning": "추상적인, 이론적인",
+                "e_sentence": "We may talk of specific beautiful things but beauty itself is _1_",
+                "k_sentence": "우리는 특정한 아름다운 것들에 대해 이야기를 할 수 있지만 아름다움 그 자체는 추상적이다.",
                 "blank_count": 1,
                 "blanks": [
                     "abstract"
