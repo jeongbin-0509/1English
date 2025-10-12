@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 수행 연습</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+</head>
+
+<body>
+   <div id="sbarpart">
+        <!--사이드바 열기 버튼 -->
+            <button class="open-btn" onclick="openSidebar()"></button>
+
+        <!-- 사이드바 -->
+            <div class="sidebar" id="sidebar">
+                <button class="close-btn" onclick="closeSidebar()"></button>
+                <h2>단<spon style="color: #66cc33;">어</spon>장 by <span style="color: #66cc33;">;</span></h2>
+                <hr style="width: auto; height: 2px; background-color: #555555; border: none">
+                <button class="Reselect" onclick="goToPage()">DAY 재선택</button>
+                <!-- <button class="Review">오답복습(미완)</button> -->
+                <!-- <button class="Favorites">즐겨찾기된 단어(미완)</button> -->
+                <!-- <button class="Statistics">통계(미완)</button> -->
+
+                <form action="{{ url_for('words') }}">
+                    <button> 단어장 바로가기 </button>
+                </form>
+                
+                <form action="{{ url_for('logout') }}">
+                    <button class="Logout">로그아웃</button>
+                </form>
+            </div>
+   </div> 
+
+<h5 style="color: #555555;">made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 / 오류문의 : 인스타 an0_9jb(오류난 화면을 찍어서 보내주세요)</h5>
+<script src="../static/javascript/script.js"></script>
+</body>
+</html>
