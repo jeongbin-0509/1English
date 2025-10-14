@@ -165,14 +165,13 @@ select {
 .loginpart {
   margin: 0;
   padding: 0;
-  height: 40vh; /* 전체 화면 높이 */
+  height: 40vh;
   display: flex;
-  justify-content: center; /* 가로 중앙 */
-  align-items: center;     /* 세로 중앙 */
-  background-color: #181818; /* 배경색 (원하는 대로 바꿔도 됨) */
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
 }
 
-/* 로그인 박스 */
 .loginbox {
   background-color: #222;
   padding: 40px 30px;
@@ -187,7 +186,6 @@ select {
   color: #66cc33;
 }
 
-/* 입력창 */
 .loginbox input {
   width: 100%;
   padding: 12px;
@@ -205,7 +203,6 @@ select {
   background-color: #2a2a2a;
 }
 
-/* 버튼 */
 .loginbox button {
   width: 100%;
   padding: 12px;
@@ -224,7 +221,6 @@ select {
   background-color: #57a82c;
 }
 
-/* 플래시 메시지 영역 */
 #flash-container {
   position: fixed;
   top: 20px;
@@ -242,15 +238,9 @@ select {
   font-weight: bold;
 }
 
-/* 카테고리별 색상 예시 */
-.flash-message.success {
-  background-color: #66cc33;
-}
-.flash-message.error {
-  background-color: #e74c3c;
-}
+.flash-message.success { background-color: #66cc33; }
+.flash-message.error   { background-color: #e74c3c; }
 
-/* 3초 후 자동 사라짐 */
 @keyframes fadeOut {
   0% {opacity: 1;}
   80% {opacity: 1;}
@@ -288,18 +278,9 @@ select {
     color: #66cc33;
     border: 2px solid #66cc33;
 }
-#sidebar .Reselect:hover {
-    background-color: #66cc33;
-    color: #222;
-}
-#sidebar .Logout {
-    background-color: #333333;
-    color: #66cc33;
-}
-#sidebar .Logout:hover {
-    background-color: #66cc33;
-    color: #222;
-}
+#sidebar .Reselect:hover { background-color: #66cc33; color: #222; }
+#sidebar .Logout { background-color: #333333; color: #66cc33; }
+#sidebar .Logout:hover { background-color: #66cc33; color: #222; }
 #sidebar h2 {
     color: #ffffff;
     text-align: center;
@@ -313,3 +294,81 @@ select {
     height: 2px;
     background-color: #66cc33;
 }
+
+/* == 균형감 배치==== */
+/* 사이드바 버튼이 항상 보이게 */
+.open-btn, .close-btn {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1200;
+}
+
+/* 오른쪽 배치 여유롭게 */
+#mainpart {
+  margin-left: 300px;                         /* 사이드바 폭(300px)에 맞춤 */
+  width: calc(100vw - 300px);
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;                  /* 가로 중앙, 세로 위쪽에서 시작 */
+  padding: 12vh 6vw 10vh;
+  background-color: #181818;
+}
+
+/* 콘텐츠 최대폭 제한 */
+.home-wrap { width: min(100%, 980px); }
+
+/* 제목은 상단 근처 */
+#mainpart > .home-wrap > h1 {
+  font-size: clamp(36px, 4.8vw, 72px);
+  margin: 0 0 7vh;
+  letter-spacing: 1.5px;
+}
+#mainpart > .home-wrap > h1 span { color: #66cc33; }
+
+/* DAY 버튼 그리드 */
+.day-select {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  gap: 26px 24px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.day-select button {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: none;
+  background: #222;
+  color: #4fb3ff;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,.35);
+}
+
+.day-select button:hover {
+  background: #4fb3ff;
+  color: #111;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(79,179,255,.45);
+}
+
+/* 하단 문구 중앙 고정 */
+#mainpart ~ h5 {
+  position: fixed;
+  bottom: 12px;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  z-index: 200;
+}
+
+/* 사이드바가 열렸을 때 */
+body.sidebar-open #mainpart { filter: brightness(.96); }
