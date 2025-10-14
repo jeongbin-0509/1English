@@ -1,77 +1,78 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영어 수행 연습</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>영어 수행 연습</title>
+  <link rel="stylesheet" href="../static/css/style.css"/>
+  <link rel="stylesheet" href="../static/css/responsive.css"/>
 </head>
 
 <body>
-   <div id="sbarpart">
-        <!--사이드바 열기 버튼 -->
-            <button class="open-btn" onclick="openSidebar()"></button>
+  <div id="sbarpart">
+    <!-- 사이드바 토글 -->
+    <button id="sidebarToggle" class="open-btn" type="button" onclick="toggleSidebar()"></button>
 
-        <!-- 사이드바 -->
-            <div class="sidebar" id="sidebar">
-                <button class="close-btn" onclick="closeSidebar()"></button>
-                <h2>단<spon style="color: #66cc33;">어</spon>장 by <span style="color: #66cc33;">;</span></h2>
-                <hr style="width: auto; height: 2px; background-color: #555555; border: none">
-                
-                <form action=>
-                    <button class="Reselect" onclick="goToPage()">DAY 재선택</button>
-                </form>
+    <!-- 사이드바 -->
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+      <button class="close-btn" type="button" aria-label="사이드바 닫기" onclick="closeSidebar()"></button>
+      <h2>단<span style="color: #66cc33;">어</span>장 by <span style="color: #66cc33;">;</span></h2>
+      <hr style="width:auto;height:2px;background-color:#555555;border:none" />
 
-                <form action=>
-                    <button class="Review">오답복습</button>
-                </form>
+      <!-- flask 라우트?-->
+      <form action="{{ url_for('main_page') }}" method="get">
+        <button class="Reselect" type="submit">DAY 재선택</button>
+      </form>
 
-                
-                <form action="{{ url_for('words') }}">
-                    <button> 단어장 바로가기 </button>
-                </form>
-                
-                <form action="{{ url_for('logout') }}">
-                    <button class="Logout">로그아웃</button>
-                </form>
-            </div>
-   </div> 
+      <form action="">
+        <button class="Review" type="button">오답복습</button>
+      </form>
 
-   <div id="mainpart">
-        <!-- 홈화면면 제목 -->
-            <h1>welc<span style="color: #66cc33;">o</span>me!</h1>
-        <!-- form 써서 url로 예문 페이지에 day 정보 보내버릴거임-->
-            <form id="goStart">
-        <!-- 단어 선택 input (value 값을 기준으로 js파일 만들어줘요요)-->
-            <!-- <div class="wordoption">
-                <label><input class="itam" type="checkbox" name="day" value="d1">Day1</label>
-                <label><input class="itam" type="checkbox" name="day" value="d2">Day2</label>
-                <label><input class="itam" type="checkbox" name="day" value="d3">Day3</label>
-                <label><input class="itam" type="checkbox" name="day" value="d4">Day4</label>
-                <label><input class="itam" type="checkbox" name="day" value="d5">Day5</label>
-                <label><input class="itam" type="checkbox" name="day" value="d6">Day6</label>
-                <label><input class="itam" type="checkbox" name="day" value="d7">Day7</label>
-                <label><input class="itam" type="checkbox" name="day" value="d8">Day8</label>
-                <label><input class="itam" type="checkbox" name="day" value="d9">Day9</label>
-                <label><input class="itam" type="checkbox" name="day" value="d10">Day10</label>
-                <label><input class="itam" type="checkbox" name="day" value="d11">Day11</label>
-                <label><input class="itam" type="checkbox" name="day" value="d12">Day12</label>
-                <label><input class="itam" type="checkbox" name="day" value="d13">Day13</label>
-                <label><input class="itam" type="checkbox" name="day" value="d14">Day14</label>
-                <label><input class="itam" type="checkbox" name="day" value="d15">Day15</label>
-                <label><input class="itam" type="checkbox" name="day" value="d16">Day16</label>
-            </div> -->
+      <form action="{{ url_for('words') }}">
+        <button type="submit">단어장 바로가기</button>
+      </form>
 
-            <!-- <div class="mainbtn">
-                <button type="button" id="selectAllBtn">모두 선택</button>
-                <button type="button" id="deselectAllBtn">모두 취소</button>
-                <button type="submit" id="startAllBtn">시작하기</button>
-            </div>
-        </form> -->
+      <form action="{{ url_for('logout') }}">
+        <button class="Logout" type="submit">로그아웃</button>
+      </form>
+    </aside>
+
+    <!-- 오버레이 -->
+    <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+  </div>
+
+  <div id="mainpart">
+    <div class="home-wrap">
+      <h1>welc<span style="color:#66cc33;">o</span>me!</h1>
+
+      <form id="goStart"></form>
+       <!--날짜들-->>
+      <div class="day-select">
+        <button type="button">17</button>
+        <button type="button">18</button>
+        <button type="button">19</button>
+        <button type="button">20</button>
+        <button type="button">21</button>
+        <button type="button">22</button>
+        <button type="button">23</button>
+        <button type="button">24</button>
+        <button type="button">25</button>
+        <button type="button">26</button>
+        <button type="button">27</button>
+        <button type="button">28</button>
+        <button type="button">29</button>
+        <button type="button">30</button>
+        <button type="button">★</button>
+      </div>
     </div>
+  </div>
 
-<h5 style="color: #555555;">made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 / 오류문의 : 인스타 an0_9jb(오류난 화면을 찍어서 보내주세요)</h5>
-<script src="../static/javascript/script.js"></script>
+  <h5 style="color:#555555;">
+    made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 / 오류문의 : 인스타 an0_9jb(오류난 화면을 찍어서 보내주세요)
+  </h5>
+
+  <!-- JS 로드 -->
+  <script src="../static/javascript/script.js"></script>
+  <script src="../static/javascript/script3.js"></script>
 </body>
 </html>
