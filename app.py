@@ -45,11 +45,6 @@ def odap():
 def main_page():
     return render_template("index.html")
 
-# 오답 노트 보기
-@app.route("/remind")
-def remind():
-    return render_template("remind.html")
-
 # 로그인
 @app.route("/login", methods=["GET", "POST"])
 @limiter.limit("10/minute")
