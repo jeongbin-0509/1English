@@ -35,6 +35,11 @@ def home():
 def words():
     return render_template("wb.html")
 
+# 오답 복습 불러오기
+@app.route("/odap")
+def odap():
+    return render_template("odap.html")
+
 # 메인 창으로 돌아가기
 @app.route("/main_page")
 def main_page():
