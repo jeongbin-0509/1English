@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>영어 수행 연습</title>
-  <link rel="stylesheet" href="../static/css/style.css"/>
-  <link rel="stylesheet" href="../static/css/responsive.css"/>
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <link rel="stylesheet" href="../static/css/responsive.css" />
 </head>
 
 <body>
@@ -16,35 +17,37 @@
     <!-- 사이드바 -->
     <aside class="sidebar" id="sidebar" aria-hidden="true">
       <button class="close-btn" type="button" aria-label="사이드바 닫기" onclick="closeSidebar()"></button>
-      <h2>단<span style="color: #66cc33;">어</span>장 by <span style="color: #66cc33;">;</span></h2>
+      <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
       <hr style="width:auto;height:2px;background-color:#555555;border:none" />
 
-      <!-- flask 라우트?-->
+      <!-- flask 라우트?(oo)-->
       <form action="{{ url_for('main_page') }}" method="get">
         <button class="Reselect" type="submit">DAY 재선택</button>
       </form>
 
-                <form action="{{ url_for('remind') }}">
-                    <button class="Review">오답복습</button>
-                </form>
+      <form action="{{ url_for('odap') }}">
+        <button class="Review" type="submit">오답복습</button>
+      </form>
 
-                
-                <form action="{{ url_for('words') }}">
-                    <button> 단어장 바로가기 </button>
-                </form>
-                
-                <form action="{{ url_for('logout') }}">
-                    <button class="Logout">로그아웃</button>
-                </form>
-            </div>
-   </div> 
+      <form action="{{ url_for('words') }}">
+        <button type="submit">단어장 바로가기</button>
+      </form>
+
+      <form action="{{ url_for('logout') }}">
+        <button class="Logout" type="submit">로그아웃</button>
+      </form>
+    </aside>
+
+    <!-- 오버레이 -->
+    <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+  </div>
 
   <div id="mainpart">
     <div class="home-wrap">
-      <h1>welc<span style="color:#66cc33;">o</span>me!</h1>
+      <h1>welc<span style="color:#35b3f2;">o</span>me!</h1>
 
       <form id="goStart"></form>
-       <!--날짜들-->>
+      <!--날짜들-->>
       <div class="day-select">
         <button type="button">17</button>
         <button type="button">18</button>
@@ -60,7 +63,6 @@
         <button type="button">28</button>
         <button type="button">29</button>
         <button type="button">30</button>
-        <button type="button">★</button>
       </div>
     </div>
   </div>
@@ -70,7 +72,8 @@
   </h5>
 
   <!-- JS 로드 -->
-  <script src="../static/javascript/script.js"></script>
-  <script src="../static/javascript/script3.js"></script>
+  <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/script3.js') }}"></script>
 </body>
+
 </html>

@@ -1,6 +1,6 @@
-// wb.js — JSON fetch + ?day= 필터 + 템플릿 복제 + _n_ → blanks[n-1] 치환
+// wb.js — JSON fetch + ?day=/starred + 템플릿 복제 + _n_ 치환 + 예문별 ★ 저장
 
-const DATA_URL = "../static/data/words.json"; // 경로 수정
+const DATA_URL = "../static/data/words.json";
 
 // ---- util
 const qs = (s, p=document) => p.querySelector(s);
@@ -8,30 +8,29 @@ const txt = (el, v) => { if (el) el.textContent = v ?? ""; };
 const html = (el, v) => { if (el) el.innerHTML = v ?? ""; };
 const esc = s => String(s).replace(/[&<>"']/g, m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 
-// ---- favorites (localStorage)
-const LS_KEY = 'wb_starred';
+// ---- favorites (예문 단위, localStorage)
+const LS_KEY = 'wb_starred_examples'; // exID 배열 저장. exID = `${wordnum}-${exIndex}`
 
-function getStarred() {
-  try { return JSON.parse(localStorage.getItem(LS_KEY)) ?? []; }
-  catch { return []; }
+function getStarredSet() {
+  try {
+    const arr = JSON.parse(localStorage.getItem(LS_KEY)) ?? [];
+    return new Set(arr.filter(x=>typeof x==='string'));
+  } catch { return new Set(); }
 }
-function setStarred(arr) {
-  const uniqSorted = [...new Set(arr)].map(n=>Number(n)).filter(Number.isFinite).sort((a,b)=>a-b);
-  localStorage.setItem(LS_KEY, JSON.stringify(uniqSorted));
+function saveStarred(set) {
+  localStorage.setItem(LS_KEY, JSON.stringify([...set]));
 }
-function isStarred(wordnum) {
-  const set = new Set(getStarred());
-  return set.has(Number(wordnum));
+function isStarredEx(exID) {
+  return getStarredSet().has(String(exID));
 }
-function toggleStarred(wordnum) {
-  const set = new Set(getStarred());
-  const k = Number(wordnum);
+function toggleStarredEx(exID) {
+  const set = getStarredSet();
+  const k = String(exID);
   if (set.has(k)) set.delete(k); else set.add(k);
-  setStarred([...set]);
+  saveStarred(set);
 }
 
-
-// _n_ → blanks[n-1] 치환. 없으면 빈칸 표시.
+// _n_ → blanks[n-1] 치환
 function renderBlanks(sentence, blanks = []) {
   return String(sentence ?? "").replace(/_(\d+)_/g, (_, n) => {
     const i = Number(n) - 1;
@@ -42,7 +41,7 @@ function renderBlanks(sentence, blanks = []) {
   });
 }
 
-// meaning 안의 텍스트 노드만 교체(별 아이콘 유지)
+// meaning 안의 텍스트 노드만 교체
 function setMeaningText(meaningEl, text) {
   let done = false;
   meaningEl?.childNodes.forEach(n => {
@@ -51,29 +50,44 @@ function setMeaningText(meaningEl, text) {
   if (!done && meaningEl) meaningEl.insertBefore(document.createTextNode(text ?? ""), meaningEl.firstChild);
 }
 
-// 예문 블록 생성
-function buildExampleBlock(tplEB, ex) {
+// 예문 블록 생성 (예문별 ★ 상태 반영)
+function buildExampleBlock(tplEB, ex, exID) {
   const eb = tplEB.cloneNode(true);
+  eb.setAttribute('data-exid', exID);
+
   setMeaningText(qs(".meaning", eb), ex?.meaning ?? "");
   const eEl = qs(".esentence", eb);
   const kEl = qs(".ksentence", eb);
   if (eEl) html(eEl, renderBlanks(ex?.e_sentence, ex?.blanks));
   if (kEl) txt(kEl, ex?.k_sentence ?? "");
+
   const star = qs(".meaning .star", eb);
-  if (star) { star.classList.remove("active"); star.textContent = "☆"; }
+  if (star) {
+    const active = isStarredEx(exID);
+    star.classList.toggle('active', active);
+    star.textContent = active ? "★" : "☆";
+    star.setAttribute('role', 'button');
+    star.setAttribute('tabindex', '0');
+    star.setAttribute('aria-pressed', String(active));
+    star.setAttribute('aria-label', active ? '즐겨찾기 해제' : '즐겨찾기에 추가');
+  }
   return eb;
 }
 
-// 단어 컨테이너 생성
-function buildWordContainer(tplWC, tplEB, item) {
-  const wc = tplWC.cloneNode(false);               // 빈 컨테이너만
+// 단어 컨테이너 생성 (예문 리스트 주입)
+function buildWordContainer(tplWC, tplEB, item, examples) {
+  const wc = tplWC.cloneNode(false);
+  wc.setAttribute('data-wordnum', String(item?.wordnum ?? ''));
+
   const header = qs("header", tplWC).cloneNode(true);
   txt(qs(".word", header), item?.word ?? "");
   txt(qs(".wordnum", header), String(item?.wordnum ?? ""));
   wc.appendChild(header);
 
-  const examples = Array.isArray(item?.examples) ? item.examples : [];
-  for (const ex of examples) wc.appendChild(buildExampleBlock(tplEB, ex));
+  examples.forEach((ex, idx) => {
+    const exID = `${item?.wordnum}-${idx}`;
+    wc.appendChild(buildExampleBlock(tplEB, ex, exID));
+  });
   return wc;
 }
 
@@ -82,17 +96,17 @@ async function main() {
   const unselected = qs(".unselected");
   const tplWC = qs(".wordcontainer", root);
   const tplEB = qs(".exampleblock", tplWC);
-
   if (!root || !tplWC || !tplEB) { console.error("템플릿 누락"); return; }
 
   const params = new URLSearchParams(location.search);
   const dayParam = params.get("day");
+  const starredParam = params.get("starred");
+  const isStarPage = starredParam === '1';
   const day = dayParam ? Number(dayParam) : NaN;
 
-  if (!Number.isFinite(day)) { if (unselected) unselected.style.display = ""; return; }
+  if (!isStarPage && !Number.isFinite(day)) { if (unselected) unselected.style.display = ""; return; }
   if (unselected) unselected.style.display = "none";
 
-  // 템플릿 분리 후 비우기
   const wcTemplate = tplWC.cloneNode(true);
   const ebTemplate = tplEB.cloneNode(true);
   root.innerHTML = "";
@@ -103,18 +117,37 @@ async function main() {
     const data = await res.json();
     if (!Array.isArray(data)) throw new Error("JSON 루트는 배열이어야 함");
 
-    const list = data.filter(v => Number(v.day) === day);
-    if (list.length === 0) {
+    const frag = document.createDocumentFragment();
+    const favSet = getStarredSet();
+
+    // 단어별로 예문 필터링 후 렌더
+    const byWord = (isStarPage
+      ? data // 즐겨찾기 페이지는 전체 탐색
+      : data.filter(v => Number(v.day) === day));
+
+    let renderedCount = 0;
+    for (const item of byWord) {
+      const examples = Array.isArray(item?.examples) ? item.examples : [];
+      const filtered = isStarPage
+        ? examples.map((ex, idx) => ({ ex, idx }))
+                  .filter(({idx}) => favSet.has(`${item.wordnum}-${idx}`))
+                  .map(({ex}) => ex)
+        : examples;
+
+      if (filtered.length === 0) continue;
+      frag.appendChild(buildWordContainer(wcTemplate, ebTemplate, item, filtered));
+      renderedCount += filtered.length;
+    }
+
+    if (renderedCount === 0) {
       if (unselected) {
         unselected.style.display = "";
         const msg = qs("#plzselect", unselected);
-        if (msg) msg.textContent = `DAY ${day} 데이터가 없습니다`;
+        msg && (msg.textContent = isStarPage ? "즐겨찾기한 예문이 없습니다 (★를 눌러 추가하세요)" : `DAY ${day} 데이터가 없습니다`);
       }
       return;
     }
 
-    const frag = document.createDocumentFragment();
-    for (const item of list) frag.appendChild(buildWordContainer(wcTemplate, ebTemplate, item));
     root.appendChild(frag);
   } catch (err) {
     console.error(err);
@@ -128,141 +161,26 @@ async function main() {
 
 document.addEventListener("DOMContentLoaded", main);
 
-// DAY 클릭 → ?day=숫자 로 이동
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('[id^="day"]');
-  if (!btn) return;
-  const n = parseInt(btn.id.slice(3), 10);
-  if (!Number.isInteger(n)) return;
-
-  // 사이드바 닫기
-  const menu = document.getElementById('menuicon');
-  if (menu) menu.checked = false;
-
-  // 해당 day로 이동
-  const url = new URL(location.href);
-  url.searchParams.set('day', n);
-  location.href = url.toString();
-});
-
-
-// [수정] buildWordContainer: 컨테이너에 data-wordnum 부여
-function buildWordContainer(tplWC, tplEB, item) {
-  const wc = tplWC.cloneNode(false);
-  wc.setAttribute('data-wordnum', String(item?.wordnum ?? ''));
-
-  const header = qs("header", tplWC).cloneNode(true);
-  txt(qs(".word", header), item?.word ?? "");
-  txt(qs(".wordnum", header), String(item?.wordnum ?? ""));
-  wc.appendChild(header);
-
-  const examples = Array.isArray(item?.examples) ? item.examples : [];
-  for (const ex of examples) wc.appendChild(buildExampleBlock(tplEB, ex));
-
-  // [추가] 이 컨테이너의 모든 별을 즐겨찾기 상태와 동기화
-  syncStarsIn(wc);
-  return wc;
-}
-
-// [추가] 별 UI 동기화 (컨테이너 단위/전체)
-function syncStarsIn(container) {
-  const wordnum = Number(container?.getAttribute('data-wordnum'));
-  const active = isStarred(wordnum);
-  container.querySelectorAll('.star').forEach(star => {
-    star.classList.toggle('active', active);
-    star.textContent = active ? '★' : '☆';
-    star.setAttribute('role', 'button');
-    star.setAttribute('tabindex', '0');
-    star.setAttribute('aria-pressed', String(active));
-    star.setAttribute('aria-label', active ? '즐겨찾기 해제' : '즐겨찾기에 추가');
-  });
-}
-function syncAllStars() {
-  document.querySelectorAll('.wordcontainer').forEach(syncStarsIn);
-}
-
-
-async function main() {
-  const root = qs(".wordblock");
-  const unselected = qs(".unselected");
-  const tplWC = qs(".wordcontainer", root);
-  const tplEB = qs(".exampleblock", tplWC);
-
-  if (!root || !tplWC || !tplEB) { console.error("템플릿 누락"); return; }
-
-  const params = new URLSearchParams(location.search);
-  const dayParam = params.get("day");
-  const starredParam = params.get("starred");           
-  const isStarPage = starredParam === '1';             
-  const day = dayParam ? Number(dayParam) : NaN;
-
-  if (!isStarPage && !Number.isFinite(day)) {
-    if (unselected) unselected.style.display = "";
-    return;
-  }
-  if (unselected) unselected.style.display = "none";
-
-  const wcTemplate = tplWC.cloneNode(true);
-  const ebTemplate = tplEB.cloneNode(true);
-  root.innerHTML = "";
-
-  try {
-    const res = await fetch(DATA_URL, { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    if (!Array.isArray(data)) throw new Error("JSON 루트는 배열이어야 함");
-
-    let list = [];
-    if (isStarPage) {
-      const fav = new Set(getStarred());
-      list = data.filter(v => fav.has(Number(v.wordnum)));
-      if (list.length === 0 && unselected) {
-        unselected.style.display = "";
-        const msg = qs("#plzselect", unselected);
-        if (msg) msg.textContent = "즐겨찾기한 단어가 없습니다 (★를 눌러 추가하세요)";
-        return;
-      }
-    } else {
-      list = data.filter(v => Number(v.day) === day);
-      if (list.length === 0 && unselected) {
-        unselected.style.display = "";
-        const msg = qs("#plzselect", unselected);
-        if (msg) msg.textContent = `DAY ${day} 데이터가 없습니다`;
-        return;
-      }
-    }
-
-    const frag = document.createDocumentFragment();
-    for (const item of list) frag.appendChild(buildWordContainer(wcTemplate, ebTemplate, item));
-    root.appendChild(frag);
-
-    // [추가] 초기 동기화(혹시 모를 상태 불일치 대비)
-    syncAllStars();
-  } catch (err) {
-    console.error(err);
-    if (unselected) {
-      unselected.style.display = "";
-      const msg = qs("#plzselect", unselected);
-      if (msg) msg.textContent = "데이터 로드 오류";
-    }
-  }
-}
-
-// [추가] 별 클릭/키보드 토글 (이벤트 위임)
+// 이벤트 위임: ★ 토글
 document.addEventListener('click', (e) => {
   const star = e.target.closest('.star');
   if (star) {
-    const wc = star.closest('.wordcontainer');
-    if (!wc) return;
-    const wordnum = Number(wc.getAttribute('data-wordnum'));
-    if (!Number.isFinite(wordnum)) return;
-    toggleStarred(wordnum);
-    // 해당 컨테이너와, 같은 단어의 모든 별 동기화
-    syncStarsIn(wc);
+    const eb = star.closest('.exampleblock');
+    if (!eb) return;
+    const exID = eb.getAttribute('data-exid');
+    if (!exID) return;
+    toggleStarredEx(exID);
+
+    const active = isStarredEx(exID);
+    star.classList.toggle('active', active);
+    star.textContent = active ? '★' : '☆';
+    star.setAttribute('aria-pressed', String(active));
+    star.setAttribute('aria-label', active ? '즐겨찾기 해제' : '즐겨찾기에 추가');
     return;
   }
 });
 
+// 키보드 접근성
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const star = e.target.closest('.star');
@@ -271,9 +189,9 @@ document.addEventListener('keydown', (e) => {
   star.click();
 });
 
-// [수정] DAY 클릭 → ?day=숫자 (기존) + [추가] ★ 클릭 → ?starred=1
+// 네비게이션: ★ 목록 / DAY 이동
 document.addEventListener('click', (e) => {
-  // ★ 즐겨찾기 목록 보기
+  // 즐겨찾기 페이지
   if (e.target && e.target.id === 'starred') {
     const menu = document.getElementById('menuicon');
     if (menu) menu.checked = false;
@@ -285,7 +203,7 @@ document.addEventListener('click', (e) => {
     return;
   }
 
-  // 기존 DAY 처리
+  // DAY 이동
   const btn = e.target.closest('[id^="day"]');
   if (!btn) return;
   const n = parseInt(btn.id.slice(3), 10);
@@ -296,6 +214,6 @@ document.addEventListener('click', (e) => {
 
   const url = new URL(location.href);
   url.searchParams.set('day', n);
-  url.searchParams.delete('starred'); 
+  url.searchParams.delete('starred');
   location.href = url.toString();
 });

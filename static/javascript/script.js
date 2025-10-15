@@ -1,3 +1,5 @@
+// Connected to Index.html
+
 // 사이드바 제어
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
