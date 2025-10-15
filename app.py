@@ -40,6 +40,7 @@ def words():
 def main_page():
     return render_template("index.html")
 
+# 오답 노트 보기
 @app.route("/remind")
 def remind():
     return render_template("remind.html")
