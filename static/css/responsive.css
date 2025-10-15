@@ -67,3 +67,33 @@
 }
 
 /* 태스트 해봐야 알긴함 디버깅 필수! */
+
+/* ===================== 균형 배치 = */
+@media (max-width: 1280px) {
+  #mainpart { padding: 10vh 5vw 9vh; }
+  .home-wrap { width: min(100%, 920px); }
+}
+
+@media (max-width: 1024px) {
+  #mainpart {
+    margin-left: 0;                /* 태블릿/모바일 */
+    width: 100vw;
+    padding: 10vh 6vw 8vh;
+  }
+  .home-wrap { width: min(100%, 860px); }
+  .day-select {
+    grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+    gap: 20px 18px;
+  }
+  .day-select button { width: 76px; height: 76px; font-size: 19px; }
+}
+
+@media (max-width: 600px) {
+  #mainpart { padding: 9vh 5vw 7vh; }
+  .home-wrap { width: 100%; }
+  .day-select {
+    grid-template-columns: repeat(auto-fit, minmax(62px, 1fr));
+    gap: 16px 14px;
+  }
+  .day-select button { width: 62px; height: 62px; font-size: 16px; }
+}
