@@ -19,13 +19,13 @@
       <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
       <hr style="width:auto;height:2px;background-color:#555555;border:none" />
 
-      <!-- flask 라우트?-->
+      <!-- flask 라우트?(oo)-->
       <form action="{{ url_for('main_page') }}" method="get">
         <button class="Reselect" type="submit">DAY 재선택</button>
       </form>
 
-      <form action="">
-        <button class="Review" type="button">오답복습</button>
+      <form action="{{ url_for('odap') }}">
+        <button class="Review" type="submit">오답복습</button>
       </form>
 
       <form action="{{ url_for('words') }}">
@@ -71,7 +71,7 @@
   </h5>
 
   <!-- JS 로드 -->
-  <script src="../static/javascript/script.js"></script>
-  <script src="../static/javascript/script3.js"></script>
+  <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/script3.js') }}"></script>
 </body>
 </html>
