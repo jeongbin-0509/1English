@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, make_response, flash, jsonify
 from supabase import create_client
-from gotrue.errors import AuthApiError, AuthWeakPasswordError
+from gotrue.errors import AuthApiError
 from dotenv import load_dotenv
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -39,6 +39,10 @@ def words():
 @app.route("/main_page")
 def main_page():
     return render_template("index.html")
+
+@app.route("/remind")
+def remind():
+    return render_template("remind.html")
 
 # 로그인
 @app.route("/login", methods=["GET", "POST"])
