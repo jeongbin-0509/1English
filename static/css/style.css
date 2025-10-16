@@ -339,7 +339,12 @@ select {
   margin-top: 2vh;
 }
 
-.day-select button {
+.day-select label {
+  display: inline-flex;    
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
   width: 88px;
   height: 88px;
   border-radius: 50%;
@@ -353,11 +358,11 @@ select {
   box-shadow: 0 0 8px rgba(0,0,0,.35);
 }
 
-.day-select button:hover {
-  background: #4fb3ff;
+.day-select label:hover {
+  background: #c24949;
   color: #111;
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(79,179,255,.45);
+  box-shadow: 0 6px 18px rgba(194, 73, 73, 0.45);
 }
 
 /* 하단 문구 중앙 고정 */
@@ -374,3 +379,18 @@ select {
 
 /* 사이드바가 열렸을 때 */
 body.sidebar-open #mainpart { filter: brightness(.96); }
+
+/* Day Select CheckBox + Invisible */
+.day-select input[type="checkbox"] {
+  display: none;
+}
+/* 선택되면 붉은색으로 바꾸기 */
+.day-select input[type="checkbox"]:checked + label {
+  color: #c24949;
+  background: #222;
+}
+.day-select input[type="checkbox"]:checked + label:hover {
+  background: #4fb3ff;
+  color: #111;
+  box-shadow: 0 6px 18px rgba(79,179,255,.45);
+}

@@ -217,3 +217,11 @@ document.addEventListener('click', (e) => {
   url.searchParams.delete('starred');
   location.href = url.toString();
 });
+
+document.getElementById("linktologin").addEventListener("click", () => {
+  window.location.href = "/login";
+})
+
+document.getElementById("cheerup").addEventListener("click", () => {
+  alert("세미콜론 화이팅 >_<");
+})
