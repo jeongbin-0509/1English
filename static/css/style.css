@@ -359,7 +359,7 @@ select {
 }
 
 .day-select label:hover {
-  background: #c24949;
+  background: #4fb3ff;
   color: #111;
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(194, 73, 73, 0.45);
@@ -386,7 +386,7 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
 }
 /* 선택되면 붉은색으로 바꾸기 */
 .day-select input[type="checkbox"]:checked + label {
-  color: #c24949;
+  color: #4fb3ff;
   background: #222;
 }
 .day-select input[type="checkbox"]:checked + label:hover {
