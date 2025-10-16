@@ -362,7 +362,7 @@ select {
   background: #4fb3ff;
   color: #111;
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(194, 73, 73, 0.45);
+  box-shadow: 0 6px 18px rgba(79,179,255,.45);
 }
 
 /* 하단 문구 중앙 고정 */
