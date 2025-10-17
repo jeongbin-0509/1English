@@ -56,22 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// day 정보 예문 페이지로 보내기
-const goStartForm = document.getElementById("goStart");
-if (goStartForm) {
-  goStartForm.addEventListener("submit", e => {
-    e.preventDefault();
-    const selected = [];
-    document.querySelectorAll("input[name='day']:checked").forEach(cb => {
-      selected.push(cb.value);
-    });
-    const url =
-      "./example.html?" +
-      selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
-    if (url !== "./example.html?") window.location.href = url;
-  });
-}
-
 // DAY 재선택
 function goToPage() {
   window.location.href = "index.html";
@@ -166,8 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const url = "templates/example.html?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
-
+      const url = "/example?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
       window.location.href = url;
     });
   }

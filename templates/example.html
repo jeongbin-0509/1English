@@ -24,28 +24,5 @@
             <button class="Favorites">즐겨찾기된 단어(미완)</button>
             <button class="Statistics">통계(미완)</button>
         </div>
-    </div>
-   
-    <br>
-
-    <div class="progress">
-        <div id="progress"></div>
-    </div>
-
-    <div id="exmplpart">
-        <h3 id="exp">영어 예문이 띄워집니다</h3>
-        <h3 id="asp">해석문이 띄워집니다</h3>
-    </div>
-
-    <div class="container">
-        <button class="okBtn" onclick="submitAnswer()">제출</button>
-        <!-- ✅ 정답/오답 피드백 메시지 출력 영역 -->
-        <div id="feedback" style="margin-top: 10px; font-weight: bold;"></div>
-    </div>
-    
-    <!-- 정적 JS 불러오기 -->
-    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
-    <script src="{{ url_for('static', filename='javascript/script2.js') }}"></script>
-    <script src="{{ url_for('static', filename='javascript/example.js') }}"></script>
 </body>
 </html>

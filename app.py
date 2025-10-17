@@ -45,6 +45,12 @@ def odap():
 def main_page():
     return render_template("index.html")
 
+# 점마 머시기냐 그 예문 돌리는 거시기 글로 가는거
+@app.route("/example")
+def example():
+    return render_template("example.html")
+
+
 # 로그인
 @app.route("/login", methods=["GET", "POST"])
 @limiter.limit("10/minute")
