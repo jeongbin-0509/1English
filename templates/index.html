@@ -19,7 +19,7 @@
       <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
       <hr style="width:auto;height:2px;background-color:#555555;border:none" />
 
-      <!-- flask 라우트?(oo)-->
+      <!-- flask 라우트 -->
       <form action="{{ url_for('main_page') }}" method="get">
         <button class="Reselect" type="submit">DAY 재선택</button>
       </form>
@@ -46,66 +46,58 @@
       <h1>welc<span style="color:#35b3f2;">o</span>me!</h1>
 
       <form id="goStart"></form>
-       <!--날짜들-->
+
+      <!-- 날짜들 -->
       <div class="day-select">
-        <input type="checkbox" id="word17">
-        <label for="word17">
-          17
-        </label>
-        <input type="checkbox" id="word18">
-        <label for="word18">
-          18
-        </label>
-        <input type="checkbox" id="word19">
-        <label for="word19">
-          19
-        </label>
-        <input type="checkbox" id="word20">
-        <label for="word20">
-          20
-        </label>
-        <input type="checkbox" id="word21">
-        <label for="word21">
-          21
-        </label>
-        <input type="checkbox" id="word22">
-        <label for="word22">
-          22
-        </label>
-        <input type="checkbox" id="word23">
-        <label for="word23">
-          23
-        </label>
-        <input type="checkbox" id="word24">
-        <label for="word24">
-          24
-        </label>
-        <input type="checkbox" id="word25">
-        <label for="word25">
-          25
-        </label>
-        <input type="checkbox" id="word26">
-        <label for="word26">
-          26
-        </label>
-        <input type="checkbox" id="word27">
-        <label for="word27">
-          27
-        </label>
-        <input type="checkbox" id="word28">
-        <label for="word28">
-          28
-        </label>
-        <input type="checkbox" id="word29">
-        <label for="word29">
-          29
-        </label>
-        <input type="checkbox" id="word30">
-        <label for="word30">
-          30
-        </label>
+        <input type="checkbox" id="word17" name="day" value="17" class="itam">
+        <label for="word17">17</label>
+
+        <input type="checkbox" id="word18" name="day" value="18" class="itam">
+        <label for="word18">18</label>
+
+        <input type="checkbox" id="word19" name="day" value="19" class="itam">
+        <label for="word19">19</label>
+
+        <input type="checkbox" id="word20" name="day" value="20" class="itam">
+        <label for="word20">20</label>
+
+        <input type="checkbox" id="word21" name="day" value="21" class="itam">
+        <label for="word21">21</label>
+
+        <input type="checkbox" id="word22" name="day" value="22" class="itam">
+        <label for="word22">22</label>
+
+        <input type="checkbox" id="word23" name="day" value="23" class="itam">
+        <label for="word23">23</label>
+
+        <input type="checkbox" id="word24" name="day" value="24" class="itam">
+        <label for="word24">24</label>
+
+        <input type="checkbox" id="word25" name="day" value="25" class="itam">
+        <label for="word25">25</label>
+
+        <input type="checkbox" id="word26" name="day" value="26" class="itam">
+        <label for="word26">26</label>
+
+        <input type="checkbox" id="word27" name="day" value="27" class="itam">
+        <label for="word27">27</label>
+
+        <input type="checkbox" id="word28" name="day" value="28" class="itam">
+        <label for="word28">28</label>
+
+        <input type="checkbox" id="word29" name="day" value="29" class="itam">
+        <label for="word29">29</label>
+
+        <input type="checkbox" id="word30" name="day" value="30" class="itam">
+        <label for="word30">30</label>
       </div>
+
+      <!-- ✅ 선택 요약 패널 -->
+      <div id="selected-days-panel" class="selected-panel hidden" aria-live="polite">
+        <span class="selected-label">선택한 Day</span>
+        <div id="selected-days" class="selected-list"></div>
       </div>
+
     </div>
   </div>
 
@@ -115,6 +107,5 @@
 
   <!-- JS 로드 -->
   <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
-  <script src="{{ url_for('static', filename='javascript/index.js')}}"></script>
 </body>
 </html>
