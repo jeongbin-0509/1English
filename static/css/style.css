@@ -386,8 +386,8 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
 }
 /* 선택되면 붉은색으로 바꾸기 */
 .day-select input[type="checkbox"]:checked + label {
-  color: #4fb3ff;
-  background: #222;
+  color: #222;
+  background: #4fb3ff;
 }
 .day-select input[type="checkbox"]:checked + label:hover {
   background: #4fb3ff;
