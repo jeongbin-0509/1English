@@ -2,6 +2,14 @@
 
 const DATA_URL = "../static/data/words.json";
 
+(function ensureDefaultQS() {
+  if (!location.search || new URLSearchParams(location.search).toString() === "") {
+    const url = new URL(location.href);
+    url.searchParams.set("day", "17");
+    url.searchParams.delete("starred");
+    location.replace(url.toString()); // 히스토리 치환
+  }
+})();
 // ---- util
 const qs = (s, p=document) => p.querySelector(s);
 const txt = (el, v) => { if (el) el.textContent = v ?? ""; };
