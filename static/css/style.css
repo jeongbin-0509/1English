@@ -295,7 +295,7 @@ select {
     background-color: #66cc33;
 }
 
-/* == 균형감 배치==== */
+/** 균형감 /
 /* 사이드바 버튼이 항상 보이게 */
 .open-btn, .close-btn {
   position: fixed;
@@ -306,11 +306,11 @@ select {
 
 /* 오른쪽 배치 여유롭게 */
 #mainpart {
-  margin-left: 8%;                        /* 사이드바 폭(300px)에 맞춤 */
+  margin-left: 8%;
   width: calc(100vw - 300px);
   min-height: 90vh;
   display: grid;
-  place-items: start center;                /* 가로 중앙, 세로 위쪽에서 시작 */
+  place-items: start center;
   padding: 12vh 6vw 10vh;
   background-color: #181818;
 }
@@ -318,7 +318,7 @@ select {
 /* 콘텐츠 최대폭 제한 */
 .home-wrap { 
   width: min(100%, 980px);
-  }
+}
 
 /* 제목은 상단 근처 */
 #mainpart > .home-wrap > h1 {
@@ -377,20 +377,76 @@ select {
   z-index: 200;
 }
 
-/* 사이드바가 열렸을 때 */
+/* 사이드바가 열림표시?*/
 body.sidebar-open #mainpart { filter: brightness(.96); }
 
-/* Day Select CheckBox + Invisible */
+/* 날짜 선택*/
 .day-select input[type="checkbox"] {
   display: none;
 }
-/* 선택되면 붉은색으로 바꾸기 */
+/* 선택되면 붉은색 */
 .day-select input[type="checkbox"]:checked + label {
   color: #222;
   background: #4fb3ff;
+}
+/* 선택 라벨 */
+.day-select input[type="checkbox"]:checked + label {
+  position: relative;
+  box-shadow: 0 0 0 2px #c24949 inset, 0 0 18px rgba(194,73,73,.35);
 }
 .day-select input[type="checkbox"]:checked + label:hover {
   background: #4fb3ff;
   color: #111;
   box-shadow: 0 6px 18px rgba(79,179,255,.45);
+}
+
+/* 선택 패널*/
+.selected-panel {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #1f1f1f;
+  border: 1px solid #2b2b2b;
+  display: flex;
+  align-items: center;
+  gap: 10px 12px;
+  flex-wrap: wrap;
+  color: #e5e7eb;
+}
+.selected-panel.hidden { display: none; }
+
+.selected-label {
+  font-weight: 700;
+  color: #4fb3ff;
+  margin-right: 4px;
+}
+
+/* 칩 */
+.selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid #3a3a3a;
+  background: #242424;
+  color: #4fb3ff;     
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  border-color: #66cc33;
+}
+.chip .x {
+  font-weight: 900;
+  line-height: 1;
 }
