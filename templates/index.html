@@ -92,10 +92,16 @@
         <label for="word30">30</label>
       </div>
 
-      <!-- ✅ 선택 요약 패널 -->
+      <!--  선택  패널 -->
       <div id="selected-days-panel" class="selected-panel hidden" aria-live="polite">
+        
         <span class="selected-label">선택한 Day</span>
         <div id="selected-days" class="selected-list"></div>
+      
+      </div>
+      <!--  시작 버튼 -->
+      <div id="start-container" class="start-container hidden">
+        <button id="startBtn" type="button">선택한 Day로 시작하기 ▶</button>
       </div>
 
     </div>
@@ -107,5 +113,6 @@
 
   <!-- JS 로드 -->
   <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+
 </body>
 </html>

@@ -85,6 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dayInputs = Array.from(document.querySelectorAll('input[name="day"]'));
 
+  // ✅ 시작 버튼 요소(있으면 연동, 없으면 무시)
+  const startContainer = document.getElementById("start-container");
+  const startBtn = document.getElementById("startBtn");
+
   function getSelectedValues() {
     return dayInputs
       .filter(cb => cb.checked)
@@ -93,12 +97,20 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(String);
   }
 
+  // ✅ 선택 여부에 따라 시작 버튼 보이기/숨기기
+  function updateStartBtn() {
+    if (!startContainer) return;
+    const anyChecked = dayInputs.some(cb => cb.checked);
+    startContainer.classList.toggle("hidden", !anyChecked);
+  }
+
   function renderChips() {
     const selected = getSelectedValues();
 
     if (selected.length === 0) {
       panel.classList.add("hidden");
       listEl.innerHTML = "";
+      updateStartBtn(); // 버튼 숨김
       return;
     }
 
@@ -133,14 +145,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
       listEl.appendChild(btn);
     });
+
+    updateStartBtn(); // 버튼 표시 갱신
   }
 
   // 체크박스 변화  반응
   dayInputs.forEach(cb => cb.addEventListener("change", renderChips));
 
   // 외부에서 선택상태 일괄 변경시 ㄱ
-  document.addEventListener("days:changed", renderChips);
+  document.addEventListener("days:changed", () => {
+    renderChips();
+    updateStartBtn();
+  });
+  // 시작 버튼
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      const selected = getSelectedValues();
+      if (selected.length === 0) {
+        alert("먼저 Day를 선택해주세요!");
+        return;
+      }
 
+      const url = "templates/example.html?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
+
+      window.location.href = url;
+    });
+  }
   // 초기 렌더하는것
   renderChips();
+  updateStartBtn();
 });
