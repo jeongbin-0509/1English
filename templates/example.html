@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 </head>
 
-<body> 
+<body>
     <div id="sbarpart">
         <!-- 사이드바 열기 버튼 -->
         <button class="open-btn" onclick="openSidebar()"></button>
@@ -24,5 +25,38 @@
             <button class="Favorites">즐겨찾기된 단어(미완)</button>
             <button class="Statistics">통계(미완)</button>
         </div>
+
+        <br><br><br>
+
+        <div class="quizblock">
+            <div class="quizcontainer">
+                <header>
+                    <div class="count">n out of N <span class="star">☆</span></div>
+                </header>
+                <div class="exampleblock">
+                    <div class="answerbox">S______</div>
+                    <div class="esentence">_1_ is better than any other club in UJHS.</div>
+                    <div class="ksentence">세미콜론은 최고다.</div>
+                    <div class="realanswer"><span>=></span>Semicolon</div>
+                </div>
+
+                <button class="check">확인</button>
+            </div>
+        </div>
+        <!-- <div class="wordblock">
+            <div class="wordcontainer">
+                <header>
+                    <div class="word">TEMPLATE_WORD</div>
+                    <div class="wordnum">0000</div>
+                </header>
+
+                <div class="exampleblock">
+                    <div class="meaning">뜻 텍스트 <span class="star">☆</span></div>
+                    <div class="esentence">Template _1_ sentence.</div>
+                    <div class="ksentence">템플릿 해석.</div>
+                </div>
+            </div>
+        </div> -->
 </body>
+
 </html>
