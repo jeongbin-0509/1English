@@ -450,3 +450,37 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
   font-weight: 900;
   line-height: 1;
 }
+
+/*  시작 버튼  */
+/*선택한 Day로 시작하기 버튼*/
+.start-container {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+#startBtn {
+  background-color: #4fb3ff;
+  color: #181818;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79,179,255,0.3);
+  transition: all 0.25s ease;
+}
+
+#startBtn:hover {
+  background-color: #66ccff;
+  box-shadow: 0 6px 18px rgba(102,204,255,0.45);
+  transform: translateY(-2px);
+}
+
+/* 숨김 클래스 */
+.start-container.hidden {
+  display: none;
+}
+
+
