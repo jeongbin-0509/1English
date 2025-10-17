@@ -28,7 +28,7 @@
         <button class="Review" type="submit">오답복습</button>
       </form>
 
-      <form action="{{ url_for('words') }}">
+      <form action="{{ url_for('words?day=17') }}">
         <button type="submit">단어장 바로가기</button>
       </form>
 
@@ -115,5 +115,6 @@
 
   <!-- JS 로드 -->
   <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/index.js')}}"></script>
 </body>
 </html>

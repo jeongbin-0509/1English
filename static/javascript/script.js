@@ -1,4 +1,5 @@
 // Connected to Index.html
+// Sidebar
 
 // 사이드바 제어
 function toggleSidebar() {
@@ -35,41 +36,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// 모든 체크박스 선택
-document.addEventListener("DOMContentLoaded", function () {
-  const selectAllBtn = document.getElementById("selectAllBtn");
-  const deselectAllBtn = document.getElementById("deselectAllBtn");
+// // 모든 체크박스 선택
+// document.addEventListener("DOMContentLoaded", function () {
+//   const selectAllBtn = document.getElementById("selectAllBtn");
+//   const deselectAllBtn = document.getElementById("deselectAllBtn");
 
-  if (selectAllBtn) {
-    selectAllBtn.addEventListener("click", function () {
-      const checkboxes = document.querySelectorAll(".itam");
-      checkboxes.forEach(cb => cb.checked = true);
-    });
-  }
+//   if (selectAllBtn) {
+//     selectAllBtn.addEventListener("click", function () {
+//       const checkboxes = document.querySelectorAll(".itam");
+//       checkboxes.forEach(cb => cb.checked = true);
+//     });
+//   }
 
-  if (deselectAllBtn) {
-    deselectAllBtn.addEventListener("click", function () {
-      const checkboxes = document.querySelectorAll(".itam");
-      checkboxes.forEach(cb => cb.checked = false);
-    });
-  }
-});
+//   if (deselectAllBtn) {
+//     deselectAllBtn.addEventListener("click", function () {
+//       const checkboxes = document.querySelectorAll(".itam");
+//       checkboxes.forEach(cb => cb.checked = false);
+//     });
+//   }
+// });
 
-// day 정보 예문 페이지로 보내기
-const goStartForm = document.getElementById("goStart");
-if (goStartForm) {
-  goStartForm.addEventListener("submit", e => {
-    e.preventDefault();
-    const selected = [];
-    document.querySelectorAll("input[name='day']:checked").forEach(cb => {
-      selected.push(cb.value);
-    });
-    const url = "./example.html?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
-    if (url !== "./example.html?") window.location.href = url;
-  });
-}
+// // day 정보 예문 페이지로 보내기
+// const goStartForm = document.getElementById("goStart");
+// if (goStartForm) {
+//   goStartForm.addEventListener("submit", e => {
+//     e.preventDefault();
+//     const selected = [];
+//     document.querySelectorAll("input[name='day']:checked").forEach(cb => {
+//       selected.push(cb.value);
+//     });
+//     const url = "./example.html?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
+//     if (url !== "./example.html?") window.location.href = url;
+//   });
+// }
 
 // DAY 재선택
 function goToPage() {
-  window.location.href = "index.html";
+  window.location.href = "/mainpage";
 }
