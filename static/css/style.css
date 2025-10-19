@@ -655,34 +655,36 @@ body.sidebar-open #mainpart {
 
 .password-wrapper {
   position: relative;
-  width: 100%;
 }
 
 .password-wrapper input {
-  padding-right: 38px; /* 오른쪽 아이콘 공간 확보 */
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 36px; /* 버튼 자리 */
 }
 
-.pw-toggle-btn {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9aa0a6;
-  transition: color 0.2s ease;
+/* 토글 버튼: 공통 버튼 스타일을 무력화 */
+.password-wrapper .pw-toggle-btn {
+  all: unset;                          /* 버튼에 먹은 기본/공통 스타일 싹 지움 */
+  position: absolute !important;
+  top: 50% !important;
+  right: 8px !important;
+  transform: translateY(-50%) !important;
+
+  width: 22px !important;              /* 정사각형 */
+  height: 22px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  cursor: pointer !important;
+  color: #9aa0a6 !important;
+  border-radius: 6px;
 }
 
-.pw-toggle-btn:hover {
-  color: #cfcfcf;
-}
+.password-wrapper .pw-toggle-btn:hover { color: #cfcfcf !important; }
 
-.pw-toggle-btn svg {
-  width: 18px;
-  height: 18px;
+.password-wrapper .pw-toggle-btn svg {
+  width: 16px; height: 16px;
 }
