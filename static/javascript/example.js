@@ -80,19 +80,42 @@ function add_exid_inplace() {
         }
     }
 }
-
 /* 기능 처리 */
 
 function insert_textbox(wordobj) {
     // 기존 영어 문장에 input:text를 집어넣은 html형식 텍스트 리턴
     // parameter: wordobj(words.json 형식에서 예문 블럭 하나)
 
+    let html_text = wordobj.e_sentence;
+    for (let i=1; i<=wordobj.blanks; i++) {
+        html_text = html_text.replace(`_${i}_`, insert_textbox2(wordobj, i));
+    }
+
+    return html_text;
+
+}
+function insert_textbox2(wordobj, nth) {
+    // 이 함수는 이승민만 사용할거임
+    // 쓰지마 종호범서핑
+    // nth 번째 빈칸을 뚫어주는 함수
+
+    const inputbox = `<input type="text" id="inputbox" placeholder="${wordobj.blanks[nth-1][0]}"></input>`;
+    return inputbox;
+}
+
+function upload_wrongwords(wrong_words) {
+    // wrong_words에 틀린 단어를 받아서 exID 형식으로 저장
+    sessionStorage.setItem("wrongs", JSON.stringify(wrong_words));
 }
 
 /* 실행 부분 */
 
-await load_data();
-add_exid_inplace();
+await load_data(); // 데이터 가져옴
+day_list = load_day(); // day_list 가져옴
+add_exid_inplace(); // 모든 예문 블럭에 exID (단어번호-예문번호) 추가
+
+const filtered_list = filter_data(word_list, day_list); // day에 맞는 예문을 섞어줌
+
 
 
 
