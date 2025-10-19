@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -289,105 +290,44 @@ input[id="menuicon"]:checked + label + div {
     </style>
   </head>
 
-<body> 
+<body>
     <div id="sbarpart">
         <!-- 사이드바 열기 버튼 -->
         <button class="open-btn" onclick="openSidebar()"></button>
 
         <!-- 사이드바 -->
-         <aside class="sidebar" id="sidebar" aria-hidden="true">
-      <button class="close-btn" type="button" aria-label="사이드바 닫기" onclick="closeSidebar()"></button>
-      <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
-      <hr style="width:auto;height:2px;background-color:#555555;border:none" />
-
-      <!-- flask 라우트 -->
-      <form action="{{ url_for('main_page') }}" method="get">
-        <button class="Reselect" type="submit">DAY 재선택</button>
-      </form>
-
-      <form action="{{ url_for('odap') }}">
-        <button class="Review" type="submit">오답복습</button>
-      </form>
-
-      <form action="{{ url_for('words') }}">
-        <button type="submit">단어장 바로가기</button>
-      </form>
-
-      <form action="{{ url_for('logout') }}">
-        <button class="Logout" type="submit">로그아웃</button>
-      </form>
-    </aside>
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" onclick="closeSidebar()"></button>
+            <h2>단<span style="color: #66cc33;">어</span>장 by <span style="color: #66cc33;">;</span></h2>
+            <hr style="width: auto; height: 2px; background-color: #555555; border: none">
+            <button class="Reselect" onclick="goToPage()">DAY 재선택</button>
+            <button class="Review">오답복습(미완)</button>
+            <button class="Favorites">즐겨찾기된 단어(미완)</button>
+            <button class="Statistics">통계(미완)</button>
+        </div>
     </div>
-  
-    <div class="hamburger" aria-hidden="true">
-    <span></span><span></span><span></span>
-  </div>
+   
+    <br>
 
-  <div class="wrap">
-    <!-- 화면 1: 기본 -->
-    <section class="screen">
-      <h2>기본 화면</h2>
-      <div class="card">
-        <div class="corner-star">★</div>
-        <span class="chip chip--blue">1 out of 214</span>
+    <div class="progress">
+        <div id="progress"></div>
+    </div>
 
-        <p class="line">
-          <span class="pill pill--good">Semicolon</span>
-          is better than any other club in UJHS.
-        </p>
-        <p class="sub">세미콜론은 최고다.</p>
+    <div id="exmplpart">
+        <h3 id="exp">영어 예문이 띄워집니다</h3>
+        <h3 id="asp">해석문이 띄워집니다</h3>
+    </div>
 
-        <div class="actions">
-          <button class="btn btn--primary">확인</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 화면 2: 오답 → 정답 안내 -->
-    <section class="screen">
-      <h2>오답 표시</h2>
-      <div class="card">
-        <div class="corner-star">★</div>
-        <span class="chip chip--blue">1 out of 214</span>
-
-        <p class="line">
-          <span class="pill pill--bad">DataInfinity</span>
-          is better than any other club in UJHS.
-        </p>
-        <p class="sub">세미콜론은 최고다.</p>
-
-        <div class="hint">
-          <span class="pill pill--good">Semicolon</span>
-        </div>
-
-        <div class="actions">
-          <button class="btn btn--primary">다음</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 화면 3: 결과 막대 -->
-    <section class="screen">
-      <h2>결과 화면</h2>
-      <div class="card" style="padding:26px 24px 28px">
-        <div class="result">
-          <div class="split" style="--ok:71.4; --bad:28.6;">
-            <div class="bar bar--ok" style="width:71.4%">50개 (71.4%)</div>
-            <div class="bar bar--bad" style="width:28.6%">20개 (28.6%)</div>
-          </div>
-        </div>
-
-        <div class="actions">
-          <button class="btn btn--primary">처음</button>
-          <button class="btn btn--danger">오답</button>
-        </div>
-      </div>
-    </section>
-  </div>
-
+    <div class="container">
+        <button class="okBtn" onclick="submitAnswer()">제출</button>
+        <!-- ✅ 정답/오답 피드백 메시지 출력 영역 -->
+        <div id="feedback" style="margin-top: 10px; font-weight: bold;"></div>
+    </div>
+    
     <!-- 정적 JS 불러오기 -->
     <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
     <script src="{{ url_for('static', filename='javascript/script2.js') }}"></script>
     <script src="{{ url_for('static', filename='javascript/example.js') }}"></script>
 </body>
+
 </html>
