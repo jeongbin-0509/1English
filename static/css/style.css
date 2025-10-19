@@ -17,7 +17,8 @@ body {
   background-color: #181818;
 }
 
-h1, h3 {
+h1,
+h3 {
   text-align: center;
   color: white;
 }
@@ -39,12 +40,14 @@ h5 {
 .mainbtn {
   margin-top: 8%;
   display: flex;
-  justify-content: center;  
-  gap: 2%;               
+  justify-content: center;
+  gap: 2%;
   flex-wrap: wrap;
 }
 
-#selectAllBtn, #deselectAllBtn, #startAllBtn {
+#selectAllBtn,
+#deselectAllBtn,
+#startAllBtn {
   background-color: #181818;
   color: #66cc33;
   border: none;
@@ -79,7 +82,8 @@ select {
   max-width: 200px;
 }
 
-.open-btn, .close-btn {
+.open-btn,
+.close-btn {
   width: 40px;
   height: 40px;
   background-image: url("../images/butt1-noogi.png");
@@ -91,7 +95,7 @@ select {
   cursor: pointer;
 }
 
-.sidebar{
+.sidebar {
   position: fixed;
   top: 0;
   left: -350px;
@@ -107,7 +111,7 @@ select {
   gap: 15px;
 }
 
-.sidebar.active{
+.sidebar.active {
   left: 0;
 }
 
@@ -125,11 +129,11 @@ select {
 
 .container {
   display: flex;
-  justify-content: center; 
-  align-items: center;    
+  justify-content: center;
+  align-items: center;
   gap: 10%;
-  height: 50vh;           
-  padding: 20px;           
+  height: 50vh;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -143,7 +147,7 @@ select {
   cursor: pointer;
 }
 
-.progress{
+.progress {
   color: #66cc33;
   font-weight: lighter;
 }
@@ -176,7 +180,7 @@ select {
   background-color: #222;
   padding: 40px 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   text-align: center;
   width: 300px;
 }
@@ -233,71 +237,102 @@ select {
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   animation: fadeOut 3s ease-in-out forwards;
   font-weight: bold;
 }
 
-.flash-message.success { background-color: #66cc33; }
-.flash-message.error   { background-color: #e74c3c; }
+.flash-message.success {
+  background-color: #66cc33;
+}
+
+.flash-message.error {
+  background-color: #e74c3c;
+}
 
 @keyframes fadeOut {
-  0% {opacity: 1;}
-  80% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 /*사이드바 내부 버튼*/
 #sidebar button:not(.close-btn) {
-    display: block;
-    width: 85%;
-    margin: 10px auto;
-    padding: 12px 0;
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  display: block;
+  width: 85%;
+  margin: 10px auto;
+  padding: 12px 0;
+  background-color: #555555;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
+
 #sidebar button:not(.close-btn):hover {
-    background-color: #66cc33;
-    color: #222222;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(102, 204, 51, 0.4);
+  background-color: #66cc33;
+  color: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(102, 204, 51, 0.4);
 }
+
 #sidebar button:not(.close-btn):active {
-    transform: scale(0.97);
-    box-shadow: 0 2px 4px rgba(102, 204, 51, 0.3);
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(102, 204, 51, 0.3);
 }
+
 #sidebar .Reselect {
-    background-color: transparent;
-    color: #66cc33;
-    border: 2px solid #66cc33;
+  background-color: transparent;
+  color: #66cc33;
+  border: 2px solid #66cc33;
 }
-#sidebar .Reselect:hover { background-color: #66cc33; color: #222; }
-#sidebar .Logout { background-color: #333333; color: #66cc33; }
-#sidebar .Logout:hover { background-color: #66cc33; color: #222; }
+
+#sidebar .Reselect:hover {
+  background-color: #66cc33;
+  color: #222;
+}
+
+#sidebar .Logout {
+  background-color: #333333;
+  color: #66cc33;
+}
+
+#sidebar .Logout:hover {
+  background-color: #66cc33;
+  color: #222;
+}
+
 #sidebar h2 {
-    color: #ffffff;
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
+
 #sidebar hr {
-    margin: 10px auto 20px auto;
-    width: 80%;
-    border: none;
-    height: 2px;
-    background-color: #66cc33;
+  margin: 10px auto 20px auto;
+  width: 80%;
+  border: none;
+  height: 2px;
+  background-color: #66cc33;
 }
 
 /** 균형감 /
 /* 사이드바 버튼이 항상 보이게 */
-.open-btn, .close-btn {
+.open-btn,
+.close-btn {
   position: fixed;
   top: 14px;
   left: 14px;
@@ -316,17 +351,20 @@ select {
 }
 
 /* 콘텐츠 최대폭 제한 */
-.home-wrap { 
+.home-wrap {
   width: min(100%, 980px);
 }
 
 /* 제목은 상단 근처 */
-#mainpart > .home-wrap > h1 {
+#mainpart>.home-wrap>h1 {
   font-size: clamp(36px, 4.8vw, 72px);
   margin: 0 0 7vh;
   letter-spacing: 1.5px;
 }
-#mainpart > .home-wrap > h1 span { color: #66cc33; }
+
+#mainpart>.home-wrap>h1 span {
+  color: #66cc33;
+}
 
 /* DAY 버튼 그리드 */
 .day-select {
@@ -340,7 +378,7 @@ select {
 }
 
 .day-select label {
-  display: inline-flex;    
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -355,21 +393,22 @@ select {
   font-weight: 700;
   cursor: pointer;
   transition: transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease;
-  box-shadow: 0 0 8px rgba(0,0,0,.35);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .35);
 }
 
 .day-select label:hover {
-  background: #c24949;
+  background: #4fb3ff;
   color: #111;
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(194, 73, 73, 0.45);
+  box-shadow: 0 6px 18px rgba(79, 179, 255, .45);
 }
 
 /* 하단 문구 중앙 고정 */
-#mainpart ~ h5 {
+#mainpart~h5 {
   position: fixed;
   bottom: 12px;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   font-size: 12px;
   color: #555;
@@ -378,26 +417,31 @@ select {
 }
 
 /* 사이드바가 열림표시?*/
-body.sidebar-open #mainpart { filter: brightness(.96); }
+body.sidebar-open #mainpart {
+  filter: brightness(.96);
+}
 
 /* 날짜 선택*/
 .day-select input[type="checkbox"] {
   display: none;
 }
+
 /* 선택되면 붉은색 */
-.day-select input[type="checkbox"]:checked + label {
-  color: #c24949;
-  background: #222;
+.day-select input[type="checkbox"]:checked+label {
+  color: #222;
+  background: #4fb3ff;
 }
+
 /* 선택 라벨 */
-.day-select input[type="checkbox"]:checked + label {
+.day-select input[type="checkbox"]:checked+label {
   position: relative;
-  box-shadow: 0 0 0 2px #c24949 inset, 0 0 18px rgba(194,73,73,.35);
+  box-shadow: 0 0 0 2px #c24949 inset, 0 0 18px rgba(194, 73, 73, .35);
 }
-.day-select input[type="checkbox"]:checked + label:hover {
+
+.day-select input[type="checkbox"]:checked+label:hover {
   background: #4fb3ff;
   color: #111;
-  box-shadow: 0 6px 18px rgba(79,179,255,.45);
+  box-shadow: 0 6px 18px rgba(79, 179, 255, .45);
 }
 
 /* 선택 패널*/
@@ -413,7 +457,10 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
   flex-wrap: wrap;
   color: #e5e7eb;
 }
-.selected-panel.hidden { display: none; }
+
+.selected-panel.hidden {
+  display: none;
+}
 
 .selected-label {
   font-weight: 700;
@@ -427,6 +474,7 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -435,7 +483,7 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
   border-radius: 9999px;
   border: 1px solid #3a3a3a;
   background: #242424;
-  color: #4fb3ff;     
+  color: #4fb3ff;
   font-size: 14px;
   cursor: pointer;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, color .15s ease;
@@ -443,9 +491,10 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
 
 .chip:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .35);
   border-color: #66cc33;
 }
+
 .chip .x {
   font-weight: 900;
   line-height: 1;
@@ -468,13 +517,13 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(79,179,255,0.3);
+  box-shadow: 0 4px 12px rgba(79, 179, 255, 0.3);
   transition: all 0.25s ease;
 }
 
 #startBtn:hover {
   background-color: #66ccff;
-  box-shadow: 0 6px 18px rgba(102,204,255,0.45);
+  box-shadow: 0 6px 18px rgba(102, 204, 255, 0.45);
   transform: translateY(-2px);
 }
 
@@ -484,3 +533,109 @@ body.sidebar-open #mainpart { filter: brightness(.96); }
 }
 
 
+
+/* Main Screen */
+.quizcontainer {
+  background-color: #474747;
+  border-radius: min(1.6vh, 2.4vw);
+  width: min(100vh, 85vw);
+  margin: min(8vh, 12vw) auto;
+  padding: min(3vh, 4.5vw) min(4vh, 6vw);
+  box-shadow: 0 0 min(1.3vh, 2vw) rgba(0, 0, 0, 0.3);
+}
+
+.quizcontainer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: min(0.2vh, 0.3vw) solid #474747;
+  padding-bottom: min(1.3vh, 2vw);
+  margin-bottom: min(2vh, 3vw);
+  border-bottom: min(0.2vh, 0.3vw);
+  padding-bottom: min(1.3vh, 2vw);
+  margin-bottom: min(1.6vh, 2.4vw);
+}
+
+.count {
+  background-color: #35b3f2;
+  color: white;
+  border-radius: min(3vh, 4.5vw);
+  padding: min(0.5vh, 0.75vw) min(1.6vh, 2.4vw);
+  font-family: "NanumGothicExtraBold";
+  font-weight: 500;
+}
+
+.count span {
+  color: #35b3f2;
+  font-weight: bold;
+}
+
+/* Example */
+.examplecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: "NanumGothicBold";
+}
+
+.exampleblock {
+  padding: min(1.8vh, 2.7vw) 0;
+  border-bottom: min(0.2vh, 0.3vw);
+}
+
+.meaning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: min(0.8vh, 1.2vw);
+  font-family: "NanumGothicExtraBold";
+  font-weight: 400;
+}
+
+.esentence,
+.ksentence {
+  color: #ccc;
+  font-size: 1rem;
+  margin: min(0.4vh, 0.6vw) 0;
+}
+
+.check {
+  display: block;
+  margin: 0 auto;
+  background-color: #35b3f2;
+  color: white;
+  border-radius: min(3vh, 4.5vw);
+  padding: min(0.5vh, 0.75vw) min(1.6vh, 2.4vw);
+  font-family: "NanumGothicExtraBold";
+  font-weight: 500;
+}
+
+/* Star Shape */
+.star {
+  top: min(1vh, 1.5vw);
+  right: min(1vh, 1.5vw);
+  font-size: 1.4rem;
+  color: #d8e4eb;
+  border-color: #35b3f2;
+  cursor: pointer;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+.quizcontainer header{
+  position: relative;
+}
+
+.star {
+  position: absolute;
+}
+
+.star.active {
+  color: #35b3f2;
+}
+
+.star:hover {
+  color: #35b3f2;
+}

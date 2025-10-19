@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //   });
 // }
 
+
 // DAY 재선택
 function goToPage() {
   window.location.href = "index.html";
@@ -167,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // SessionStorage로 day 정보 보내기
       sessionStorage.setItem("days", JSON.stringify(selected.map(i => Number(i))));
-
+      
       window.location.href = "/example";
     });
   }

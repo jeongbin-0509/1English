@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, make_response, flash, jsonify
 from supabase import create_client
-from gotrue.errors import AuthApiError, AuthWeakPasswordError
+from gotrue.errors import AuthApiError
 from dotenv import load_dotenv
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -49,6 +49,12 @@ def example():
 @app.route("/main_page")
 def main_page():
     return render_template("index.html")
+
+# 점마 머시기냐 그 예문 돌리는 거시기 글로 가는거
+@app.route("/example")
+def example():
+    return render_template("example.html")
+
 
 # 로그인
 @app.route("/login", methods=["GET", "POST"])
