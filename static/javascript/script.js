@@ -56,6 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// day 정보 예문 페이지로 보내기 -> 이거 필요 ㄴㄴ
+// const goStartForm = document.getElementById("goStart");
+// if (goStartForm) {
+//   goStartForm.addEventListener("submit", e => {
+//     e.preventDefault();
+//     const selected = [];
+//     document.querySelectorAll("input[name='day']:checked").forEach(cb => {
+//       selected.push(cb.value);
+//     });
+//     const url =
+//       "./example.html?" +
+//       selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
+//     if (url !== "./example.html?") window.location.href = url;
+//   });
+// }
+
+
 // DAY 재선택
 function goToPage() {
   window.location.href = "index.html";
@@ -149,9 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("먼저 Day를 선택해주세요!");
         return;
       }
-
-      const url = "/example?" + selected.map(h => `day=${encodeURIComponent(h)}`).join("&");
-      window.location.href = url;
+      // SessionStorage로 day 정보 보내기
+      sessionStorage.setItem("days", JSON.stringify(selected.map(i => Number(i))));
+      
+      window.location.href = "/example";
     });
   }
   // 초기 렌더하는것

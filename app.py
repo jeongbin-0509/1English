@@ -40,6 +40,11 @@ def words():
 def odap():
     return render_template("odap.html")
 
+# 예문 창 불러오기
+@app.route("/example")
+def example():
+    return render_template("example.html")
+
 # 메인 창으로 돌아가기
 @app.route("/main_page")
 def main_page():
