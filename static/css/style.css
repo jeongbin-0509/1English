@@ -639,3 +639,50 @@ body.sidebar-open #mainpart {
 .star:hover {
   color: #35b3f2;
 }
+
+/* 화면 읽기용 텍스트 숨김(접근성용) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 38px; /* 오른쪽 아이콘 공간 확보 */
+}
+
+.pw-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa0a6;
+  transition: color 0.2s ease;
+}
+
+.pw-toggle-btn:hover {
+  color: #cfcfcf;
+}
+
+.pw-toggle-btn svg {
+  width: 18px;
+  height: 18px;
+}

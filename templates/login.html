@@ -26,19 +26,41 @@
     </div>
 
     <div class="loginpart" style="align-items: center; text-align: center;">
-            <div class="loginbox">
-                <h2>Login</h2>
-                <form action="{{ url_for('login') }}" method="post">
-                    <input type="text" name="username" placeholder="학번" required>
-                    <input type="password" name="password" placeholder="비밀번호" required>
-                    <button type="submit">Login</button>
-                </form>
-                <form action="{{ url_for('signup') }}">
-                    <button type="submit" style="background-color:white;">Signup</button>
-                </form>
-            </div>
-        </form>
-            
+        <div class="loginbox">
+            <h2>Login</h2>
+
+            <!-- 로그인 폼 -->
+            <form action="{{ url_for('login') }}" method="post" class="auth-form" novalidate>
+                <label class="sr-only" for="username">학번</label>
+                <input id="username" type="text" name="username" placeholder="학번" required>
+
+                <label class="sr-only" for="password">비밀번호</label>
+                <div class="password-wrapper">
+                    <input id="password" type="password" name="password" placeholder="비밀번호" required aria-describedby="pw-toggle-desc">
+                    <!-- 토글 버튼: 아이콘(SVG) 사용, 버튼 접근성 속성 포함 -->
+                    <button id="pw-toggle" type="button" class="pw-toggle-btn" aria-pressed="false" aria-label="비밀번호 보기" title="비밀번호 보기">
+                        <!-- 눈 모양 SVG (간단한 버전) -->
+                        <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                            <path d="M17.94 17A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a20.1 20.1 0 0 1 4.12-4.65"></path>
+                            <path d="M1 1l22 22"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="pw-toggle-desc" class="sr-only">비밀번호 표시 토글 버튼입니다.</div>
+
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+
+            <!-- 회원가입 이동 -->
+            <form action="{{ url_for('signup') }}">
+                <button type="submit" class="secondary-btn">Signup</button>
+            </form>
+        </div>
     </div>
 
     <h5 style="color: #555555;">
@@ -48,5 +70,47 @@
 
     <!-- 자바스크립트도 url_for 사용 -->
     <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  const pwInput = document.getElementById('password');
+  const toggleBtn = document.getElementById('pw-toggle');
+  const eyeOpen = document.getElementById('eye-open');
+  const eyeClosed = document.getElementById('eye-closed');
+
+  if (!pwInput || !toggleBtn) return;
+
+  toggleBtn.addEventListener('click', function () {
+    const isPassword = pwInput.type === 'password';
+    if (isPassword) {
+      pwInput.type = 'text';
+      toggleBtn.setAttribute('aria-pressed', 'true');
+      toggleBtn.setAttribute('aria-label', '비밀번호 숨기기');
+      toggleBtn.title = '비밀번호 숨기기';
+      // 아이콘 전환
+      eyeOpen.style.display = 'none';
+      eyeClosed.style.display = '';
+    } else {
+      pwInput.type = 'password';
+      toggleBtn.setAttribute('aria-pressed', 'false');
+      toggleBtn.setAttribute('aria-label', '비밀번호 보기');
+      toggleBtn.title = '비밀번호 보기';
+      eyeOpen.style.display = '';
+      eyeClosed.style.display = 'none';
+    }
+
+    // 포커스 유지: 토글 클릭 시 입력 포커스를 비밀번호로 되돌리기
+    pwInput.focus();
+  });
+
+  // 키보드 접근성: Enter/Space로 버튼 작동 (버튼 요소라 이미 기본 동작이지만 안전하게 처리)
+  toggleBtn.addEventListener('keydown', function (ev) {
+    if (ev.key === ' ' || ev.key === 'Enter') {
+      ev.preventDefault();
+      toggleBtn.click();
+    }
+  });
+});
+
+    </script>
 </body>
 </html>
