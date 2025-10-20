@@ -341,8 +341,8 @@ select {
 
 /* 오른쪽 배치 여유롭게 */
 #mainpart {
-  margin-left: 8%;
-  width: calc(100vw - 300px);
+  margin-left: 13%;
+  width: calc(100vw - 350px);
   min-height: 90vh;
   display: grid;
   place-items: start center;

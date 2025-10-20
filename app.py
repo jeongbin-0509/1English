@@ -49,7 +49,7 @@ def words():
 def odap():
     return render_template("odap.html")
 
-# 예문 창 불러오기 (✅ 한 번만 정의)
+# 예문 창 불러오기
 @app.route("/example")
 def example():
     return render_template("example.html")
