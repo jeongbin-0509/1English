@@ -1653,6 +1653,198 @@
             }
         ]
     },
+    {"day" : 19,
+        "wordnum" : 734,
+        "word" : "level off",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "안정되다, 안정시키다",
+                "e_sentence" : "The stock market began to _1_ after rising for five days straight.",
+                "k_sentence" : "증권 시장이 5일 동안의 연속 상승 후에 안정되기 시작했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "level off"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 735,
+        "word" : "result in",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "(결과적으로) ~을 낳다[야기하다], 그 결과 ~이 되다",
+                "e_sentence" : "The new manager had to put significant time and effort into repair and maintenance of the machines, which _1_ lower production and thus a loss of profits.",
+                "k_sentence" : "새 관리자는 상당한 노력을 그 기계의 수리와 유지보수에 들여야만 했고, 그것은 더 낮은 생산과 따라서 이익의 손실을 낳았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "resulted in"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 736,
+        "word" : "make the most of",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 최대한 활용하다",
+                "e_sentence" : "You can _1_ your time by planning ahead.",
+                "k_sentence" : "여러분은 미리 계획함으로써 시간을 최대한 활용할 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "make the most of"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 737,
+        "word" : "rush out of",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~로부터 (급히) 달려 나오다, ~로부터 빠져나오다",
+                "e_sentence" : "You _1_ your house only to realize you forgot your keys.",
+                "k_sentence" : "당신은 집에서 급히 달려 나오고 결국 열쇠를 잊고 왔음을 깨닫는다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "rush out of"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 738,
+        "word" : "cut down on",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 줄이다",
+                "e_sentence" : "Some of the residents were advised to _1_ out door activities.",
+                "k_sentence" : "주민 일부는 실외 활동을 줄이라고 권고받았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "cut down on"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 739,
+        "word" : "give way to",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~에 굽히다: ~에게 항복하다",
+                "e_sentence" : "Don't _1_ despair though things went against you.",
+                "k_sentence" : "상황이 뜻대로 되지 않았더라도 절망에 굽히지 말라.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "give way to"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 740,
+        "word" : "take ~ into account",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 고려하다, ~을 참작하다[계산에 넣다]",
+                "e_sentence" : "City planning must _1_ projected growth.",
+                "k_sentence" : "도시 계획은 예상되응 성장을 감안해야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "take into account"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 741,
+        "word" : "contribute to",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~에 기여하다; ~을 돕다, ~에 기부금을 내다",
+                "e_sentence" : "She thinks the sharing economy _1_ saving the environment since less car use means reduced CO₂ emissions.",
+                "k_sentence" : "그녀는 차를 덜 사용하면 아산화탄소 배출이 줄어든다는 것을 의미하기 떄문에 공유경제가 환경을 구하는 데 기여한다고 생각한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "contributes to"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 742,
+        "word" : "give rise to",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 낳다[일으키다], ~이 생기게 하다",
+                "e_sentence" : "New technologies have _1_ more convenient means of payment.",
+                "k_sentence" : "새로운 기술은 더욱 편리한 지불 수단들을 낳아 왔다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "given rise to"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 743,
+        "word" : "dwell on",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 곰곰히 생각하다; ~을 오래 바라보다",
+                "e_sentence" : "_1_ exciting pictures of what your goals will look like when they come true.",
+                "k_sentence" : "너의 꿈이 실현되었을 때 어떻게 보일지에 대한 흥미로운 그림들에 대해 곰곰이 생각하라.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "Dwell on"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 744,
+        "word" : "refrain from",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 삼가다, ~을 꺼리다",
+                "e_sentence" : "Please _1_ playing loud music in residential areas.",
+                "k_sentence" : "주택가에서는 음악을 크게 트는 것을 삼가 주시기 바랍니다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "refrain from"
+                ]
+            }
+        ]
+    },
+    {"day" : 19,
+        "wordnum" : 745,
+        "word" : "show off",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "뽐내다, 자랑하다, 돋보이게 하다",
+                "e_sentence" : "At the entrence he keeps taking photos with his cellphone to _1_ his new adventure later.",
+                "k_sentence" : "입구에서 그는 나중에 그의 새로운 모험을 뽐내기 위해 휴대전화로 사진을 계속 찍는다.",
+                "blank_count" : 1,                
+		"blanks" : [
+                    "show off"
+                ]
+            }
+        ]
+    },
     {
         "day": 21,
         "wordnum": 801,
