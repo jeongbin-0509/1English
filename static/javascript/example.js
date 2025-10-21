@@ -10,7 +10,7 @@ async function load_data() {
     // words.json의 데이터를 word_list로 옮김
     // parameter: -; return: void
 
-    const res = await fetch("../data/words.json");
+    const res = await fetch("../static/data/words.json");
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     
     word_list = await res.json();
@@ -18,10 +18,10 @@ async function load_data() {
 
 function shuffled(a) {
     // 배열을 랜덤으러 섞어줘요 ㅎㅎ
-    arr = f_list.slice();
+    let arr = a.slice();
     for (let i=arr.length-1; i>0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
+        [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 
     return arr;
@@ -87,7 +87,7 @@ function insert_textbox(wordobj) {
     // parameter: wordobj(words.json 형식에서 예문 블럭 하나)
 
     let html_text = wordobj.e_sentence;
-    for (let i=1; i<=wordobj.blanks; i++) {
+    for (let i=1; i<=wordobj.blank_count; i++) {
         html_text = html_text.replace(`_${i}_`, insert_textbox2(wordobj, i));
     }
 
@@ -110,7 +110,7 @@ function upload_wrongwords(wrong_words) {
 
 /* 실행 부분 */
 
-await load_data(); // 데이터 가져옴
+load_data(); // 데이터 가져옴
 day_list = load_day(); // day_list 가져옴
 add_exid_inplace(); // 모든 예문 블럭에 exID (단어번호-예문번호) 추가
 
