@@ -2087,6 +2087,732 @@
         ]
     },
     {
+        "day": 20,
+        "wordnum": 761,
+        "word": "slip into",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~ 안으로 (미끄러지듯) 들어가다; ~을 후려치다",
+                "e_sentence": "Three teens _1_ their sleeping bags and zipped them up.",
+                "k_sentence": "세 명의 십 대들은 침낭 속으로 들어가서 지퍼를 올렸다.",
+                "blank_count": 1,
+                "blanks": [
+                    "slipped into"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 762,
+        "word": "lie in",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 있다, ~에 놓여 있다",
+                "e_sentence": "The answer to the question _1_ the difference between temperature and heat.",
+                "k_sentence": "이 문제에 대한 답은 온도와 열기의 차이에 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "lies in"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 763,
+        "word": "be obliged to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "하는 수 없이 ~하다",
+                "e_sentence": "Banks must _1_ reveal all the suspicious accounts.",
+                "k_sentence": "은행은 의심되는 계좌들을 모두 공개해야만 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "be obliged to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 764,
+        "word": "take charge of",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 떠맡다[돌보다]; ~의 책임을 지다",
+                "e_sentence": "I'm afraid I cannot _1_ the demonstration.",
+                "k_sentence": "유감이지만 나는 그 시연을 떠맡을 수 없다.",
+                "blank_count": 1,
+                "blanks": [
+                    "take charge of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 765,
+        "word": "make up",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 구성하다[이루다] 2. 화장하다 3. (이야기 등을) 지어내다",
+                "e_sentence": "All of the devices and systems that _1_ the IoT collect a great deal of personal data.",
+                "k_sentence": "사물인터넷을 구성하는 모든 기구와 체계는 많은 양의 개인적인 데이터를 모은다.",
+                "blank_count": 1,
+                "blanks": [
+                    "make up"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 766,
+        "word": "engage with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 다루다; ~와 관계를 맺다; ~에 관여하다",
+                "e_sentence": "A politics of the future has to _1_ new ideas.",
+                "k_sentence": "미래의 정치는 새로운 사상들을 다루어야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "engage with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 767,
+        "word": "add up to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "결국 ~이 되다",
+                "e_sentence": "Almost every move we make _1_ form a vast bank of information called big data.",
+                "k_sentence": "우리가 하는 거의 모든 움직임이 결국 빅데이터라고 불리는 방대한 양의 정보를 형성하게 된다.",
+                "blank_count": 1,
+                "blanks": [
+                    "adds up to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 768,
+        "word": "in a nutshell",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "아주 간결하게, 요약하자면",
+                "e_sentence": "_1_, his strategy is to be as honest as possible.",
+                "k_sentence": "요약하자면, 그의 전략은 가능한 한 정직하자는 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "In a nutshell"
+                    ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 769,
+        "word": "show up",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "나타나다, 눈에 띄다, 나타내 보이다",
+                "e_sentence": "All they had to do is _1_ to class to graduate.",
+                "k_sentence": "졸업하려면 수업에 나타나기만 하면 되는 것이었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "show up"
+                ]
+            },
+            {
+                "meaning": "나타나다, 눈에 띄다, 나타내 보이다",
+                "e_sentence": "I was waiting for Nicole for a long time, and finally she _1_.",
+                "k_sentence": "나는 오랫동안 Nicole을 기다리고 있었고, 마침내 그녀가 나타났다. ",
+                "blank_count": 1,
+                "blanks": [
+                    "showed up"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 770,
+        "word": "take ~ for granted",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~을 당연한 일로 여기다; ~을 대수롭지 않게 여기다",
+                "e_sentence": "At that time, it was _1_ that only men could enter the race.",
+                "k_sentence": "그 당시에는 오직 남성들만이 경주에 참여할 수 있는 것이 당연시되었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "taken for granted"
+                ]
+            },
+            {
+                "meaning": "~을 당연한 일로 여기다; ~을 대수롭지 않게 여기다",
+                "e_sentence": "Many of us _1_ it _2_ that only humans farm food.",
+                "k_sentence": "우리 중 많은 사람은 인간들만 식량을 재배한다는 것을 당연하게 여긴다. ",
+                "blank_count": 2,
+                "blanks": [
+                    "take","for granted"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 771,
+        "word": "lay down",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 내려놓다; (무기 등을) 버리다; 사임하다 2. (법 등을) 정하다",
+                "e_sentence": "Both sides agreed to _1_ their arms and negotiate.",
+                "k_sentence": "양측 모두가 무기를 내려놓고 협상하는 데 동의했다.",
+                "blank_count": 1,
+                "blanks": [
+                    "lay down"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 772,
+        "word": "settle in",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "(새 집·직장 등에) 적응하다",
+                "e_sentence": "Koreans were not the only ethnic group to _1_ the area.",
+                "k_sentence": "한국인이 그 지역에 적응한 유일한 민족은 아니었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "settle in"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 773,
+        "word": "keep track of",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 기록하다, ~의 자국을 뒤밟다",
+                "e_sentence": "This refrigerator will _1_ all the items it contains and text you to get what you need the next time you go shopping.",
+                "k_sentence": "이 냉장고는 안에 들어 있는 모든 물건들을 기록하고 있다가 당신이 다음에 장을 보러 갈 때 필요한 것을 사 오라고 문자 메시지를 보낼 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "keep track of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 774,
+        "word": "have to do with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~와 관계가 있다",
+                "e_sentence": "Many of the stories _1_ some kind of stereotype.",
+                "k_sentence": "그 이야기들 중 많은 것이 일종의 고정관념과 관계가 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "have to do with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 775,
+        "word": "do away with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 폐기하다[버리다], ~을 처분하다",
+                "e_sentence": "We should _1_ the outdated rule.",
+                "k_sentence": "우리는 시대에 맞지 않는 그 규칙을 폐기해야 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "do away with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 776,
+        "word": "wipe out",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 완전히 없애다, ~을 말살시키다",
+                "e_sentence": "Nuclear weapons can _1_ our entire civilization.",
+                "k_sentence": "핵무기는 우리의 모든 문명을 완전히 없앨 수도 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "wipe out"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 777,
+        "word": "be covered with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~로 덮이다",
+                "e_sentence": "A reservoir of water is at the Veggie's base, and it _1_ a fabric that allows the water to pass through it.",
+                "k_sentence": "Veggie의 바닥에는 물 저장고가 있고, 그것(물 저장고)은 물이 통과할 수 있는 직물로 덮여 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "is covered with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 778,
+        "word": "run for",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 출마하다, ~에 입후보하다",
+                "e_sentence": "I'm making plans to _1_ president of student council.",
+                "k_sentence": "나는 학생회장으로 출마할 계획을 세우고 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "run for"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 779,
+        "word": "get in the way of",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~에 방해가 되다",
+                "e_sentence": "She never lets her busy schedule _1_ her studies.",
+                "k_sentence": "그녀는 절대 자신의 바쁜 스케줄이 학업에 방해가 되게 하지 않는다.",
+                "blank_count": 1,
+                "blanks": [
+                    "get in the way of"
+                ]
+            },
+            {
+                "meaning": "~에 방해가 되다",
+                "e_sentence": "Move the motorcycle so that it doesn’t _1_ trucks.",
+                "k_sentence": "트럭들에게 방해가 되지 않도록 오토바이를 옮기시오.",
+                "blank_count": 1,
+                "blanks": [
+                    "get in the way of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 780,
+        "word": "make out",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 이해하다[알다] 2. (문서 등을) 작성하다",
+                "e_sentence": "I could hear voices but I couldn't _1_ what they were saying.",
+                "k_sentence": "사람들의 목소리가 들리기는 했지만 그들이 무슨 말을 하는지 이해할 수 없었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "make out"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 781,
+        "word": "refer to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 언급하다, ~에 참조하다",
+                "e_sentence": "That is why Ifrane is often _1_ as 'Morocco's Switzerland.'",
+                "k_sentence": "그런 이유로 Ifrane이 ‘모로코의 스위스'라고 자주 언급되는 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "referred to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 782,
+        "word": "cope with",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~에 대처[대응]하다; ~을 다루다",
+                "e_sentence": "Happy people are better able to _1_ stress.",
+                "k_sentence": "행복한 사람들이 스트레스에 더 잘 대처할 수 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "cope with"
+                ]
+            },
+            {
+                "meaning": "~에 대처[대응]하다; ~을 다루다",
+                "e_sentence": "When we are experiencing some difficult problem that is beyond our ability to _1_, we cry.",
+                "k_sentence": "우리가 대처할 능력을 넘어서는 어떤 어려운 문제를 경험할 때, 우리는 운다",
+                "blank_count": 1,
+                "blanks": [
+                    "cope with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 783,
+        "word": "rush through",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 서둘러 처리하다",
+                "e_sentence": "It looks like you'll have to _1_ the assignment now.",
+                "k_sentence": "이제 여러분은 과제를 서둘러 처리해야 할 것으로 보입니다.",
+                "blank_count": 1,
+                "blanks": [
+                    "rush through"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 784,
+        "word": "amount to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 이르다[달하다]; ~와 마찬가지다",
+                "e_sentence": "His earnings are said to _1_ $100,000.",
+                "k_sentence": "그의 소득은 10만 달러에 이른다고들 한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "amount to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 785,
+        "word": "identify with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~와 동질감을 갖다, ~와 동일시하다",
+                "e_sentence": "Audiences were able to _1_ the characters.",
+                "k_sentence": "관객들은 등장인물들과 동질감을 가질 수 있었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "identify with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 786,
+        "word": "bring ~ to life",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~에 생명[활기]을 불어넣다; ~을 회생시키다 2. (이야기 등을) 재미있게 하다",
+                "e_sentence": "They read a book out loud and _1_ the characters _2_.",
+                "k_sentence": "그들은 큰 소리로 책을 읽고 등장인물에게 생명을 불어넣는다.",
+                "blank_count": 2,
+                "blanks": [
+                    "bring",
+                    "to life"
+                ]
+            }
+        ] 
+    },
+    {
+        "day": 20,
+        "wordnum": 787,
+        "word": "turn to",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~에 의지하다 2. ~로 변화하다",
+                "e_sentence": "I have some sincere friends that I can _1_ whenever I face the hardship.",
+                "k_sentence": "나는 내가 고난에 직면할 때마다 의지할 수 있는 진실한 친구들이 몇 명 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "turn to"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 788,
+        "word": "cut off",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 잘라내다, ~을 차단하다, ~을 가로막다",
+                "e_sentence": "In fact, you can make nearly any graph more convincing in favor of your argument by _1_ the graph at a certain point.",
+                "k_sentence": "사실, 그래프를 특정 지점에서 잘라냄으로써 당신의 주장에 유리하게 만들 수 있다.",
+                "blank_count": 1,
+                "blanks": [
+                    "cutting off"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 789,
+        "word": "stem from",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에서 비롯되다, ~에서 기인하다[유래하다]",
+                "e_sentence": "Princess's fears _1_ her puppyhood when she almost drowned twice.",
+                "k_sentence": "Princess의 두려움은 그 개가 거의 두 번이나 익사할 뻔했던 강아지 시절에서 비롯되었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "stemmed from"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 790,
+        "word": "rip away",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 떼내다, ~을 벗기다",
+                "e_sentence": "It felt like something had been _1_ from me forever.",
+                "k_sentence": "무엇인가 나로부터 영원히 떼내어진 것 같은 느낌이었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "ripped away"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 791,
+        "word": "make a point of",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 꼭 하기로 되어 있다; ~을 늘 하다",
+                "e_sentence": "Please _1_ welcoming Jack to our department on his first day.",
+                "k_sentence": "Jack이 우리 부서에 오는 첫날 그를 꼭 환영해 주기 바랍니다.",
+                "blank_count": 1,
+                "blanks": [
+                    "make a point of"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 792,
+        "word": "go off",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. (경보기 등이) 울리다 2. 발사되다, 폭발하다 3. (무엇을 하러) 자리를 뜨다",
+                "e_sentence": "The smart watch _1_ at six o'clock — half an hour earlier than yesterday.",
+                "k_sentence": "그 스마트워치는 6시에 울렸는데, 어제보다 30분 전이었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "went off"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 793,
+        "word": "concentrate on",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~에 집중하다",
+                "e_sentence": "_1_ your classmates' needs, not yours.",
+                "k_sentence": "너 자신의 것이 아니라 반 친구들의 필요에 집중하라.",
+                "blank_count": 1,
+                "blanks": [
+                    "Concentrate on"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 794,
+        "word": "set out",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "출발하다, (여행을) 시작하다; 착수하다",
+                "e_sentence": "One day, Hadjara _1_ before dawn for a nearby spring, which is the closest water source to her home.",
+                "k_sentence": "어느 날, Hadjara는 새벽 전에 가까운 샘을 향해 출발했는데, 그것은 그녀의 집에서 가장 가까운 수원이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "set out"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 795,
+        "word": "get through",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 통과하다[빠져나가다]; ~을 끝내다 2. ~에 합격하다",
+                "e_sentence": "The team will easily _1_ the preliminaries.",
+                "k_sentence": "그 팀은 예선을 쉽게 통과할 것이다.",
+                "blank_count": 1,
+                "blanks": [
+                    "get through"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 796,
+        "word": "bring about",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "야기하다, 초래하다",
+                "e_sentence": "He never dreamed that his actions would _1_ such results.",
+                "k_sentence": "그는 자신의 행동이 그런 결과를 야기할 줄은 꿈에도 몰랐다.",
+                "blank_count": 1,
+                "blanks": [
+                    "bring about"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 797,
+        "word": "in retrospect",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "돌이켜 생각해 보면",
+                "e_sentence": "_1_, the policy was more successful than we had expected.",
+                "k_sentence": "돌이켜 생각해 보면, 그 정책은 우리가 예상했던 것보다 더 성공적이었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "In retrospect"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 798,
+        "word": "hit upon",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "~을 (우연히) 생각해내다",
+                "e_sentence": "She _1_ a solution when she was taking a shower.",
+                "k_sentence": "그녀는 샤워 중에 해답을 생각해냈다.",
+                "blank_count": 1,
+                "blanks": [
+                    "hit upon"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 799,
+        "word": "catch up with",
+        "example_count": 1,
+        "examples": [
+            {
+                "meaning": "1. ~을 따라잡다 2. ~을 체포하다",
+                "e_sentence": "After missing a term because of travel, he had to work hard to _1_ the others.",
+                "k_sentence": "여행 때문에 한 학기를 놓친 다음, 그는 다른 사람들을 따라잡기 위해 열심히 공부해야 했다.",
+                "blank_count": 1,
+                "blanks": [
+                    "catch up with"
+                ]
+            }
+        ]
+    },
+    {
+        "day": 20,
+        "wordnum": 800,
+        "word": "at odds with",
+        "example_count": 2,
+        "examples": [
+            {
+                "meaning": "~와 불화하여, ~와 마찰을 빚어",
+                "e_sentence": "Tim and Jack argue and are always _1_ each other.",
+                "k_sentence": "Tim과 Jack은 서로 싸우고 항상 불화한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "at odds with"
+                ]
+            },
+            {
+                "meaning": "~와 불화하여, ~와 마찰을 빚어",
+                "e_sentence": "The workshop helps families who are _1_ each other.",
+                "k_sentence": "그 워크숍은 서로 불화를 빚고 있는 가족들을 돕는다.",
+                "blank_count": 1,
+                "blanks": [
+                    "at odds with"
+                ]
+            }
+        ]
+    },
+    {
         "day": 21,
         "wordnum": 801,
         "word": "derive",
@@ -2158,7 +2884,7 @@
         "day": 21,
         "wordnum": 805,
         "word": "desolate",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "황량한, 적막한, 외로운",
@@ -2337,7 +3063,7 @@
         "day": 21,
         "wordnum": 815,
         "word": "microbe",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "미생물, 병원균",
@@ -2397,7 +3123,7 @@
         "day": 21,
         "wordnum": 818,
         "word": "hesitate",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "주저하다, 망설이다",
@@ -2763,7 +3489,7 @@
         "day": 22,
         "wordnum": 839,
         "word": "activate",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "활성화하다, 작동시키다; 반응을 촉진하다",
@@ -3010,7 +3736,7 @@
         "day": 22,
         "wordnum": 853,
         "word": "undermine",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "손상시키다. 기반을 약화시키다",
@@ -3036,7 +3762,7 @@
         "day": 22,
         "wordnum": 854,
         "word": "fragile",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "부서지기 쉬운, 취약한",
