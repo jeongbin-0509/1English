@@ -1845,6 +1845,247 @@
             }
         ]
     },
+    
+{"day" : 19,
+        "wordnum" : 746,
+        "word" : "stand out",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "두각을 나타내다, 돋보이다",
+                "e_sentence" : "In those days, one woman _1_ as a pioneer.",
+                "k_sentence" : "그러한 시대에, 한 여성이 선구자로서 두각을 나타냈다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stood out"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 747,
+        "word" : "be engaged in",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. ~에 몰두하다, ~으로 바쁘다 2. ~에 종사하다",
+                "e_sentence" : "You should _1_ asking yourself questions about things you are hearing.",
+                "k_sentence" : "여러분이 듣고 있는 말에 대하여 스스로에게 질문하는 것에 몰두해야 한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "be engaged in"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 748,
+        "word" : "get rid of",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 업애다[제거하다]",
+                "e_sentence" : "Stress hormones burn away when you _1_ the stress source.",
+                "k_sentence" : "스트레스 호르몬들은 여러분이 스트레스의 원인을 없애면 연소되어 사라진다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "get rid of"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 749,
+        "word" : "make for",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. ~에 도움이 되다 2. ~쪽으로 가다[향하다]",
+                "e_sentence" : "Constant _1_ arguing doesn't make for a happy marriage.",
+                "k_sentence" : "계속 다투는 것은 행복한 결혼 생활에 도움이 되지 않는다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "make for"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 750,
+        "word" : "in nature",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "사실상, 현실적으로; 완전히",
+                "e_sentence" : "His work is very specialized _1_, so it can't be done by others.",
+                "k_sentence" : "그의 말은 사실상 매우 전문화 되어있어서 다른 사람에 의해 이루어질 수 없다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "in nature"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 751,
+        "word" : "let go of",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "(쥐고 있던 것을) 놓다: ~에서 손을 놓다",
+                "e_sentence" : "You gradually learn when to _1_ the accelerator",
+                "k_sentence" : "여려분은 언제 가속 패달에서 발을 때야 할지 점차 배우게 된다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "let go of"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 752,
+        "word" : "keep in touch",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~와 연락하다, ~와 연락하고 지내다",
+                "e_sentence" : "I _1_ with old friends in my previous school.",
+                "k_sentence" : "나는 이전 학교의 예 친구들과 연락하고 지낸다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "keep in touch"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 753,
+        "word" : "dispose of",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 업애다[처리하다]; (문제 등을) 처리(해결)하다",
+                "e_sentence" : "The partticipants were simply told to _1_ any scraps.",
+                "k_sentence" : "참가자들은 단지 남는 종이를 업애라고 들었을 뿐이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "dispose of"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 754,
+        "word" : "put out",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. 불을 끄다 2. (쓰래기 등을) 내다 놓다; (제품 등을) 생산하다",
+                "e_sentence" : "I didn't know that I could _1_ a fire in no time.",
+                "k_sentence" : "나는 즉시 불을 끌 수 있다는 것을 몰랐다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "put out"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 755,
+        "word" : "go through",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. ~을 격다 2. ~을 조사하다[검토하다]",
+                "e_sentence" : "This documentary will help you understand the physical changes that older people _1_",
+                "k_sentence" : "이 다큐멘터리는 노인들이 격는 신체적인 변화를 당신이 이해하는 데 도움이 될 것이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "go through"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 756,
+        "word" : "hit the mark",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : " 예상이 들어맞다, 적중하다; 목표를 달성하다",
+                "e_sentence" : "He blushed and she knew she had _1_.",
+                "k_sentence" : "그가 얼굴을 붉혔고 그녀는 자기 얘상이 들어 맞았음을 알았다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "hit the mark"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 757,
+        "word" : "attribute to",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~ 때문이라 여기다, ~ 덕분으로 돌리다",
+                "e_sentence" : "Young Mozart's incredible musical ability might better be _1_ practice, practice, practice.",
+                "k_sentence" : "어린 Mozart's의 놀라운 음악적 능력은 오히려 연습, 연습, 연습 때문일 수 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "attributed to"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 758,
+        "word" : "specialize in",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "~을 전문으로 하다, ~을 전공하다",
+                "e_sentence" : "A pediatrician is a doctor that _1_ the health care of children under 18.",
+                "k_sentence" : "소아과 의사는 18세 미만의 어린이의 건강 관리를 전문으로 하는 의사이다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "specializes in"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 759,
+        "word" : "blow up",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "폭파하다, 터뜨리다; 화를 내다",
+                "e_sentence" : "Last night a terrorist called and told us that us that he would _1_ the building.",
+                "k_sentence" : "어젯밤에 한 테러범이 전화해서 우리에세 그 건물을 폭파하겠다고 했다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "blow up"
+                ]
+            }
+        ]
+    },
+{"day" : 19,
+        "wordnum" : 760,
+        "word" : "break down",
+        "example_count" : 1,
+        "examples" : [
+            {
+                "meaning" : "1. 고장나다, 실패하다, 아주 나빠지다 2. 분해하다",
+                "e_sentence" : "A cow has a stomach with four rooms to _1_ the food it eat",
+                "k_sentence" : "소는 먹는 음식을 분해하는 4개의 방이 있는 위를 지니고 있다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "break down"
+                ]
+            }
+        ]
+    },
     {
         "day": 21,
         "wordnum": 801,
