@@ -1,121 +1,103 @@
-// example.html과 연동시키는 파일
-// 여기는 함수 써서 조립하는 식으로 코드 구성하자
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>영어 수행 연습 - 예문</title>
 
-let word_list = []; // JSON 데이터 전부 다 들어간 리스트
-let day_list = []; // 사용자가 원하는 day를 sessionStorage에서 가져옴
+    <!-- 경로/엔드포인트 이름은 네 앱에 맞게 사용 -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/example.css') }}">
+  </head>
+  <body>
+    <!-- 햄버거 버튼 -->
+    <button class="hamburger" id="sidebarToggle" aria-expanded="false" onclick="openSidebar()">
+      <span></span><span></span><span></span>
+    </button>
 
-/* 데이터 처리 */
+    <!-- 사이드바 -->
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" onclick="closeSidebar()"></button>
+      <h2>단<span class="accent">어</span>장 by <span class="accent">;</span></h2>
+      <hr class="divider" />
+      <div class="menu-stack">
+        <form action="{{ url_for('main_page') }}" method="get">
+          <button class="menu-btn" type="submit">DAY 재선택</button>
+        </form>
+        <form action="{{ url_for('odap') }}">
+          <button class="menu-btn" type="submit">오답복습</button>
+        </form>
+        <form action="{{ url_for('words') }}">
+          <button class="menu-btn" type="submit">단어장 바로가기</button>
+        </form>
+        <form action="{{ url_for('logout') }}">
+          <button class="menu-btn" type="submit">로그아웃</button>
+        </form>
+      </div>
+    </div>
+    <div id="sidebarOverlay" class="overlay"></div>
 
-async function load_data() { 
-    // words.json의 데이터를 word_list로 옮김
-    // parameter: -; return: void
+    <main class="wrap">
+      <section class="card" id="card">
+        <!-- 우상단 즐겨찾기 -->
+        <button class="corner-star" id="favBtn" title="즐겨찾기 토글">★</button>
 
-    const res = await fetch("../static/data/words.json");
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    
-    word_list = await res.json();
-}
+        <div class="head">
+          <span class="chip" id="counter">1 out of 1</span>
+        </div>
 
-function shuffled(a) {
-    // 배열을 랜덤으러 섞어줘요 ㅎㅎ
-    let arr = a.slice();
-    for (let i=arr.length-1; i>0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
+        <div class="content">
+          <p class="en" id="en">Loading…</p>
+          <p class="ko" id="ko" aria-live="polite"></p>
 
-    return arr;
-}
+          <!-- 오답 피드백 박스 (오답 때만 표시) -->
+          <div id="feedback" class="feedback" hidden>
+            <div class="fb-row">
+              <span class="fb-label">내 답</span>
+              <span class="fb-value" id="myAnswer">-</span>
+            </div>
+            <div class="fb-row">
+              <span class="fb-label">정답</span>
+              <span class="fb-value correct" id="rightAnswer">-</span>
+            </div>
+          </div>
+        </div>
 
-function filter_data(word_list, day_list) {
-    // word_list에서 day_list에 포함되는 day만 선택해서 남김
-    // 랜덤으로 섞음
-    // parameter: word_list, day_list:int[]; return: filtered_list
+        <!-- 기본 액션 (문제 진행 중) -->
+        <div class="actions" id="actions">
+          <button class="btn" id="submitBtn">확인</button>
+        </div>
 
-    // 1) day 필터
-    const f_list = word_list.filter(w => day_list.includes(Number(w.day)));
+        <!-- ✅ 최종 화면 전용 패널 (처음엔 숨김) -->
+        <section id="finalPanel" class="final-panel" hidden>
+          <div class="final-actions">
+            <button class="btn" id="btnShowWrong">틀린 단어 보기</button>
+            <button class="btn btn-outline" id="btnBackToDay">DAY 재선택으로 돌아가기</button>
+          </div>
 
-    // 2) 예문 평탄화 + exID 보장
-    const flat = [];
-    for (const w of f_list) {
-        const exs = Array.isArray(w.examples) ? w.examples : [];
-        for (let i=0; i<exs.length; i++){
-            const ex = exs[i];
-            const exID = ex.exID ?? `${w.wordnum}-${i}`;
-            if (!ex.exID){ ex.exID = exID; ex.origIndex ??= i; }
-            flat.push({
-            day: Number(w.day),
-            wordnum: w.wordnum,
-            word: w.word,
-            exID,
-            origIndex: ex.origIndex ?? i,
-            ex
-            });
-        }
-    }
+          <section id="wrongSection" class="wrong-section" hidden>
+            <h3 class="wrong-title">틀린 단어</h3>
+            <div id="wrongList"></div>
+          </section>
+        </section>
 
-  // 3) 전역 셔플
-    return shuffled(flat);
-}
+      </section>
 
-function load_day() {
-  // day_list를 sessionStorage에서 가져옴
-  // parameter: -; return: day_list:int[]
-    try {
-        const raw = sessionStorage.getItem("days");
-        const arr = raw ? JSON.parse(raw) : [];
-        return arr.map(Number).filter(Number.isFinite);
-    } catch {
-        return [];
-    }
-}
+      <div class="result" aria-hidden="true">
+        <div class="bar" id="progressBar"></div>
+      </div>
+      <div class="legend">
+        <span class="good" id="goodCnt">0 정답</span>
+        <span class="bad" id="badCnt">0 오답</span>
+      </div>
+    </main>
 
-function add_exid_inplace() {
-    // word_list에 exID 추가하기
-    for (const item of word_list) {
-        const exs = Array.isArray(item.examples) ? item.examples : [];
-        for (let i = 0; i < exs.length; i++) {
-            exs[i].exID = `${String(item.wordnum)}-${i}`; // 예: "1123-0"
-            exs[i].origIndex = i;                         // 선택: 원래 위치
-        }
-    }
-}
-/* 기능 처리 */
-
-function insert_textbox(wordobj) {
-    // 기존 영어 문장에 input:text를 집어넣은 html형식 텍스트 리턴
-    // parameter: wordobj(words.json 형식에서 예문 블럭 하나)
-
-    let html_text = wordobj.e_sentence;
-    for (let i=1; i<=wordobj.blank_count; i++) {
-        html_text = html_text.replace(`_${i}_`, insert_textbox2(wordobj, i));
-    }
-
-    return html_text;
-
-}
-function insert_textbox2(wordobj, nth) {
-    // 이 함수는 이승민만 사용할거임
-    // 쓰지마 종호범서핑
-    // nth 번째 빈칸을 뚫어주는 함수
-
-    const inputbox = `<input type="text" id="inputbox" placeholder="${wordobj.blanks[nth-1][0]}"></input>`;
-    return inputbox;
-}
-
-function upload_wrongwords(wrong_words) {
-    // wrong_words에 틀린 단어를 받아서 exID 형식으로 저장
-    sessionStorage.setItem("wrongs", JSON.stringify(wrong_words));
-}
-
-/* 실행 부분 */
-
-load_data(); // 데이터 가져옴
-day_list = load_day(); // day_list 가져옴
-add_exid_inplace(); // 모든 예문 블럭에 exID (단어번호-예문번호) 추가
-
-const filtered_list = filter_data(word_list, day_list); // day에 맞는 예문을 섞어줌
-
-
-
-
+    <script>
+      /* 네 앱 라우트명에 맞추기 — 홈이 main_page면 이렇게 둬 */
+      window.WORDS_URL = "{{ url_for('static', filename='data/words.json') }}";
+      window.INDEX_URL = "{{ url_for('main_page') }}";
+    </script>
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/example.js') }}"></script>
+  </body>
+</html>
