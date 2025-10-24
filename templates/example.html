@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영어 수행 연습</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="arrow icon" href="./arrow.png" type="image/x-icon">
     <!-- 정적 CSS 불러오기 -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/example.css')}}">
-  </head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+</head>
 
-<body>
+<body> 
     <div id="sbarpart">
-        <!-- 사이드바 열기 버튼 -->
-        <button class="open-btn" onclick="openSidebar()"></button>
-
+        <!-- 사이드바 토글 -->
+        <button id="sidebarToggle" class="open-btn" type="button" onclick="toggleSidebar()"></button>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <!-- 사이드바 -->
-        <div class="sidebar" id="sidebar">
-            <button class="close-btn" onclick="closeSidebar()"></button>
-            <h2>단<span style="color: #66cc33;">어</span>장 by <span style="color: #66cc33;">;</span></h2>
-            <hr style="width: auto; height: 2px; background-color: #555555; border: none">
-            <button class="Reselect" onclick="goToPage()">DAY 재선택</button>
-            <button class="Review">오답복습(미완)</button>
-            <button class="Favorites">즐겨찾기된 단어(미완)</button>
-            <button class="Statistics">통계(미완)</button>
-        </div>
+        <aside class="sidebar" id="sidebar" aria-hidden="true">
+            <button class="close-btn" type="button" aria-label="사이드바 닫기" onclick="closeSidebar()"></button>
+            <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
+            <hr style="width:auto;height:2px;background-color:#555555;border:none" />
+
+            <!-- flask 라우트 -->
+            <form action="{{ url_for('main_page') }}" method="get">
+                <button class="Reselect" type="submit">DAY 재선택</button>
+            </form>
+
+            <form action="{{ url_for('odap') }}">
+                <button class="Review" type="submit">오답복습</button>
+            </form>
+
+            <form action="{{ url_for('words') }}">
+                <button type="submit">단어장 바로가기</button>
+            </form>
+
+            <form action="{{ url_for('logout') }}">
+                <button class="Logout" type="submit">로그아웃</button>
+            </form>
+        </aside>
+
+        <!-- 오버레이 -->
+        <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
     </div>
    
     <br>
-
-    <div class="progress">
-        <div id="progress"></div>
-    </div>
-
-    <div id="exmplpart">
-        <h3 id="exp">영어 예문이 띄워집니다</h3>
-        <h3 id="asp">해석문이 띄워집니다</h3>
-    </div>
-
-    <div class="container">
-        <button class="okBtn" onclick="submitAnswer()">제출</button>
-        <!-- ✅ 정답/오답 피드백 메시지 출력 영역 -->
-        <div id="feedback" style="margin-top: 10px; font-weight: bold;"></div>
+    <div class="exmplbox">
+        <div class="propart">
+            <div id="progress">
+                <div class="cpg">0</div>&nbsp;out of&nbsp;<div class="totalpg">000</div>
+            </div>
+            <div class="propart star">☆</div>  
+        </div>
+        <div id="exmplpart">
+            <h3 id="exp"><div class="answer">DataInfinity</div>&nbsp;is better than any other club in UJHS.</h3>
+            <h3 id="asp">세미콜론은 최고다.</h3>
+        </div>
+        <div class="feedback">
+            <img src="arrow.png" alt="화살표 아이콘" width="60" height="50"><div id="checkpart">Semicolon</div>
+        </div>
+        <div id="container">
+            <button class="okBtn" onclick="submitAnswer()">다음</button>
+        </div>
     </div>
     
-    <!-- 정적 JS 불러오기 -->
-    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
-    <script src="{{ url_for('static', filename='javascript/example.js') }}"></script>
-</body>
 
+    
+    
+    <!-- 정적 JS 불러오기 -->
+    <script src=".static/script.js"></script>
+    <script src=".static/script2.js"></script>
+    <script src=".static/example.js"></script>
+</body>
 </html>
