@@ -1,18 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>결과</title>
-  <link rel="stylesheet" href="../resultstyle.css">
-  <link rel="stylesheet" href="../resultresponsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 수행 연습</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <!-- 정적 CSS 불러오기 -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 
-<body>
-  <h1>📘 테스트 결과</h1>
-  <div class="result-box">
-    <div class="stat correct" id="correct-count">정답: 0개</div>
-    <div class="stat incorrect" id="incorrect-count">오답: 0개</div>
-    <button class="goHome" onclick="goHome()">🏠 홈으로 돌아가기</button>
-  </div>
+<body> 
+    <div id="sbarpart">
+        <!-- 사이드바 토글 -->
+        <button id="sidebarToggle" class="open-btn" type="button" onclick="toggleSidebar()"></button>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- 사이드바 -->
+        <aside class="sidebar" id="sidebar" aria-hidden="true">
+            <button class="close-btn" type="button" aria-label="사이드바 닫기" onclick="closeSidebar()"></button>
+            <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
+            <hr style="width:auto;height:2px;background-color:#555555;border:none" />
+
+            <!-- flask 라우트 -->
+            <form action="{{ url_for('main_page') }}" method="get">
+                <button class="Reselect" type="submit">DAY 재선택</button>
+            </form>
+
+            <form action="{{ url_for('odap') }}">
+                <button class="Review" type="submit">오답복습</button>
+            </form>
+
+            <form action="{{ url_for('words') }}">
+                <button type="submit">단어장 바로가기</button>
+            </form>
+
+            <form action="{{ url_for('logout') }}">
+                <button class="Logout" type="submit">로그아웃</button>
+            </form>
+        </aside>
+
+        <!-- 오버레이 -->
+        <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+    </div>
+   
+    <br>
+    <div class="exmplbox">
+        <div class="bar-wrap">
+            <div class="bar" id="resultBar">
+                <div class="segment correct" id="segCorrect">
+                    <span class="label" id="lblCorrect">50개 (71.4%) </span>
+                </div>
+                <div class="segment wrong" id="segwrong">
+                    <span class="label" id="lblWrong">20개 (28.6%)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="correctBtn">처음</button>
+            <button class="wrongBtn">오답</button>
+        </div>
+    </div>
+    
+
+    
+    
+    <!-- 정적 JS 불러오기 -->
+    <script src=".static/script.js"></script>
+    <script src=".static/script2.js"></script>
+    <script src=".static/example.js"></script>
 </body>
 </html>
