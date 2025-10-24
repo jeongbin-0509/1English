@@ -1,4 +1,4 @@
-/* 데스크탑 */
+/* 데스크탑
 @media (min-width: 1024px) {
   .container {
     margin-top: 120px;
@@ -96,4 +96,4 @@
     gap: 16px 14px;
   }
   .day-select button { width: 62px; height: 62px; font-size: 16px; }
-}
+} 
