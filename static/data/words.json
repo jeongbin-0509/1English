@@ -1901,7 +1901,7 @@
         "examples" : [
             {
                 "meaning" : "1. ~에 도움이 되다 2. ~쪽으로 가다[향하다]",
-                "e_sentence" : "Constant _1_ arguing doesn't make for a happy marriage.",
+                "e_sentence" : "Constant arguing doesn't _1_ a happy marriage.",
                 "k_sentence" : "계속 다투는 것은 행복한 결혼 생활에 도움이 되지 않는다.",
                 "blank_count" : 1,
                 "blanks" : [
