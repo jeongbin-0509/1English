@@ -15,7 +15,7 @@ app.secret_key = os.getenv("SECRET_KEY", "change-this")
 
 # 개발용 rate limiter (메모리 저장)
 limiter = Limiter(
-    key_func=get_remote_address,
+    key_func=get_remote_address,  # ✅ v3 시그니처 호환
     app=app,
     default_limits=["200/hour"],
     storage_uri="memory://",
@@ -49,7 +49,7 @@ def words():
 def odap():
     return render_template("odap.html")
 
-# 예문 창 불러오기
+# 예문 창 불러오기 (✅ 한 번만 정의)
 @app.route("/example")
 def example():
     return render_template("example.html")
@@ -58,6 +58,12 @@ def example():
 @app.route("/main_page")
 def main_page():
     return render_template("index.html")
+
+# 즐겨찾기 페이지
+@app.route("/favorite")
+def favorite():
+    return render_template("favorite.html")
+
 
 # 로그인
 @app.route("/login", methods=["GET", "POST"])
@@ -133,7 +139,7 @@ def signup():
 
     return render_template("signup.html")
 
-# 대시보드 라우트는 한 번만 선언
+# ✅ 대시보드 라우트는 한 번만 선언
 @app.route("/dashboard")
 def dashboard():
     token = request.cookies.get("access_token")
@@ -169,5 +175,5 @@ def logout():
     return resp
 
 if __name__ == "__main__":
-    # debug=True는 개발 중에만 사용
+    # debug=True는 개발 중에만 사용하세요.
     app.run(debug=True)
