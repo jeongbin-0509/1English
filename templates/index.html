@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>영어 수행 연습</title>
-  <link rel="stylesheet" href="../static/css/style.css" />
-  <link rel="stylesheet" href="../static/css/responsive.css" />
+  <link rel="stylesheet" href="../static/css/style.css"/>
+  <link rel="stylesheet" href="../static/css/responsive.css"/>
 </head>
 
 <body>
@@ -26,7 +25,11 @@
       </form>
 
       <form action="{{ url_for('odap') }}">
-        <button class="Review" type="submit">오답복습</button>
+        <button class="Review" type="submit">오답 노트</button>
+      </form>
+
+      <form action="{{ url_for('favorite') }}">
+        <button type="submit">즐겨찾기</button>
       </form>
 
       <form action="{{ url_for('words') }}">
@@ -36,6 +39,7 @@
       <form action="{{ url_for('logout') }}">
         <button class="Logout" type="submit">로그아웃</button>
       </form>
+      
     </aside>
 
     <!-- 오버레이 -->
@@ -116,5 +120,4 @@
   <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
 
 </body>
-
 </html>
