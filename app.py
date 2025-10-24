@@ -15,7 +15,7 @@ app.secret_key = os.getenv("SECRET_KEY", "change-this")
 
 # 개발용 rate limiter (메모리 저장)
 limiter = Limiter(
-    key_func=get_remote_address,  # ✅ v3 시그니처 호환
+    key_func=get_remote_address,
     app=app,
     default_limits=["200/hour"],
     storage_uri="memory://",
@@ -133,7 +133,7 @@ def signup():
 
     return render_template("signup.html")
 
-# ✅ 대시보드 라우트는 한 번만 선언
+# 대시보드 라우트는 한 번만 선언
 @app.route("/dashboard")
 def dashboard():
     token = request.cookies.get("access_token")
@@ -169,5 +169,5 @@ def logout():
     return resp
 
 if __name__ == "__main__":
-    # debug=True는 개발 중에만 사용하세요.
+    # debug=True는 개발 중에만 사용
     app.run(debug=True)
