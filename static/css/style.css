@@ -698,12 +698,40 @@ input[id="menuicon"]:checked + label span:nth-child(1) {
   background: transparent !important;
   transform: none !important;
 }
-/* 메뉴 토글용 체크박스 완전 숨기기 */
+/* 0) 체크박스 아이콘(하얀 네모)만 완전히 숨김 */
 input#menuicon {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 1) 햄버거 버튼은 반드시 보이게(덮어쓰임 방지) */
+.open-btn {
+  position: fixed !important;
+  top: 14px !important;
+  left: 14px !important;
+  z-index: 1200 !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  background-image: url("../images/butt1-noogi.png") !important; /* 경로 주입 */
+}
+
+/* 2) 오버레이가 버튼을 덮지 않게 (혹시 모를 상황) */
+.sidebar-overlay {
+  z-index: 900 !important;
+}
+
+/* 3) 혹시 responsive.css에서 숨겼다면 되살림 */
+@media (max-width: 9999px){
+  .open-btn { display: block !important; }
 }
