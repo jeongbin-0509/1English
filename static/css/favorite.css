@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal; font-style: normal;
+}
+*{ font-family:'NEXON Lv2 Gothic',sans-serif; font-weight:bold; box-sizing:border-box; }
+body{ margin:10px; background:#181818; color:#eaeaea; }
+h1{ text-align:center; font-size:5vw; margin:4.5% 0 6%; }
+h3{ font-size:2vw; margin:0; }
+
+.favbtn{
+  position:fixed; top:16px; left:16px;
+  background: linear-gradient(90deg,#35b3f2,#1aa0ff);
+  color:#0b1b2a; border:none; border-radius:10px;
+  padding:10px 20px; font-size:15px; font-weight:700; cursor:pointer;
+  box-shadow:0 4px 12px rgba(26,160,255,.4);
+}
+
+.fav-days{
+  max-width:960px; margin:0 auto 12px; display:flex; flex-wrap:wrap; gap:12px; justify-content:center;
+}
+.day-chip{
+  appearance:none; border:none; cursor:pointer;
+  padding:10px 16px; border-radius:999px; background:#2b2b2b; color:#4fb3ff;
+  box-shadow:0 2px 8px rgba(0,0,0,.3); transition:transform .15s ease, filter .2s ease;
+}
+.day-chip:hover{ transform:translateY(-2px); filter:brightness(1.1); }
+
+.fav-detail{ max-width:960px; margin:16px auto; }
+.fav-detail.hidden{ display:none; }
+.detail-head{ display:flex; align-items:center; justify-content:space-between; margin:8px 4px 12px; }
+.clear-day{
+  background:#2b2b2b; color:#ff9c9c; border:1px solid #3a3a3a; border-radius:10px; padding:8px 12px; cursor:pointer;
+}
+
+#fav-items{ display:grid; gap:12px; }
+.fav-card{
+  background:#222; color:#eaeaea; border:1px solid #333; border-radius:12px; padding:14px 16px;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+.fav-head{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.fav-head .num{
+  font-weight:900; color:#66cc33; font-size:14px; background:#1a1a1a; border:1px solid #2c2c2c; border-radius:8px; padding:4px 8px;
+}
+.fav-head .word{ font-weight:900; font-size:18px; color:#4fb3ff; flex:1; }
+.fav-head .del{
+  background:#2b2b2b; color:#ffb3b3; border:1px solid #3a3a3a; border-radius:8px; padding:6px 10px; cursor:pointer;
+}
+.sent{ margin-top:6px; font-size:15px; color:#ddd; }
+.sent.en{ color:#cde8ff; }
+.sent.ko{ color:#cfcfcf; }
