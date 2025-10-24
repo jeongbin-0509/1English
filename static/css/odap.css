@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  padding: 0;
+  background-color: #181818;
+}
+
+h1, h3 {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin: 4.5% 0 10%;
+  font-size: 5vw;
+}
+
+h3 {
+  margin: 5% 0 0.5%;
+  font-size: 2vw;
+}
+
+h5 {
+  margin-top: 8%;
+}
+/* === 오답 노트 === */
+
+.wrong-days{
+  max-width: 960px;
+  margin: 24px auto 8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 12px;
+  justify-content:center;
+}
+
+.day-chip{
+  appearance:none; border:none; cursor:pointer;
+  padding: 10px 16px; border-radius: 999px;
+  background:#2b2b2b; color:#4fb3ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  transition: transform .15s ease, filter .2s ease;
+}
+.day-chip:hover{ transform: translateY(-2px); filter:brightness(1.1); }
+
+.wrong-detail{ max-width: 960px; margin: 16px auto; }
+.wrong-detail.hidden{ display:none; }
+
+#detail-title{ text-align:left; color:#eaeaea; margin: 16px 8px; }
+
+#wrong-items{ display:grid; gap:12px; }
+
+.wrong-card{
+  background:#222; color:#eaeaea;
+  border:1px solid #333; border-radius:12px;
+  padding:14px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+}
+
+.wrong-head{
+  display:flex; align-items:center; gap:10px; margin-bottom:8px;
+}
+.wrong-head .num{
+  font-weight:900; color:#66cc33; font-size:14px;
+  background:#1a1a1a; border:1px solid #2c2c2c; border-radius:8px;
+  padding:4px 8px;
+}
+.wrong-head .word{ font-weight:900; font-size:18px; color:#4fb3ff; }
+
+.pair{
+  display:flex; gap:8px; align-items:center; margin:4px 0;
+}
+.pair .label{
+  min-width:44px; font-size:12px; color:#bbb; background:#1a1a1a; border-radius:6px; padding:2px 6px;
+}
+.pair .val{ font-weight:800; }
+.pair .val.ok{ color:#66cc33; }
+
+.sent{ margin-top:8px; font-size:15px; color:#ddd; }
+.sent.en{ color:#cde8ff; }
+.sent.ko{ color:#cfcfcf; }
+.fill {
+  color: #4fb3ff;
+  font-weight: 800;
+}
+/* === 나가기 버튼 (odapbtn) === */
+.odapbtn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(90deg, #35b3f2, #1aa0ff);
+  color: #0b1b2a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(26,160,255,0.4);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.odapbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26,160,255,0.55);
+  filter: brightness(1.1);
+}
+
+.odapbtn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(26,160,255,0.4);
+  filter: brightness(0.95);
+}
+
+.badge{
+  margin-left:auto;
+  background:#3a3a3a; color:#ffb3b3;
+  padding:2px 8px; border-radius:999px; font-size:12px; font-weight:900;
+  border:1px solid #4a4a4a;
+}
+.history summary{ cursor:pointer; margin-top:8px; color:#9ecbff; }
+.hist-wrap{ margin-top:8px; border-top:1px solid #333; padding-top:8px; }
+.hist-row{
+  display:grid; grid-template-columns: 24px 1fr 1fr auto;
+  gap:8px; padding:6px 0; font-size:13px; color:#dedede;
+  border-bottom:1px dashed #2d2d2d;
+}
+.hist-row .idx{ color:#66cc33; font-weight:900; }
+.fill{ color:#4fb3ff; font-weight:800; }
+.muted{ color:#aaa; }

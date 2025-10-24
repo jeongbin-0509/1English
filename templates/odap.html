@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영어 수행 연습</title>
-    <link rel="stylesheet" href="../static/css/odapcss.css">
+    <link rel="stylesheet" href="../static/css/odap.css">
     <link rel="stylesheet" href="../static/css/responsive.css">
 </head>
 
@@ -13,6 +13,21 @@
 <form action="main_page">
     <button class="odapbtn" type="submit">나가기</button>  
 </form>
+<h1>오답 노트</h1>
+
+<!-- ✅ Day 목록이 그려질 곳 -->
+<section id="wrong-days" class="wrong-days">
+  <noscript style="color:#cfcfcf">자바스크립트가 꺼져 있어 목록을 불러올 수 없어요.</noscript>
+</section>
+
+<!-- ✅ Day 선택 시 상세가 그려질 곳 -->
+<section id="wrong-detail" class="wrong-detail hidden">
+  <h3 id="detail-title"></h3>
+  <div id="wrong-items"></div>
+</section>
+
+<!-- ✅ 스크립트 로드: odap.js 로 바꾸기 -->
+<script src="{{ url_for('static', filename='javascript/odap.js') }}"></script>
   
 
 <h5 style="color: #555555;">made by 정빈, 범서, 예강, 상혁, 승민, 종호, 하윤 / 오류문의 : 인스타 an0_9jb(오류난 화면을 찍어서 보내주세요)</h5>

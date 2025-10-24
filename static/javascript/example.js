@@ -1,121 +1,358 @@
-// example.html과 연동시키는 파일
-// 여기는 함수 써서 조립하는 식으로 코드 구성하자
+/* example.html 동작 스크립트 (마지막 화면에서 '다음' 제거 + 이번 세션 오답만 표시) */
+const $ = (s) => document.querySelector(s);
+const byId = (id) => document.getElementById(id);
 
-let word_list = []; // JSON 데이터 전부 다 들어간 리스트
-let day_list = []; // 사용자가 원하는 day를 sessionStorage에서 가져옴
+/* ===== 사이드바 ===== */
+function toggleSidebar(){
+  const sb = byId("sidebar");
+  const ov = byId("sidebarOverlay");
+  const btn = byId("sidebarToggle");
+  const willOpen = !sb.classList.contains("active");
 
-/* 데이터 처리 */
-
-async function load_data() { 
-    // words.json의 데이터를 word_list로 옮김
-    // parameter: -; return: void
-
-    const res = await fetch("../static/data/words.json");
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    
-    word_list = await res.json();
+  sb.classList.toggle("active", willOpen);
+  ov.classList.toggle("active", willOpen);
+  btn.setAttribute("aria-expanded", String(willOpen));
+  sb.setAttribute("aria-hidden", String(!willOpen));
+  document.body.classList.toggle("noscroll", willOpen);
 }
 
-function shuffled(a) {
-    // 배열을 랜덤으러 섞어줘요 ㅎㅎ
-    let arr = a.slice();
-    for (let i=arr.length-1; i>0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+document.addEventListener("DOMContentLoaded", () => {
+  byId("sidebarToggle")?.addEventListener("click", toggleSidebar);
+  byId("sidebarClose")?.addEventListener("click", toggleSidebar);
+  byId("sidebarOverlay")?.addEventListener("click", toggleSidebar);
+});
+
+/* ===== 상태 ===== */
+let words = [];
+let examples = [];
+let pos = 0;
+let correct = 0, wrong = 0;
+let mode = "question";
+let finished = false;
+let favSet = new Set(JSON.parse(localStorage.getItem("favorites") || "[]"));
+let wrongsThisRun = []; // ✅ 이번 세션 오답만 저장
+
+/* ===== 데이터 ===== */
+async function loadWords(){
+  const url = window.WORDS_URL || "../data/words.json";
+  const res = await fetch(url);
+  if(!res.ok) throw new Error("데이터 로드 실패");
+  words = await res.json();
+}
+function loadDays(){
+  try{ return (JSON.parse(sessionStorage.getItem("days")||"[]")||[]).map(Number); }
+  catch{ return []; }
+}
+function filterByDays(all, days){
+  if(!days?.length) return all;
+  const set = new Set(days);
+  return all.filter(w => set.has(Number(w.day)));
+}
+function flattenExamples(list){
+  const out=[]; for(const w of list){
+    (Array.isArray(w.examples)?w.examples:[]).forEach((ex,i)=>{
+      const exID = ex.exID || `${w.wordnum}-${i}`;
+      out.push({ day:+w.day, wordnum:String(w.wordnum), word:w.word, exID, ex });
+    });
+  } return out;
+}
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a; }
+
+/* ===== 렌더 ===== */
+function makeInput(exID, idx){
+  return `<input id="in-${exID}-${idx}" class="textbox" type="text" autocomplete="off" />`;
+}
+
+function renderCurrent(){
+  const cur = examples[pos]; if(!cur) return;
+
+  byId("counter").textContent = `${pos+1} out of ${examples.length}`;
+  byId("favBtn").classList.toggle("is-active", favSet.has(cur.exID));
+
+  let html = cur.ex.e_sentence;
+  const count = Number(cur.ex.blank_count || 0);
+  for(let i=1;i<=count;i++){ html = html.replace(`_${i}_`, makeInput(cur.exID, i)); }
+  byId("en").innerHTML = html;
+  byId("ko").textContent = cur.ex.k_sentence || "";
+
+  hideFeedback();
+  hideFinalPanel();
+
+  const first = byId(`in-${cur.exID}-1`); first?.focus();
+
+  const p = Math.round((pos/examples.length)*100);
+  byId("progressBar").style.width = p + "%";
+  byId("goodCnt").textContent = `${correct} 정답`;
+  byId("badCnt").textContent = `${wrong} 오답`;
+
+  mode = "question";
+  byId("submitBtn").textContent = "확인";
+  byId("submitBtn").disabled = false;
+  byId("actions").hidden = false;
+}
+
+/* ===== 채점 ===== */
+function collectUserAnswers(cur){
+  const a=[]; const n=Number(cur.ex.blank_count||0);
+  for(let i=1;i<=n;i++){ a.push((byId(`in-${cur.exID}-${i}`)?.value||"").trim()); }
+  return a;
+}
+
+function evaluate(){
+  if (finished) return;
+  if(mode==="feedback"){ goNext(); return; }
+
+  const cur = examples[pos]; if(!cur) return;
+  const key = Array.isArray(cur.ex.blanks)?cur.ex.blanks:[];
+  const mine = collectUserAnswers(cur);
+
+  let ok = true;
+  key.forEach((ans, i)=>{
+    const expect = String(ans).trim().toLowerCase();
+    const got = String(mine[i]||"").trim().toLowerCase();
+    const el = byId(`in-${cur.exID}-${i+1}`);
+    if(!got || expect!==got){ ok=false; el?.classList.add("wrong"); }
+    else { el?.classList.remove("wrong"); el?.classList.add("correct"); }
+  });
+
+  if(ok){
+    correct++; goNext();
+  }else{
+    wrong++;
+    const wrongItem = { exID: cur.exID, ts: Date.now(), expect: key, mine, word: cur.word };
+    wrongsThisRun.push(wrongItem);
+    const all = JSON.parse(sessionStorage.getItem("wrongs")||"[]");
+    all.push(wrongItem);
+    sessionStorage.setItem("wrongs", JSON.stringify(all));
+
+        // ★ 오답 노트에 추가 (새 함수 호출)
+    addToWrongNotebook(cur, mine, key);
+
+    showFeedback(mine, key);
+    mode = "feedback";
+    byId("submitBtn").textContent = "다음";
+
+    showFeedback(mine, key);
+    mode = "feedback";
+    byId("submitBtn").textContent = "다음";
+  }
+
+  byId("goodCnt").textContent = `${correct} 정답`;
+  byId("badCnt").textContent = `${wrong} 오답`;
+}
+
+function goNext(){
+  pos++;
+  if(pos>=examples.length){
+    renderFinal();
+    return;
+  }
+  renderCurrent();
+}
+
+/* ===== 피드백 ===== */
+function showFeedback(user, key){
+  byId("myAnswer").textContent = (user.join(" / ") || "(빈칸)");
+  byId("rightAnswer").textContent = key.join(" / ");
+  byId("feedback").hidden = false;
+}
+function hideFeedback(){
+  byId("feedback").hidden = true;
+  byId("myAnswer").textContent = "-";
+  byId("rightAnswer").textContent = "-";
+}
+
+/* ===== 즐겨찾기 ===== */
+function toggleFavorite(){
+  const cur = examples[pos]; if(!cur) return;
+  favSet.has(cur.exID) ? favSet.delete(cur.exID) : favSet.add(cur.exID);
+  localStorage.setItem("favorites", JSON.stringify([...favSet]));
+  byId("favBtn").classList.toggle("is-active", favSet.has(cur.exID));
+}
+
+/* ===== 마지막 화면 ===== */
+function renderFinal(){
+  finished = true;
+  byId("counter").textContent="완료!";
+  byId("en").innerHTML="수고했어!";
+  byId("ko").textContent=`정답 ${correct} / 오답 ${wrong}`;
+  byId("progressBar").style.width="100%";
+  hideFeedback();
+
+  /* 🔥 '다음' 버튼 완전 제거 */
+  byId("submitBtn").remove();
+
+  /* 액션 영역 숨기기 */
+  byId("actions").hidden = true;
+
+  /* 결과 버튼 패널 표시 */
+  buildAndShowFinalPanel();
+}
+
+function buildAndShowFinalPanel(){
+  const panel = byId("finalPanel");
+  panel.hidden = false;
+
+  byId("btnShowWrong")?.addEventListener("click", showWrongList);
+  byId("btnBackToDay")?.addEventListener("click", () => {
+    location.href = (window.INDEX_URL || "./index");
+  });
+}
+
+/* ===== 이번 세션 오답 보기 ===== */
+function showWrongList(){
+  const listEl = byId("wrongList");
+  const data = wrongsThisRun;
+
+  if(!data.length){
+    listEl.innerHTML = `<p class="empty">이번 테스트에서 틀린 단어가 없어요. 👍</p>`;
+    byId("wrongSection").hidden = false;
+    return;
+  }
+
+  const items = data.map((w, i) => {
+    const mine = (w.mine || []).join(" / ") || "미응답";
+    const expect = (w.expect || []).join(" / ");
+    const word = w.word ? `<div class="word">단어: <b>${escapeHtml(w.word)}</b></div>` : "";
+    return `
+      <div class="wrong-item">
+        <div class="idx">${i+1}.</div>
+        <div class="body">
+          ${word}
+          <div>내 답: <b>${escapeHtml(mine)}</b></div>
+          <div>정답: <b class="ok">${escapeHtml(expect)}</b></div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  listEl.innerHTML = items;
+  byId("wrongSection").hidden = false;
+}
+
+/* ===== 유틸 ===== */
+function hideFinalPanel(){
+  const panel = byId("finalPanel");
+  if(panel) panel.hidden = true;
+  const sect = byId("wrongSection");
+  if(sect) sect.hidden = true;
+}
+function escapeHtml(str){
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#39;");
+}
+
+/* ===== 시작 ===== */
+async function boot(){
+  wrongsThisRun = [];
+  await loadWords();
+  const list = filterByDays(words, loadDays());
+  examples = shuffle(flattenExamples(list.length?list:words));
+  renderCurrent();
+
+  byId("submitBtn").addEventListener("click", evaluate);
+  byId("favBtn").addEventListener("click", toggleFavorite);
+
+  document.addEventListener("keydown", (e)=>{
+    if(e.key==="Enter" && !finished){
+      e.preventDefault(); evaluate();
     }
+  });
+}
+document.addEventListener("DOMContentLoaded", boot);
 
-    return arr;
+// === 오답 노트(localStorage) 저장 ===
+function addToWrongNotebook(cur, mine, key){
+  try{
+    const store = JSON.parse(localStorage.getItem('wrongNotebook') || '{}');
+    const dayKey  = String(cur.day);
+    const itemKey = String(cur.wordnum);
+    if(!store[dayKey]) store[dayKey] = {};
+
+    const prev = store[dayKey][itemKey] || {
+      day: cur.day,
+      wordnum: cur.wordnum,
+      word: cur.word || "",
+      e_sentence: cur.ex?.e_sentence || "",
+      k_sentence: cur.ex?.k_sentence || "",
+      wrong_count: 0,
+      last_wrong: null,
+      history: []
+    };
+
+    const entry = {
+      mine: Array.isArray(mine) ? mine : [],
+      expect: Array.isArray(key) ? key : [],
+      ts: Date.now()
+    };
+
+    // 최신 메타 업데이트
+    prev.word        = cur.word || prev.word;
+    prev.e_sentence  = cur.ex?.e_sentence || prev.e_sentence;
+    prev.k_sentence  = cur.ex?.k_sentence || prev.k_sentence;
+    prev.wrong_count = (prev.wrong_count || 0) + 1;
+    prev.last_wrong  = entry;
+
+    // 히스토리 누적(최대 50개 정도로 캡)
+    prev.history = [entry, ...(prev.history || [])].slice(0, 50);
+
+    store[dayKey][itemKey] = prev;
+    localStorage.setItem('wrongNotebook', JSON.stringify(store));
+  }catch(e){
+    console.warn('wrongNotebook 저장 실패:', e);
+  }
 }
 
-function filter_data(word_list, day_list) {
-    // word_list에서 day_list에 포함되는 day만 선택해서 남김
-    // 랜덤으로 섞음
-    // parameter: word_list, day_list:int[]; return: filtered_list
+/* ===== 즐겨찾기 ===== */
+function toggleFavorite(){
+  const cur = examples[pos]; if(!cur) return;
 
-    // 1) day 필터
-    const f_list = word_list.filter(w => day_list.includes(Number(w.day)));
+  if (favSet.has(cur.exID)) {
+    // 삭제
+    favSet.delete(cur.exID);
+    removeFromFavoriteNotebook(cur);
+  } else {
+    // 추가
+    favSet.add(cur.exID);
+    addToFavoriteNotebook(cur);
+  }
 
-    // 2) 예문 평탄화 + exID 보장
-    const flat = [];
-    for (const w of f_list) {
-        const exs = Array.isArray(w.examples) ? w.examples : [];
-        for (let i=0; i<exs.length; i++){
-            const ex = exs[i];
-            const exID = ex.exID ?? `${w.wordnum}-${i}`;
-            if (!ex.exID){ ex.exID = exID; ex.origIndex ??= i; }
-            flat.push({
-            day: Number(w.day),
-            wordnum: w.wordnum,
-            word: w.word,
-            exID,
-            origIndex: ex.origIndex ?? i,
-            ex
-            });
-        }
+  localStorage.setItem("favorites", JSON.stringify([...favSet]));
+  byId("favBtn").classList.toggle("is-active", favSet.has(cur.exID));
+}
+
+// ---- 즐겨찾기 노트 저장/삭제 ----
+function addToFavoriteNotebook(cur){
+  try{
+    const store = JSON.parse(localStorage.getItem('favoriteNotebook') || '{}');
+    const dayKey = String(cur.day);         // 예: "17"
+    const itemKey = String(cur.wordnum);    // 예: "580"
+    if(!store[dayKey]) store[dayKey] = {};
+    store[dayKey][itemKey] = {
+      day: cur.day,
+      wordnum: cur.wordnum,
+      word: cur.word || "",
+      e_sentence: cur.ex?.e_sentence || "",
+      k_sentence: cur.ex?.k_sentence || "",
+      ts: Date.now()
+    };
+    localStorage.setItem('favoriteNotebook', JSON.stringify(store));
+  }catch(e){ console.warn('favoriteNotebook 저장 실패', e); }
+}
+
+function removeFromFavoriteNotebook(cur){
+  try{
+    const store = JSON.parse(localStorage.getItem('favoriteNotebook') || '{}');
+    const dayKey = String(cur.day);
+    const itemKey = String(cur.wordnum);
+    if (store[dayKey] && store[dayKey][itemKey]) {
+      delete store[dayKey][itemKey];
+      if (Object.keys(store[dayKey]).length === 0) delete store[dayKey];
+      localStorage.setItem('favoriteNotebook', JSON.stringify(store));
     }
-
-  // 3) 전역 셔플
-    return shuffled(flat);
+  }catch(e){ console.warn('favoriteNotebook 삭제 실패', e); }
 }
-
-function load_day() {
-  // day_list를 sessionStorage에서 가져옴
-  // parameter: -; return: day_list:int[]
-    try {
-        const raw = sessionStorage.getItem("days");
-        const arr = raw ? JSON.parse(raw) : [];
-        return arr.map(Number).filter(Number.isFinite);
-    } catch {
-        return [];
-    }
-}
-
-function add_exid_inplace() {
-    // word_list에 exID 추가하기
-    for (const item of word_list) {
-        const exs = Array.isArray(item.examples) ? item.examples : [];
-        for (let i = 0; i < exs.length; i++) {
-            exs[i].exID = `${String(item.wordnum)}-${i}`; // 예: "1123-0"
-            exs[i].origIndex = i;                         // 선택: 원래 위치
-        }
-    }
-}
-/* 기능 처리 */
-
-function insert_textbox(wordobj) {
-    // 기존 영어 문장에 input:text를 집어넣은 html형식 텍스트 리턴
-    // parameter: wordobj(words.json 형식에서 예문 블럭 하나)
-
-    let html_text = wordobj.e_sentence;
-    for (let i=1; i<=wordobj.blank_count; i++) {
-        html_text = html_text.replace(`_${i}_`, insert_textbox2(wordobj, i));
-    }
-
-    return html_text;
-
-}
-function insert_textbox2(wordobj, nth) {
-    // 이 함수는 이승민만 사용할거임
-    // 쓰지마 종호범서핑
-    // nth 번째 빈칸을 뚫어주는 함수
-
-    const inputbox = `<input type="text" id="inputbox" placeholder="${wordobj.blanks[nth-1][0]}"></input>`;
-    return inputbox;
-}
-
-function upload_wrongwords(wrong_words) {
-    // wrong_words에 틀린 단어를 받아서 exID 형식으로 저장
-    sessionStorage.setItem("wrongs", JSON.stringify(wrong_words));
-}
-
-/* 실행 부분 */
-
-load_data(); // 데이터 가져옴
-day_list = load_day(); // day_list 가져옴
-add_exid_inplace(); // 모든 예문 블럭에 exID (단어번호-예문번호) 추가
-
-const filtered_list = filter_data(word_list, day_list); // day에 맞는 예문을 섞어줌
-
-
-
-

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>즐겨찾기</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/favorite.css') }}">
+</head>
+<body>
+
+<form action="{{ url_for('main_page') }}">
+  <button class="favbtn" type="submit">나가기</button>
+</form>
+
+<h1>즐겨찾기</h1>
+
+<section id="fav-days" class="fav-days"></section>
+
+<section id="fav-detail" class="fav-detail hidden">
+  <div class="detail-head">
+    <h3 id="fav-title"></h3>
+    <button id="clearDayBtn" class="clear-day">이 Day 비우기</button>
+  </div>
+  <div id="fav-items"></div>
+</section>
+
+<script src="{{ url_for('static', filename='javascript/favorite.js') }}"></script>
+</body>
+</html>
