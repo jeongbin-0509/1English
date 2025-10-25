@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영어 수행 연습</title>
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png')}}" type="image/x-icon">
     <link rel="arrow icon" href="./arrow.png" type="image/x-icon">
     <!-- 정적 CSS 불러오기 -->
     <link rel="stylesheet" href="../static/css/style.css" />
@@ -18,9 +18,9 @@
         <button id="sidebarToggle" class="open-btn" type="button" onclick="toggleSidebar()"></button>
         <input type="checkbox" id="menuicon">
         <label for="menuicon">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </label>
         <!-- 사이드바 -->
         <aside class="sidebar" id="sidebar" aria-hidden="true">

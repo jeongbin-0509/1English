@@ -723,7 +723,7 @@ input#menuicon {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
-  background-image: url("../images/butt1-noogi.png") !important; /* 경로 주입 */
+  background-image: url("../hamburger.png") !important; /* 경로 주입 */
 }
 
 /* 2) 오버레이가 버튼을 덮지 않게 (혹시 모를 상황) */
