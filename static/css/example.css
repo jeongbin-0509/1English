@@ -120,7 +120,7 @@ body.noscroll{overflow:hidden}
 }
 .sidebar.active{ transform:translateX(0); }
 .side-title{ margin:8px 6px 10px; }
-.accent{ color:#66cc33 }
+.accent{ color:#35b3f2 }
 .divider{ height:2px; background:#3d454e; border:none; margin:8px 0 12px; }
 .side-btn{ width:100%; padding:12px 14px; margin:10px 0; background:#2b3138; color:#eaf2ff; border:1px solid rgba(255,255,255,.06); border-radius:12px; cursor:pointer; }
 
@@ -190,4 +190,10 @@ body.noscroll{overflow:hidden}
     font-family: "NanumGothicExtraBold";
     font-weight: 500;
 
+}
+
+#jonghobabo {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
