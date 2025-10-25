@@ -120,7 +120,7 @@ body.noscroll{overflow:hidden}
 }
 .sidebar.active{ transform:translateX(0); }
 .side-title{ margin:8px 6px 10px; }
-.accent{ color:#35b3f2 }
+.accent{ color:#66cc33 }
 .divider{ height:2px; background:#3d454e; border:none; margin:8px 0 12px; }
 .side-btn{ width:100%; padding:12px 14px; margin:10px 0; background:#2b3138; color:#eaf2ff; border:1px solid rgba(255,255,255,.06); border-radius:12px; cursor:pointer; }
 
@@ -174,26 +174,142 @@ body.noscroll{overflow:hidden}
   margin-top:18px; padding:14px; background:#161b21;
   border:1px solid rgba(255,255,255,.08); border-radius:16px;
 }
-
-.word {
-    font-size: 1.6rem;
-    color: #35b3f2;
-    font-family: "NanumGothicExtraBold";
-    font-weight: 700;
+.wrong-title{ margin:0 0 8px; font-size:16px; }
+.wrong-item{
+  display:flex; gap:10px; padding:12px; border-radius:12px;
+  background:#1c2127; border:1px solid rgba(255,255,255,.06);
+  margin-bottom:10px;
 }
+.wrong-item .idx{ width:24px; opacity:.6; }
+.wrong-item .ok{ color:var(--green); }
+.wrong-section .empty{ color:var(--muted); }
 
-.wordnum {
-    background-color: #35b3f2;
-    color: white;
-    border-radius: min(3vh, 4.5vw);
-    padding: min(0.5vh, 0.75vw) min(1.6vh, 2.4vw);
-    font-family: "NanumGothicExtraBold";
-    font-weight: 500;
-
-}
-
-#jonghobabo {
+/* 입력 유령(ghost) 레이어 */
+.ghost-input {
   position: relative;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  /* 입력칸 높이에 맞추기 위해 필요하다면 line-height 조정 */
+}
+
+.ghost-input .ghost {
+  position: absolute;
+  left: 10px;              /* ← textbox의 padding-left와 같게 */
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.35;           /* 흐리게 */
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  font-weight: 600;        /* 살짝 두껍게(원한다면 조절) */
+}
+
+/* 기존 textbox가 있다면 여기에 맞춰 보정 */
+.textbox {
+  position: relative;
+  z-index: 1;              /* 실제 입력이 위로 오게 */
+  background: transparent; /* 아래 깔린 ghost가 비치도록 */
+  /* 기존 스타일 예시 — 프로젝트 스타일에 맞게 유지/조정 */
+  /* padding-left가 ghost left와 맞아야 정확히 겹쳐 보임 */
+  padding-left: 10px;      /* ← ghost left와 반드시 동일하게 */
+  /* height, line-height, font-size 등은 기존 값 쓰기 */
+}
+
+/* 정오답 시 테두리 등 기존 효과 유지 */
+.textbox.correct { /* ... */ }
+.textbox.wrong   { /* ... */ }
+
+/* 타이핑 글자가 안 보일 때 강제 표시 */
+.textbox{
+  color: var(--text, #e8eef5) !important;
+  -webkit-text-fill-color: var(--text, #e8eef5) !important; /* 사파리/크롬 */
+  caret-color: var(--text, #e8eef5) !important;
+  background: transparent;  /* 유령 글자와 겹치게 */
+  position: relative; 
+  z-index: 1;
+}
+.ghost-input .ghost{
+  z-index: 0;
+}
+
+/* === 문장과 입력칸 폰트/라인하이트 동기화 === */
+.en {
+  --en-line: 1.35;             /* 문장 줄높이(프로젝트 값과 맞춰도 됨) */
+}
+
+/* 유령 래퍼, 유령 텍스트, 실제 입력 모두 문장과 동일한 활자 설정을 상속 */
+.en .ghost-input,
+.en .ghost-input .ghost,
+.en .ghost-input .textbox {
+  font: inherit;               /* 폰트패밀리, 굵기, 크기, 스타일 전부 상속 */
+  font-size: 1em;              /* 문장 크기 그대로 */
+  line-height: var(--en-line);
+  letter-spacing: inherit;
+  font-weight: inherit;
+}
+
+/* 입력칸 박스 크기를 '문장 기준'으로 맞춤 */
+.en .ghost-input .textbox {
+  height: calc(var(--en-line) * 1em);
+  padding: 0 .6em;             /* 좌우 패딩만, 세로는 line-height로 맞춤 */
+  background: transparent;
+  border: 0;                   /* 기존 디자인 유지하려면 너의 테두리 규칙 남겨도 됨 */
+  outline: none;
+  color: var(--text, #e8eef5);
+  -webkit-text-fill-color: var(--text, #e8eef5);
+  caret-color: var(--text, #e8eef5);
+  position: relative;
+  z-index: 1;
+  min-font-size: 16px;         /* iOS/Safari 확대 방지: 16px 미만이면 확대됨 */
+}
+
+/* 유령 앞글자 위치(입력 텍스트와 정확히 겹침) */
+.en .ghost-input {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;    /* 문장 베이스라인에 맞춰 배치 */
+}
+.en .ghost-input .ghost {
+  position: absolute;
+  left: 10px;                  /* ⬅︎ .textbox의 padding-left와 반드시 동일 */
+  top: 50%;
+  transform: translateY(-50%); /* 입력 높이 기준 중앙 정렬 */
+  opacity: .35;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* 네가 둥근 박스/그림자 등을 쓰는 경우(선택) */
+.en .ghost-input .textbox.rounded {
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* 혹시 기존 .textbox에 고정 height/font-size가 박혀 있으면 이 규칙이 이기게 */
+.textbox { font: inherit !important; font-size: 1em !important; line-height: var(--en-line) !important; }
+
+/* 문장(.en) 안의 입력칸 공통 패딩 한 번에 관리 */
+.en .ghost-input{
+  --pad-x: 12px;          /* ← 좌측 여백을 여기서만 변경 */
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.en .ghost-input .textbox{
+  font: inherit; line-height: inherit; letter-spacing: inherit;
+  background: transparent;
+  border: 0; outline: none;
+  padding-left: var(--pad-x);   /* ⬅︎ 입력 시작 X */
+  color: var(--text,#e8eef5); -webkit-text-fill-color: var(--text,#e8eef5);
+  caret-color: var(--text,#e8eef5);
+  position: relative; z-index: 1;
+  height: calc(1em * 1.35);    /* 너의 줄높이에 맞춰 조절 */
+}
+.en .ghost-input .ghost{
+  position: absolute;
+  left: var(--pad-x);           /* ⬅︎ 유령 X = 입력 시작 X */
+  top: 50%; transform: translateY(-50%);
+  font: inherit; line-height: inherit; letter-spacing: inherit; font-weight: inherit;
+  opacity: .35; pointer-events: none; user-select: none; z-index: 0;
 }
