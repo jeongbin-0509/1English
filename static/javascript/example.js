@@ -59,10 +59,54 @@ function flattenExamples(list){
 function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a; }
 
 /* ===== 렌더 ===== */
-function makeInput(exID, idx){
-  return `<input id="in-${exID}-${idx}" class="textbox" type="text" autocomplete="off" />`;
+// ✅ 기존 makeInput 교체
+function makeInput(exID, idx, ghostChar = "") {
+  const g = String(ghostChar || "");
+  return `
+    <span class="ghost-input">
+      <span class="ghost" aria-hidden="true">${escapeHtml(g)}</span>
+      <input
+        id="in-${exID}-${idx}"
+        class="textbox"
+        type="text"
+        autocomplete="off"
+        inputmode="latin"
+        spellcheck="false"
+        style="color:var(--text,#e8eef5);-webkit-text-fill-color:var(--text,#e8eef5);caret-color:var(--text,#e8eef5);background:transparent;position:relative;z-index:1;"
+      />
+    </span>
+  `;
 }
 
+
+function alignGhosts() {
+  document.querySelectorAll('.ghost-input').forEach(wrap => {
+    const input = wrap.querySelector('.textbox');
+    const ghost = wrap.querySelector('.ghost');
+    if (!input || !ghost) return;
+
+    const cs = getComputedStyle(input);
+
+    // 입력 텍스트의 실제 시작 X = border-left + padding-left
+    const left =
+      parseFloat(cs.borderLeftWidth || 0) +
+      parseFloat(cs.paddingLeft || 0);
+
+    ghost.style.left = left + 'px';
+
+    // 폰트 메트릭도 강제로 동일화(혹시 상속이 안될 때 대비)
+    ghost.style.font = cs.font;
+    ghost.style.letterSpacing = cs.letterSpacing;
+    ghost.style.fontWeight = cs.fontWeight;
+    ghost.style.lineHeight = cs.lineHeight;
+  });
+}
+
+// 렌더 직후와 창 리사이즈 때 보정
+window.addEventListener('resize', alignGhosts);
+
+
+// ✅ renderCurrent() 안의 입력칸 생성 부분만 수정
 function renderCurrent(){
   const cur = examples[pos]; if(!cur) return;
 
@@ -71,7 +115,14 @@ function renderCurrent(){
 
   let html = cur.ex.e_sentence;
   const count = Number(cur.ex.blank_count || 0);
-  for(let i=1;i<=count;i++){ html = html.replace(`_${i}_`, makeInput(cur.exID, i)); }
+  const blanks = Array.isArray(cur.ex.blanks) ? cur.ex.blanks : [];
+
+  for (let i = 1; i <= count; i++) {
+    const answer = String(blanks[i-1] || "");
+    const ghostChar = answer.charAt(0); // ← 앞글자만
+    html = html.replace(`_${i}_`, makeInput(cur.exID, i, ghostChar));
+  }
+
   byId("en").innerHTML = html;
   byId("ko").textContent = cur.ex.k_sentence || "";
 
@@ -90,6 +141,9 @@ function renderCurrent(){
   byId("submitBtn").disabled = false;
   byId("actions").hidden = false;
 }
+
+alignGhosts();
+
 
 /* ===== 채점 ===== */
 function collectUserAnswers(cur){
@@ -356,3 +410,4 @@ function removeFromFavoriteNotebook(cur){
     }
   }catch(e){ console.warn('favoriteNotebook 삭제 실패', e); }
 }
+
