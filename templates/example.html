@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영어 수행 연습</title>
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png')}}" type="image/x-icon">
-    <link rel="arrow icon" href="./arrow.png" type="image/x-icon">
-    <!-- 정적 CSS 불러오기 -->
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <!-- <link rel="stylesheet" href="../static/css/responsive.css" /> -->
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>영어 수행 연습 - 예문</title>
 
-<body> 
-    <div id="sbarpart">
-        <!-- 사이드바 토글 -->
-        <button id="sidebarToggle" class="open-btn" type="button" onclick="toggleSidebar()"></button>
-        <input type="checkbox" id="menuicon">
-        <label for="menuicon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <!-- 사이드바 -->
-        <aside class="sidebar" id="sidebar" aria-hidden="true">
-            <button class="close-btn" type="button" aria-label="사이드바 닫기" onclick="closeSidebar()"></button>
-            <h2>단<span style="color: #35b3f2;">어</span>장 by <span style="color: #35b3f2;">;</span></h2>
-            <hr style="width:auto;height:2px;background-color:#555555;border:none" />
+    <!-- 경로/엔드포인트 이름은 네 앱에 맞게 사용 -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/example.css') }}">
+  </head>
+  <body>
+    <!-- 햄버거 버튼 -->
+    <button class="hamburger" id="sidebarToggle" aria-expanded="false" onclick="openSidebar()">
+      <span></span><span></span><span></span>
+    </button>
 
-            <!-- flask 라우트 -->
-            <form action="{{ url_for('main_page') }}" method="get">
-                <button class="Reselect" type="submit">DAY 재선택</button>
-            </form>
-
-            <form action="{{ url_for('odap') }}">
-                <button class="Review" type="submit">오답복습</button>
-            </form>
-
-            <form action="{{ url_for('words') }}">
-                <button type="submit">단어장 바로가기</button>
-            </form>
-
-            <form action="{{ url_for('logout') }}">
-                <button class="Logout" type="submit">로그아웃</button>
-            </form>
-        </aside>
-
-        <!-- 오버레이 -->
-        <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+    <!-- 사이드바 -->
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" onclick="closeSidebar()"></button>
+      <h2>단<span class="accent">어</span>장 by <span class="accent">;</span></h2>
+      <hr class="divider" />
+      <div class="menu-stack">
+        <form action="{{ url_for('main_page') }}" method="get">
+          <button class="menu-btn" type="submit">DAY 재선택</button>
+        </form>
+        <form action="{{ url_for('odap') }}">
+          <button class="menu-btn" type="submit">오답복습</button>
+        </form>
+        <form action="{{ url_for('words') }}">
+          <button class="menu-btn" type="submit">단어장 바로가기</button>
+        </form>
+        <form action="{{ url_for('logout') }}">
+          <button class="menu-btn" type="submit">로그아웃</button>
+        </form>
+      </div>
     </div>
     <div id="sidebarOverlay" class="overlay"></div>
 
