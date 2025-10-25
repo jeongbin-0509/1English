@@ -24,7 +24,7 @@
         "examples": [
             {
                 "meaning": "문명, 문명사회, 전 세계",
-                "e_sentence": "Greece is called the 'cradle of Western _1_.",
+                "e_sentence": "Greece is called the cradle of Western _1_.",
                 "k_sentence": "그리스는 서양 문명의 발상지로 불린다.",
                 "blank_count": 1,
                 "blanks": [
