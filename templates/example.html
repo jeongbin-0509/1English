@@ -6,17 +6,18 @@
     <title>영어 수행 연습 - 예문</title>
 
     <!-- 경로/엔드포인트 이름은 네 앱에 맞게 사용 -->
-    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/example.css') }}">
   </head>
   <body>
     <!-- 햄버거 버튼 -->
     <button class="hamburger" id="sidebarToggle" aria-expanded="false" onclick="openSidebar()">
-      <input type="image" src="../static/hamburger.png" id="jonghobabo">
+      <span></span><span></span><span></span>
     </button>
 
     <!-- 사이드바 -->
     <div class="sidebar" id="sidebar">
+      <button class="close-btn" onclick="closeSidebar()"></button>
       <h2>단<span class="accent">어</span>장 by <span class="accent">;</span></h2>
       <hr class="divider" />
       <div class="menu-stack">
