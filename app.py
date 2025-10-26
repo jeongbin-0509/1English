@@ -88,9 +88,8 @@ def login():
 
         if session:
             resp = make_response(redirect(url_for("dashboard")))
-            # 로컬(HTTP) 테스트용: secure=False. 배포(HTTPS) 시 True로 변경!
-            resp.set_cookie("access_token", session.access_token, httponly=True, secure=False, samesite="Lax")
-            resp.set_cookie("refresh_token", session.refresh_token, httponly=True, secure=False, samesite="Lax")
+            resp.set_cookie("access_token", session.access_token, httponly=True, secure=True, samesite="Lax")
+            resp.set_cookie("refresh_token", session.refresh_token, httponly=True, secure=True, samesite="Lax")
             flash("✅ 로그인 성공!", "success")
             return resp
 
