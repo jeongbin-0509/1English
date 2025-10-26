@@ -2,7 +2,8 @@
 Flask>=3.0
 gunicorn>=21.2
 python-dotenv>=1.0
-flask-cors>=4.0          
+flask-cors>=4.0
+gotrue>=2.4.0           
 
 # Supabase (Python 클라이언트 v2)
 supabase>=2.4.0
