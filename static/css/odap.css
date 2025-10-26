@@ -140,3 +140,24 @@ h5 {
 .hist-row .idx{ color:#66cc33; font-weight:900; }
 .fill{ color:#4fb3ff; font-weight:800; }
 .muted{ color:#aaa; }
+
+
+
+.today-btn{
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #232a3a);
+  background: var(--chip, #1b1f2a);
+  color: var(--fg, #eaeaea);
+  font-size: 13px;
+  cursor: pointer;
+}
+.today-btn:hover{ filter: brightness(1.1); }
+.today-btn.active{
+  background: var(--chip-active, #2c3345);
+  box-shadow: 0 0 0 2px rgba(123,216,143,0.25) inset;
+}
