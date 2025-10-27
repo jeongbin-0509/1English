@@ -374,7 +374,7 @@
             {
                 "meaning": "고백하다, 인정하다, 자백하다",
                 "e_sentence": "When little Maria _1_ her act, the neighbor asked to see the painting.",
-                "k_sentence": "어린 Maria가 자신의 행동을 고백하다, 그 이웃은 그 그림을 보기를 요청했다.",
+                "k_sentence": "어린 Maria가 자신의 행동을 고백하자, 그 이웃은 그 그림을 보기를 요청했다.",
                 "blank_count": 1,
                 "blanks": [
                     "confessed"
