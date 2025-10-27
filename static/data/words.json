@@ -718,7 +718,7 @@
                 "k_sentence": "2015년에 현금 거래는 스웨덴에서 이루어지는 모든 결제의 20%를 겨우 차지했다.",
                 "blank_count": 1,
                 "blanks": [
-                    "account for"
+                    "accounted for"
                 ]
             }
         ]
@@ -748,7 +748,7 @@
         "examples": [
             {
                 "meaning": "1. ~을 검토하다 ~을 조사하다",
-                "e_sentence": "Then let's go _1_ what we've prepared.",
+                "e_sentence": "Then let's _1_ what we've prepared.",
                 "k_sentence": "그럼 우리가 준비한 것을 검토해 봅시다.",
                 "blank_count": 1,
                 "blanks": [
@@ -803,7 +803,7 @@
                 "k_sentence": "이런 소중한 추억들을 간직하기 위해 우리는 종종 집에 기념품들을 가져온다.",
                 "blank_count": 1,
                 "blanks": [
-                    "held on"
+                    "hold on"
                 ]
             }
         ]
