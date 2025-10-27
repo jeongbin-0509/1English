@@ -6670,7 +6670,7 @@
             },
             {
                 "meaning": "목적, 동기",
-                "e_sentence": "His sole object in life was to make a great fortune.",
+                "e_sentence": "His sole _1_ in life was to make a great fortune.",
                 "k_sentence": "삶에서 그의 유일한 목적은 많은 재산을 모으는 것이었다.",
                 "blank_count": 1,
                 "blanks": [
