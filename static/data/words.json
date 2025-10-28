@@ -876,7 +876,7 @@
         "examples": [
             {
                 "meaning": "~에 등록하다, ~을 신청[가입]하다",
-                "e_sentence": "I tried to _1_ for your lifeguard training course this summer.",
+                "e_sentence": "I tried to _1_ your lifeguard training course this summer.",
                 "k_sentence": "저는 이번 여름에 귀사의 인명구조원 훈련 과정에 등록하려 했습니다.",
                 "blank_count": 1,
                 "blanks": [
