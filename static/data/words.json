@@ -7918,7 +7918,7 @@
             },
             {
                 "meaning": "의도하다",
-                "e_sentence": "Since the bilding is _1_ for children, the handrails and stairs are specially designed for children's convenience.",
+                "e_sentence": "Since the building is _1_ for children, the handrails and stairs are specially designed for children's convenience.",
                 "k_sentence": "그 건물은 어린이를 위한 것이기 때문에 일반 손잡이와 계단은 어린이의 편의에 맞게 특별히 설계되었다.",
                 "blank_count": 1,
                 "blanks": [
@@ -8164,7 +8164,7 @@
             {
                 "meaning": "객관적인",
                 "e_sentence": "It is urgent to introduce _1_ methods to assess teachers.",
-                "k_sentence": "교사를 평가하는 객고나적인 방법을 도입하는 것이 시급하다.",
+                "k_sentence": "교사를 평가하는 객관적인 방법을 도입하는 것이 시급하다.",
                 "blank_count": 1,
                 "blanks": [
                     "objective"
