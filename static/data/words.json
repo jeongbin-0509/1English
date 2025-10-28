@@ -7998,7 +7998,7 @@
             },
             {
                 "meaning": "균형을 잡다",
-                "e_sentence": "Likewise, missed field goals need not be balanced by successes.",
+                "e_sentence": "Likewise, missed field goals need not be _1_ by successes.",
                 "k_sentence": "마찬가지로, 놓친 필드 골은 성공(득점)에 의해서 균형이 맞춰져야 하는 것은 아니다.",
                 "blank_count": 1,
                 "blanks": [
@@ -8224,7 +8224,7 @@
             {
                 "meaning": "출현",
                 "e_sentence": "The _1_ of a pandemic flu virus is not only inevitable, but overdue.",
-                "k_sentence": "세계적으로 유행하는 독감 바이러스의 추렿ㄴ은 불가피할 뿐만 아니라 이미 무르익었다.",
+                "k_sentence": "세계적으로 유행하는 독감 바이러스의 출현은 불가피할 뿐만 아니라 이미 무르익었다.",
                 "blank_count": 1,
                 "blanks": [
                     "emergence"
