@@ -7690,7 +7690,7 @@
             {
                 "meaning": "근거를 두다",
                 "e_sentence": "Readers want their stories firmly _1_ in scientific fact.",
-                "k_sentence": "곧 그의 전사들은 상대 마을의 전사들에 필적했다.",
+                "k_sentence": "독자들은 그들의 이야기들이 과학적 사실에 확고히 근거를 두기를 원한다.",
                 "blank_count": 1,
                 "blanks": [
                     "grounded"
