@@ -1364,7 +1364,7 @@
             {
                 "meaning": "1. (곤란을) 극복하다, ~을 넘다 2. (병에서) 회복되다",
                 "e_sentence": "_1_ it and don't let the past keep you from moving forward.",
-                "k_sentence": "그것을 극복하고 과거가 여러분이 앞으로 나아가느 것을 막지 못하게 하라",
+                "k_sentence": "그것을 극복하고 과거가 여러분이 앞으로 나아가는 것을 막지 못하게 하라",
                 "blank_count": 1,
                 "blanks": [
                     "Get over"
@@ -1441,7 +1441,7 @@
             {
                 "meaning": "1. ~을 거절하다 2. ~을 약하게 하다. (소리 등을)낮추다",
                 "e_sentence": "Due to my present duty, I have to _1_ your proposal.",
-                "k_sentence": "현재의 제 임무 떄문에, 당신의 제안을 거절해야겠습니다.",
+                "k_sentence": "현재의 제 임무 때문에, 당신의 제안을 거절해야겠습니다.",
                 "blank_count": 1,
                 "blanks": [
                     "turn down"
@@ -1757,7 +1757,7 @@
             {
                 "meaning" : "~을 고려하다, ~을 참작하다[계산에 넣다]",
                 "e_sentence" : "City planning must _1_ projected growth.",
-                "k_sentence" : "도시 계획은 예상되응 성장을 감안해야 한다.",
+                "k_sentence" : "도시 계획은 예상되는 성장을 감안해야 한다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "take into account"
@@ -1950,7 +1950,7 @@
             {
                 "meaning" : "~와 연락하다, ~와 연락하고 지내다",
                 "e_sentence" : "I _1_ with old friends in my previous school.",
-                "k_sentence" : "나는 이전 학교의 예 친구들과 연락하고 지낸다.",
+                "k_sentence" : "나는 이전 학교의 옛 친구들과 연락하고 지낸다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "keep in touch"
@@ -1966,7 +1966,7 @@
             {
                 "meaning" : "~을 업애다[처리하다]; (문제 등을) 처리(해결)하다",
                 "e_sentence" : "The partticipants were simply told to _1_ any scraps.",
-                "k_sentence" : "참가자들은 단지 남는 종이를 업애라고 들었을 뿐이다.",
+                "k_sentence" : "참가자들은 단지 남는 종이를 없애라고 들었을 뿐이다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "dispose of"
@@ -1998,7 +1998,7 @@
             {
                 "meaning" : "1. ~을 격다 2. ~을 조사하다[검토하다]",
                 "e_sentence" : "This documentary will help you understand the physical changes that older people _1_",
-                "k_sentence" : "이 다큐멘터리는 노인들이 격는 신체적인 변화를 당신이 이해하는 데 도움이 될 것이다.",
+                "k_sentence" : "이 다큐멘터리는 노인들이 겪는 신체적인 변화를 당신이 이해하는 데 도움이 될 것이다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "go through"
@@ -2014,7 +2014,7 @@
             {
                 "meaning" : " 예상이 들어맞다, 적중하다; 목표를 달성하다",
                 "e_sentence" : "He blushed and she knew she had _1_.",
-                "k_sentence" : "그가 얼굴을 붉혔고 그녀는 자기 얘상이 들어 맞았음을 알았다.",
+                "k_sentence" : "그가 얼굴을 붉혔고 그녀는 자기 예상이 들어 맞았음을 알았다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "hit the mark"
@@ -2062,7 +2062,7 @@
             {
                 "meaning" : "폭파하다, 터뜨리다; 화를 내다",
                 "e_sentence" : "Last night a terrorist called and told us that us that he would _1_ the building.",
-                "k_sentence" : "어젯밤에 한 테러범이 전화해서 우리에세 그 건물을 폭파하겠다고 했다.",
+                "k_sentence" : "어젯밤에 한 테러범이 전화해서 우리에게 그 건물을 폭파하겠다고 했다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "blow up"
