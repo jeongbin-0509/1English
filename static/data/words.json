@@ -8352,7 +8352,7 @@
             {
                 "meaning": "방해하다",
                 "e_sentence": "Their pleasant evening was unexpectedly _1_ as they waited to get a taxi.",
-                "k_sentence": "그의 걸작은 수천 개의 파란 점들로 덮여 있다.",
+                "k_sentence": "그들의 즐거운 저녁은 그들이 택시를 타려고 기다리던 중 예기치 못하게 방해받았다.",
                 "blank_count": 1,
                 "blanks": [
                     "interrupted"
