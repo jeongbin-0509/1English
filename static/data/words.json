@@ -1934,7 +1934,7 @@
             {
                 "meaning" : "(쥐고 있던 것을) 놓다: ~에서 손을 놓다",
                 "e_sentence" : "You gradually learn when to _1_ the accelerator",
-                "k_sentence" : "여려분은 언제 가속 패달에서 발을 때야 할지 점차 배우게 된다.",
+                "k_sentence" : "여려분은 언제 가속 패달에서 발을 떼야 할지 점차 배우게 된다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "let go of"
