@@ -1773,7 +1773,7 @@
             {
                 "meaning" : "~에 기여하다; ~을 돕다, ~에 기부금을 내다",
                 "e_sentence" : "She thinks the sharing economy _1_ saving the environment since less car use means reduced CO₂ emissions.",
-                "k_sentence" : "그녀는 차를 덜 사용하면 아산화탄소 배출이 줄어든다는 것을 의미하기 때문에 공유경제가 환경을 구하는 데 기여한다고 생각한다.",
+                "k_sentence" : "그녀는 차를 덜 사용하면 이산화탄소 배출이 줄어든다는 것을 의미하기 때문에 공유경제가 환경을 구하는 데 기여한다고 생각한다.",
                 "blank_count" : 1,
                 "blanks" : [
                     "contributes to"
