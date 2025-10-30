@@ -458,7 +458,7 @@
         "examples": [
             {
                 "meaning": "기념비, 기념비, 유물",
-                "e_sentence": "A _1_to him was erected in St. Paul's Cathedral.",
+                "e_sentence": "A _1_ to him was erected in St. Paul's Cathedral.",
                 "k_sentence": "St.Paul 대성당에 그를 기념하는 기념비가 세워졌다.",
                 "blank_count": 1,
                 "blanks": [
