@@ -1436,12 +1436,21 @@
         "day": 19,
         "wordnum": 721,
         "word": "turn down",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "1. ~을 거절하다 2. ~을 약하게 하다. (소리 등을)낮추다",
                 "e_sentence": "Due to my present duty, I have to _1_ your proposal.",
                 "k_sentence": "현재의 제 임무 때문에, 당신의 제안을 거절해야겠습니다.",
+                "blank_count": 1,
+                "blanks": [
+                    "turn down"
+                ]
+            },
+            {
+                "meaning": "1. ~을 거절하다 2. ~을 약하게 하다. (소리 등을)낮추다",
+                "e_sentence": "After carefully considering the opportunity, I decided to _1_ the offer.",
+                "k_sentence": "그 기회를 주의 깊게 고려한 다음 나는 그 제안을 거절하기로 결정했다.",
                 "blank_count": 1,
                 "blanks": [
                     "turn down"
@@ -1612,6 +1621,15 @@
                 "meaning": "1. (규칙 등이) 유효하다, 딱 들어맞다 2. 진실이다",
                 "e_sentence": "These findings do not _1_ for women and children.",
                 "k_sentence": "이런 발견이 여성과 아이들에게는 들어맞지 않는다.",
+                "blank_count": 1,
+                "blanks": [
+                    "hold true"
+                ]
+            },
+            {
+                "meaning": "1. (규칙 등이) 유효하다, 딱 들어맞다 2. 진실이다",
+                "e_sentence":"Since the same principles _1_ for international negotiations, keep them in mind.",
+                "k_sentence":"같은 원칙들이 국제적인 협상에서도 유효하므로 그것을 기억하라.",
                 "blank_count": 1,
                 "blanks": [
                     "hold true"
@@ -1810,6 +1828,15 @@
                 "blanks" : [
                     "Dwell on"
                 ]
+            },
+            {
+                "meaning" : "~을 곰곰히 생각하다; ~을 오래 바라보다",
+                "e_sentence":"You made a mistake, but I don't think you should _1_ it.",
+                "k_sentence":"네가 실수를 했지만 그것을 곰곰이 생각할 필요는 없는 것 같구나.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "dwell on"
+                ]
             }
         ]
     },
@@ -1858,6 +1885,15 @@
                 "blank_count" : 1,
                 "blanks" : [
                     "stood out"
+                ]
+            },
+            {
+                "meaning" : "두각을 나타내다, 돋보이다",
+                "e_sentence": "People appreciate individual talent and personal abilities that _1_ beyond the group.",
+                "k_sentence": "사람들은 집단을 뛰어넘는 두각을 나타내는 개별적인 재능과 개인의 능력을 높이 평가한다.",
+                "blank_count" : 1,
+                "blanks" : [
+                    "stand out"
                 ]
             }
         ]
@@ -1985,6 +2021,15 @@
                 "k_sentence" : "나는 즉시 불을 끌 수 있다는 것을 몰랐다.",
                 "blank_count" : 1,
                 "blanks" : [
+                    "put out"
+                ]
+            },
+            {
+                "meaning" : "1. 불을 끄다 2. (쓰래기 등을) 내다 놓다; (제품 등을) 생산하다",
+                "e_sentence": "Remember to _1_ the fires as soon as there's smoke.",
+                "k_sentence":"연기가 나자마자 불을 끄는 것을 기억하라.",
+                "blank_count":1,
+                "blanks": [
                     "put out"
                 ]
             }
