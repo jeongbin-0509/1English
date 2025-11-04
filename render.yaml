@@ -18,3 +18,15 @@ services:
         sync: false
       - key: SECRET_KEY
         sync: false
+
+name: Deploy to Render on push
+on:
+  push:
+    branches: [ "main" ]   # 배포 브랜치로 교체
+jobs:
+  render-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Render Deploy Hook
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
