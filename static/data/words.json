@@ -7859,7 +7859,7 @@
             {
                 "meaning": "선내",
                 "e_sentence": "This means that all passengers are on _1_.",
-                "k_sentence": "이것은 모든 승객이 탐승한 것을 의미한다.",
+                "k_sentence": "이것은 모든 승객이 탑승한 것을 의미한다.",
                 "blank_count": 1,
                 "blanks": [
                     "board"
