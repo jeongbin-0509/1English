@@ -6128,7 +6128,7 @@
         "examples": [
             {
                 "meaning": "만들어 내다, 생산하다",
-                "e_sentence": "As the waste materials decompose, the _1_ methane gas.",
+                "e_sentence": "As the waste materials decompose, they _1_ methane gas.",
                 "k_sentence": "그 폐기물은 부패하면서 메탄가스를 만들어 낸다.",
                 "blank_count": 1,
                 "blanks": [
