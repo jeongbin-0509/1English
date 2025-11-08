@@ -5456,7 +5456,7 @@
             {
                 "meaning": "예언하다, 예보하다",
                 "e_sentence": "A scientist at NASA _1_ that there will be 50 basic food items.",
-                "k_sentence": "NASA의 과학자는 50개의 기본적인 음식 품목이 있게 될 것이라고 예상했다.",
+                "k_sentence": "NASA의 과학자는 50개의 기본적인 음식 품목이 있게 될 것이라고 예상한다.",
                 "blank_count": 1,
                 "blanks": [
                     "predicts"
