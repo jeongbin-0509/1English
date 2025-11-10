@@ -7595,7 +7595,7 @@
             {
                 "meaning": "지형, 지세",
                 "e_sentence": "The geographical _1_ of the world can be found in maps and images.",
-                "k_sentence": "세계의 지형들은 지도와 미미지에서 찾을 수 있다.",
+                "k_sentence": "세계의 지형들은 지도와 이미지에서 찾을 수 있다.",
                 "blank_count": 1,
                 "blanks": [
                     "features"
