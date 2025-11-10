@@ -2062,7 +2062,7 @@
         "example_count": 1,
         "examples": [
             {
-                "meaning": "1. ~을 격다 2. ~을 조사하다[검토하다]",
+                "meaning": "1. ~을 겪다 2. ~을 조사하다[검토하다]",
                 "e_sentence": "This documentary will help you understand the physical changes that older people _1_",
                 "k_sentence": "이 다큐멘터리는 노인들이 겪는 신체적인 변화를 당신이 이해하는 데 도움이 될 것이다.",
                 "blank_count": 1,
@@ -7399,7 +7399,7 @@
             {
                 "meaning": "지속하다",
                 "e_sentence": "I hope some people will _1_ in the journey to unraveling this mystery.",
-                "k_sentence": "나는 몇몇 사람들이 이 신비를 푸는 여향을 지속하기를 바란다.",
+                "k_sentence": "나는 몇몇 사람들이 이 신비를 푸는 여행을 지속하기를 바란다.",
                 "blank_count": 1,
                 "blanks": [
                     "persist"
