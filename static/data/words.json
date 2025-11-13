@@ -2969,7 +2969,7 @@
             },
             {
                 "meaning": "황량한, 적막한, 외로운",
-                "e_sentence": "The place was a company _1_ area, like a desert.",
+                "e_sentence": "The place was a completely _1_ area, like a desert.",
                 "k_sentence": "그 장소는 사막과 같이 완전히 황량한 지역이었다.",
                 "blank_count": 1,
                 "blanks": [
