@@ -7653,6 +7653,15 @@
                 "blanks": [
                     "direct"
                 ]
+            },
+            {
+                "meaning": "직행의",
+                "e_sentence": "There were no _1_ flights to New Delhi that day.",
+                "k_sentence": "그날 New Delhi로 가는 직항편이 없었다.",
+                "blank_count": 1,
+                "blanks": [
+                    "direct"
+                ]
             }
         ]
     },
