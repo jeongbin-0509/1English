@@ -4166,12 +4166,21 @@
         "day": 23,
         "wordnum": 873,
         "word": "combine",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "결합하다, 연합하다, 합병[융합]하다",
                 "e_sentence": "The system _1_ three existing technologies.",
                 "k_sentence": "그 시스템은 기존의 세 가지 기술을 결합한다.",
+                "blank_count": 1,
+                "blanks": [
+                    "combines"
+                ]
+            },
+            {
+                "meaning": "결합하다, 연합하다, 합병[융합]하다",
+                "e_sentence": "Hydrogen _1_ with oxygen to form water.",
+                "k_sentence": "수소는 산소와 결합하여 물이 된다.",
                 "blank_count": 1,
                 "blanks": [
                     "combines"
@@ -4523,12 +4532,21 @@
         "day": 23,
         "wordnum": 894,
         "word": "dedicate",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "바치다, 전념하다",
                 "e_sentence": "People who _1_ their time to turning edibles into visuals are often called food artists.",
                 "k_sentence": "자신의 시간을 바쳐 식품을 영상으로 바꾸는 사람들을 흔히 음식 예술가라고 불린다.",
+                "blank_count": 1,
+                "blanks": [
+                    "dedicate"
+                ]
+            },
+            {
+                "meaning": "바치다, 전념하다",
+                "e_sentence": "The new president said he would _1_ himself to protecting the weak.",
+                "k_sentence": "새 대통령은 약자를 보호하는 데 헌신하겠다고 말했다.",
                 "blank_count": 1,
                 "blanks": [
                     "dedicate"
@@ -4642,7 +4660,7 @@
         "day": 23,
         "wordnum": 901,
         "word": "instinct",
-        "example_count": 1,
+        "example_count": 2,
         "examples": [
             {
                 "meaning": "본능, 본성, 재능",
@@ -4651,6 +4669,15 @@
                 "blank_count": 1,
                 "blanks": [
                     "instincts"
+                ]
+            },
+            {
+                "meaning": "본능, 본성, 재능",
+                "e_sentence": "The _1_ for survival is powerful in most, but not all, people.",
+                "k_sentence": "생존을 위한 본능은 다 그런것은 아니지만 대부분의 사람들에게 있어서 강력하다.",
+                "blank_count": 1,
+                "blanks": [
+                    "instinct"
                 ]
             }
         ]
