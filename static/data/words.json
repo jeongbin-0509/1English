@@ -6805,7 +6805,7 @@
             },
             {
                 "meaning": "반대하다, 싫어하다",
-                "e_sentence": "Many people _1_ to the building of a gas station in many town.",
+                "e_sentence": "Many people _1_ to the building of a gas station in their town.",
                 "k_sentence": "많은 사람들이 자신들의 마을에 주유소를 건설하는 것에 반대했다.",
                 "blank_count": 1,
                 "blanks": [
