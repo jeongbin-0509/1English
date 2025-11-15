@@ -7806,7 +7806,7 @@
             },
             {
                 "meaning": "이유, 동기",
-                "e_sentence": "This step is consideered to be necessary on public _1_.",
+                "e_sentence": "This step is considered to be necessary on public _1_.",
                 "k_sentence": "이 단계는 공공적 이유로 필요하다고 여겨진다.",
                 "blank_count": 1,
                 "blanks": [
